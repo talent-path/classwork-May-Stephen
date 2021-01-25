@@ -4,6 +4,7 @@ import static com.tp.rpg.Application.chooseArmor;
 import static com.tp.rpg.Application.chooseWeapon;
 
 public class PlayerCharacter extends Character {
+
     //use scanner here to get something from the user
     @Override
     public void makeChoice() {
@@ -14,7 +15,7 @@ public class PlayerCharacter extends Character {
         System.out.println();
         System.out.println("Your character now has " + health + " health." + "\n" +
                 "Your weapon gives you an attack of " + weaponValue + "." + "\n" +
-                "Your armor gives you a defensive value of " + armorValue + ".");
+                "Your armor gives you a defensive value of " + armorValue + ". \n");
     }
 
 }

@@ -24,7 +24,12 @@ public abstract class Character implements Chooser {
     }
 
     public boolean isAlive(){
-        throw new UnsupportedOperationException();
+
+       boolean alive = false;
+//       while () {
+//           alive = true;
+//       }
+       return alive;
     }
 
 }

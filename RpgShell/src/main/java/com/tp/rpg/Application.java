@@ -15,9 +15,9 @@ public class Application {
     public static void main(String[] args) {
 
         PlayerCharacter pc = setUpPlayer();
+        NonPlayerCharacter enemy = setUpEnemy();
 
         while( pc.isAlive() ){
-            NonPlayerCharacter enemy = setUpEnemy();
 
             battle( pc, enemy );
 
@@ -30,10 +30,10 @@ public class Application {
 
     //walk the user through setting up their character
     private static PlayerCharacter setUpPlayer() {
-        PlayerCharacter player = new PlayerCharacter();
+        PlayerCharacter pc = new PlayerCharacter();
 
-        player.makeChoice();
-        return player;
+        pc.makeChoice();
+        return pc;
     }
 
     //create some NPC object (with armor & weapons?)
@@ -42,10 +42,10 @@ public class Application {
         Random rand = new Random();
         System.out.println("Your enemy is ready to fight!");
         System.out.println("They have " + health + " health.");
-        int armor = rand.nextInt(4);
+        int armor = rand.nextInt(3) + 1;
         int enemyArmor = enemyArmor(armor);
         System.out.println("There defensive value is " + enemyArmor);
-        int weapon = rand.nextInt(4);
+        int weapon = rand.nextInt(3) + 1;
         int enemyWeapon = enemyWeapon(weapon);
         System.out.println("There attack value is " + enemyWeapon);
         return null;
@@ -114,7 +114,7 @@ public class Application {
         System.out.println("Choose your armor.");
         int armorValue = 0;
         int armorChoice =
-                Console.readInt("1 - Shield, 2 - Helmet, 3 - Chest Plate, 4 - Boots): ", 1, 4);
+                Console.readInt("1 - Shield, 2 - Helmet, 3 - Chest Plate, 4 - Boots: ", 1, 4);
         switch (armorChoice) {
             case 1:
                 Shield shield = new Shield();
@@ -162,12 +162,15 @@ public class Application {
             case 1:
                 System.out.println("Enemy brought a sword to battle!");
                 attackValue = 85;
+                break;
             case 2:
                 System.out.println("Enemy brought a Magic Staff to battle! Watch out for critical hits!");
                 attackValue = 75;
+                break;
             case 3:
                 System.out.println("Enemy is prepared to fight you with his bare hands!");
                 attackValue = 25;
+                break;
             case 4:
                 System.out.println("Enemy brought a hammer to battle! They may be slow, but they hit hard!");
                 attackValue = 170;
