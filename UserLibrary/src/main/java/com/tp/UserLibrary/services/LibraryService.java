@@ -1,8 +1,7 @@
 package com.tp.UserLibrary.services;
 
 import com.tp.UserLibrary.exceptions.*;
-import com.tp.UserLibrary.models.LibraryBook;
-import com.tp.UserLibrary.models.LibraryBookViewModel;
+import com.tp.UserLibrary.models.Book;
 import com.tp.UserLibrary.persistence.LibraryDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -19,68 +18,57 @@ public class LibraryService {
     LibraryDao dao;
 
 
-    public List<LibraryBookViewModel> getAllBooks() {
-        List<LibraryBook> allBooks = dao.getAllBooks();
-        List<LibraryBookViewModel> converted = new ArrayList<>();
-        for (LibraryBook toConvert : allBooks) {
-            converted.add(convertModel(toConvert));
+    public List<Book> getAllBooks() {
+        List<Book> allBooks = dao.getAllBooks();
+        List<Book> copy = new ArrayList<>();
+        for (Book toCopy : allBooks) {
+            copy.add(toCopy);
         }
-        return converted;
+        return copy;
     }
 
-    private LibraryBookViewModel convertModel(LibraryBook book) {
-        LibraryBookViewModel toReturn = new LibraryBookViewModel();
-        toReturn.setAuthors(book.getAuthors());
-        toReturn.setBookId(book.getBookId());
-        toReturn.setTitle(book.getTitle());
-        toReturn.setYear(book.getYear());
+//    private Book convertModel(Book book) {
+//        Book toReturn = new Book();
+//        toReturn.setAuthors(book.getAuthors());
+//        toReturn.setBookId(book.getBookId());
+//        toReturn.setTitle(book.getTitle());
+//        toReturn.setYear(book.getYear());
+//
+//        return toReturn;
+//    }
 
-        return toReturn;
-    }
-
-    public LibraryBookViewModel getBookById(Integer bookId){
-    LibraryBook book = dao.getBookById(bookId);
-    return convertModel(book);
+    public Book getBookById(Integer bookId){
+    Book book = dao.getBookById(bookId);
+    return book;
     }
 
     public void deleteBook(Integer bookId) throws InvalidBookIdException, NullBookIdException {
         dao.deleteBook(bookId);
     }
 
-    public LibraryBookViewModel addBook(Integer bookId, List<String> authors, String title, Integer year) throws InvalidBookIdException, InvalidPublicationYearException, InvalidTitleException, InvalidAuthorException {
-        if ( bookId < 0) {
-            throw new InvalidBookIdException("Invalid book ID.");
-        }
-        if ( authors == null) {
-            throw new InvalidAuthorException("Invalid author(s).");
-        }
-        if (title == "") {
-            throw new InvalidTitleException("Invalid title.");
-        }
-        if(year > 2021) {
-            throw new InvalidPublicationYearException("Invalid publication year.");
-        }
-        LibraryBook book = dao.addBook(bookId, authors, title, year);
-        return convertModel(book);
+    public Book addBook(Book partialBook) {
+
+        Book finishedBook = dao.addBook(partialBook);
+        return finishedBook;
     }
 
 
-    public LibraryBookViewModel getBookByAuthor(List<String> authors) throws InvalidAuthorException, NullAuthorsException {
-        LibraryBook book = dao.getBookByAuthor(authors);
-        return convertModel(book);
+    public Book getBookByAuthor(List<String> authors){
+        Book book = dao.getBookByAuthor(authors);
+        return book;
     }
 
-    public LibraryBookViewModel getBookByTitle(String title) throws InvalidTitleException, NullTitleException {
-        LibraryBook book = dao.getBookByTitle(title);
-        return convertModel(book);
+    public Book getBookByTitle(String title){
+        Book book = dao.getBookByTitle(title);
+        return book;
     }
 
-    public LibraryBookViewModel getBookByYear(Integer year) throws InvalidPublicationYearException, NullYearException {
-        LibraryBook book = dao.getBookByYear(year);
-        return convertModel(book);
+    public Book getBookByYear(Integer year){
+        Book book = dao.getBookByYear(year);
+        return book;
     }
 
-//    public LibraryBookViewModel editTitle(String title) throws InvalidTitleException, NullTitleException {
+//    public Book editTitle(String title) throws InvalidTitleException, NullTitleException {
 //        LibraryBook book
 //    }
 }

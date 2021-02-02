@@ -1,23 +1,23 @@
 package com.tp.UserLibrary.persistence;
 
 import com.tp.UserLibrary.exceptions.*;
-import com.tp.UserLibrary.models.LibraryBook;
+import com.tp.UserLibrary.models.Book;
 
 import java.util.List;
 
 public interface LibraryDao {
 
-    List<LibraryBook> getAllBooks();
+    List<Book> getAllBooks();
 
     void deleteBook(Integer bookId) throws InvalidBookIdException, NullBookIdException;
 
-    LibraryBook getBookById(Integer bookId);
+    Book getBookById(Integer bookId);
 
-    LibraryBook addBook(Integer bookId, List<String> authors, String title, Integer year) throws InvalidBookIdException, InvalidAuthorException, InvalidTitleException, InvalidPublicationYearException;
+    Book getBookByAuthor(List<String> authors);
 
-    LibraryBook getBookByAuthor(List<String> authors) throws InvalidAuthorException, NullAuthorsException;
+    Book getBookByTitle(String title);
 
-    LibraryBook getBookByTitle(String title) throws InvalidTitleException, NullTitleException;
+    Book getBookByYear(Integer year);
 
-    LibraryBook getBookByYear(Integer year) throws InvalidPublicationYearException, NullYearException;
+    Book addBook(Book partialBook);
 }

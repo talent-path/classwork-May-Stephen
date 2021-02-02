@@ -4,4 +4,8 @@ public class InvalidBookIdException extends Exception{
     public InvalidBookIdException(String msg) {
         super(msg);
     }
+    public InvalidBookIdException(String msg, Throwable innerException) {
+        super(msg, innerException);
+    }
+
 }

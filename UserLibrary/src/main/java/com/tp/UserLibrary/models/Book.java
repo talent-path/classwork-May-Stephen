@@ -2,26 +2,22 @@ package com.tp.UserLibrary.models;
 
 import java.util.List;
 
-public class LibraryBook {
+public class Book {
     private Integer bookId;
     private String title;
     private List<String> authors;
     private Integer year;
 
 
-    public LibraryBook(Integer bookId, String title, List<String> authors, Integer year) {
-        this.bookId = bookId;
-        this.title = title;
-        this.authors = authors;
-        this.year = year;
+    public Book(Book that) {
+
+        this.title = that.getTitle();
+        this.authors = that.getAuthors();
+        this.year = that.getYear();
     }
 
+    public Book() {
 
-    public LibraryBook(LibraryBook that) {
-        this.bookId = that.bookId;
-        this.title = that.title;
-        this.authors = that.authors;
-        this.year = that.year;
     }
 
     public Integer getBookId() {
@@ -38,5 +34,17 @@ public class LibraryBook {
 
     public Integer getYear() {
         return year;
+    }
+
+    public void setAuthors(List<String> authors) {
+    }
+
+    public void setBookId(Integer bookId) {
+    }
+
+    public void setTitle(String title) {
+    }
+
+    public void setYear(Integer year) {
     }
 }
