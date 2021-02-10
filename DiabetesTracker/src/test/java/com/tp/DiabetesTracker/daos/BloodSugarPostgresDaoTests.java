@@ -1,10 +1,13 @@
 package com.tp.DiabetesTracker.daos;
 
+import com.tp.DiabetesTracker.exceptions.InvalidBSValueException;
+import com.tp.DiabetesTracker.exceptions.InvalidLabelException;
 import com.tp.DiabetesTracker.models.BloodSugarRecord;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.jdbc.core.JdbcTemplate;
 
@@ -56,4 +59,23 @@ public class BloodSugarPostgresDaoTests {
 
     }
 
+
+    @Test
+    public void addBloodSugarRecordNullValue() {
+        BloodSugarRecord record = new BloodSugarRecord();
+        record.setbsValue(null);
+        record.setLabel("Snack");
+
+        assertThrows(DataIntegrityViolationException.class, () -> toTest.addBloodSugar(record));
+    }
+
+    @Test
+    public void addBloodSugarRecordNullLabel(){
+
+        BloodSugarRecord record = new BloodSugarRecord();
+        record.setbsValue(100);
+        record.setLabel(null);
+
+        assertThrows(DataIntegrityViolationException.class, () -> toTest.addBloodSugar(record));
+    }
 }
