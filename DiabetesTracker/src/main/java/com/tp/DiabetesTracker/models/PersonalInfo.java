@@ -6,7 +6,24 @@ public class PersonalInfo {
     String name;
     Integer height;
     Integer weight;
+    Integer minBS;
+    Integer maxBS;
 
+    public Integer getMinBS() {
+        return minBS;
+    }
+
+    public void setMinBS(Integer minBS) {
+        this.minBS = minBS;
+    }
+
+    public Integer getMaxBS() {
+        return maxBS;
+    }
+
+    public void setMaxBS(Integer maxBS) {
+        this.maxBS = maxBS;
+    }
 
     public Integer getUserId() {
         return userId;

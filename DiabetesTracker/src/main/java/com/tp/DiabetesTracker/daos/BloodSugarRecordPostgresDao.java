@@ -12,7 +12,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 @Component
-public class PostgresTrackerDao implements TrackerDao {
+public class BloodSugarRecordPostgresDao implements BloodSugarRecordDao {
 
     @Autowired
     JdbcTemplate template;
@@ -39,22 +39,7 @@ public class PostgresTrackerDao implements TrackerDao {
         return allRecords;
     }
 
-    @Override
-    public PersonalInfo addInfo(PersonalInfo toAdd) {
-        Integer userId = template.queryForObject(
-                "INSERT INTO public.\"PersonalInfo\"(\n" +
-                        "\t\"name\", \"Height(in.)\", \"Weight(lbs.)\")\n" +
-                        "\tVALUES (?, ?, ?) RETURNING \"UserId\";",
-                new PersonalInfoIDMapper(),
-                toAdd.getName(),
-                toAdd.getHeight(),
-                toAdd.getWeight());
 
-        toAdd.setUserId(userId);
-
-        return toAdd;
-
-    }
 
     class BloodSugarMapper implements RowMapper<BloodSugarRecord> {
 
@@ -78,23 +63,7 @@ public class PostgresTrackerDao implements TrackerDao {
         }
     }
 
-    class PersonalInfoMapper implements RowMapper<PersonalInfo> {
 
-        @Override
-        public PersonalInfo mapRow(ResultSet resultSet, int i) throws SQLException {
-            PersonalInfo mappedInfo = new PersonalInfo();
-            mappedInfo.setName(resultSet.getString("name"));
-            mappedInfo.setHeight(resultSet.getInt("Height(in.)"));
-            mappedInfo.setWeight(resultSet.getInt("Weight(lbs.)"));
 
-            return mappedInfo;
-        }
-    }
 
-    class PersonalInfoIDMapper implements RowMapper<Integer> {
-        @Override
-        public Integer mapRow(ResultSet resultSet, int i) throws SQLException {
-            return resultSet.getInt("UserId");
-        }
-    }
 }

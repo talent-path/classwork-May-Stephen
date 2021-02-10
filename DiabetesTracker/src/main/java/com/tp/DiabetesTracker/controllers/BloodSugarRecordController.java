@@ -3,7 +3,7 @@ package com.tp.DiabetesTracker.controllers;
 
 import com.tp.DiabetesTracker.models.BloodSugarRecord;
 import com.tp.DiabetesTracker.models.PersonalInfo;
-import com.tp.DiabetesTracker.services.TrackerService;
+import com.tp.DiabetesTracker.services.BloodSugarManagementService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,10 +12,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
-public class TrackerController {
+public class BloodSugarRecordController {
 
     @Autowired
-    TrackerService service;
+    BloodSugarManagementService service;
 
 
     @PostMapping("/bloodsugar")
@@ -31,9 +31,5 @@ public class TrackerController {
         return service.getAllRecords();
     }
 
-    @PostMapping("/info")
-    public ResponseEntity addInfo(@RequestBody PersonalInfo toAdd) {
-        PersonalInfo enteredInfo = service.addInfo(toAdd);
-        return ResponseEntity.ok(enteredInfo);
-    }
+
 }
