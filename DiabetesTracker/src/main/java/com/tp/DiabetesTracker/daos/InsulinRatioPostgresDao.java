@@ -1,7 +1,10 @@
 package com.tp.DiabetesTracker.daos;
 
+import com.tp.DiabetesTracker.daos.mappers.InsulinRatioMapper;
+import com.tp.DiabetesTracker.daos.mappers.IntegerMapper;
 import com.tp.DiabetesTracker.models.InsulinRatio;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
@@ -12,11 +15,12 @@ import java.util.List;
 
 
 @Component
+@Profile({"production", "daoTesting"})
 public class InsulinRatioPostgresDao implements InsulinRatioDao {
 
 
     @Autowired
-    JdbcTemplate template;
+    private JdbcTemplate template;
 
 
     @Override
@@ -25,7 +29,7 @@ public class InsulinRatioPostgresDao implements InsulinRatioDao {
                 "INSERT INTO public.\"InsulinRatios\"(\n" +
                         "\t\"StartTime\", \"EndTime\", \"RatioFactor\")\n" +
                         "\tVALUES (?, ?, ?) RETURNING \"RatioId\";",
-                    new InsulinRatioIDMapper(),
+                    new IntegerMapper("RatioId"),
                     toAdd.getStart(),
                     toAdd.getEnd(),
                     toAdd.getRatioFactor());
@@ -48,26 +52,7 @@ public class InsulinRatioPostgresDao implements InsulinRatioDao {
 
 
 
-    class InsulinRatioMapper implements RowMapper<InsulinRatio>{
-        @Override
-        public InsulinRatio mapRow(ResultSet resultSet, int i) throws SQLException {
-            InsulinRatio mappedInsulinRatio = new InsulinRatio();
-            mappedInsulinRatio.setStart(resultSet.getTime("StartTime"));
-            mappedInsulinRatio.setEnd(resultSet.getTime("EndTime"));
-            mappedInsulinRatio.setRatioFactor(resultSet.getInt("RatioFactor"));
-
-            return mappedInsulinRatio;
-        }
 
 
-    }
-
-    class InsulinRatioIDMapper implements RowMapper<Integer> {
-    @Override
-        public Integer mapRow(ResultSet resultSet, int i) throws SQLException {
-            return resultSet.getInt("RatioId");
-    }
-
-    }
 }
 
