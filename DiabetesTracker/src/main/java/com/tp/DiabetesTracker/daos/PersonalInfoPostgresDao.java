@@ -1,6 +1,7 @@
 package com.tp.DiabetesTracker.daos;
 
 import com.tp.DiabetesTracker.daos.mappers.IntegerMapper;
+import com.tp.DiabetesTracker.exceptions.*;
 import com.tp.DiabetesTracker.models.PersonalInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;
@@ -20,7 +21,14 @@ public class PersonalInfoPostgresDao implements PersonalInfoDao {
 
 
     @Override
-    public PersonalInfo addInfo(PersonalInfo toAdd) {
+    public PersonalInfo addInfo(PersonalInfo toAdd) throws InvalidNameException, InvalidHeightException, InvalidWeightException, InvalidMinBSException, InvalidMaxBSException {
+        if(toAdd.getName() == null) throw new InvalidNameException("Invalid Name provided");
+        if(toAdd.getMinBS() == null) throw new InvalidMinBSException("Invalid minimum BS value provided.");
+        if(toAdd.getMaxBS() == null) throw new InvalidMaxBSException("Invalid maximum BS value provided.");
+        if(toAdd.getWeight() == null) throw new InvalidWeightException("Invalid weight provided.");
+        if(toAdd.getHeight() == null) throw new InvalidHeightException("Invalid height provided.");
+
+
         Integer userId = template.queryForObject(
                 "INSERT INTO public.\"PersonalInfo\"(\n" +
                         "\t\"name\", \"Height(in.)\", \"Weight(lbs.)\", \"MinBS\", \"MaxBS\")\n" +
