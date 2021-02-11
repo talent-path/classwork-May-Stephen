@@ -1,13 +1,15 @@
 package com.tp.DiabetesTracker.controllers;
 
 
+import com.tp.DiabetesTracker.exceptions.InvalidBSValueException;
+import com.tp.DiabetesTracker.exceptions.InvalidLabelException;
 import com.tp.DiabetesTracker.models.BloodSugarRecord;
-import com.tp.DiabetesTracker.models.PersonalInfo;
 import com.tp.DiabetesTracker.services.BloodSugarManagementService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -19,9 +21,16 @@ public class BloodSugarRecordController {
 
 
     @PostMapping("/bloodsugar")
-    public ResponseEntity addBG(@RequestBody BloodSugarRecord toAdd){
+    public ResponseEntity addBG(@RequestBody BloodSugarRecord toAdd) {
 
-        BloodSugarRecord enteredBG = service.addBloodSugar(toAdd);
+        BloodSugarRecord enteredBG = null;
+        try {
+            enteredBG = service.addBloodSugar(toAdd);
+        } catch (InvalidLabelException e) {
+            e.getMessage();
+        } catch (InvalidBSValueException e) {
+            e.getMessage();
+        }
         return ResponseEntity.ok(enteredBG);
 
     }
@@ -30,6 +39,7 @@ public class BloodSugarRecordController {
     public List<BloodSugarRecord> getAllRecords() {
         return service.getAllRecords();
     }
-
-
 }
+
+
+

@@ -2,6 +2,8 @@ package com.tp.DiabetesTracker.controllers;
 
 
 
+import com.tp.DiabetesTracker.exceptions.InvalidRatioValueException;
+import com.tp.DiabetesTracker.exceptions.InvalidTimeException;
 import com.tp.DiabetesTracker.models.InsulinRatio;
 import com.tp.DiabetesTracker.services.BloodSugarManagementService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +22,14 @@ public class InsulinRatioController {
     @PostMapping("/addratio")
     public ResponseEntity addRatio(@RequestBody InsulinRatio toAdd){
 
-        InsulinRatio enteredRatio = service.addRatio(toAdd);
+        InsulinRatio enteredRatio = null;
+        try {
+            enteredRatio = service.addRatio(toAdd);
+        } catch (InvalidTimeException e) {
+            e.getMessage();
+        } catch (InvalidRatioValueException e) {
+            e.getMessage();
+        }
         return ResponseEntity.ok(enteredRatio);
 
     }

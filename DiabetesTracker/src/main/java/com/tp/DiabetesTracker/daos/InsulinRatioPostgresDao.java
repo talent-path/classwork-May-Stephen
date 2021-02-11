@@ -2,6 +2,8 @@ package com.tp.DiabetesTracker.daos;
 
 import com.tp.DiabetesTracker.daos.mappers.InsulinRatioMapper;
 import com.tp.DiabetesTracker.daos.mappers.IntegerMapper;
+import com.tp.DiabetesTracker.exceptions.InvalidRatioValueException;
+import com.tp.DiabetesTracker.exceptions.InvalidTimeException;
 import com.tp.DiabetesTracker.models.InsulinRatio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;
@@ -20,11 +22,15 @@ public class InsulinRatioPostgresDao implements InsulinRatioDao {
 
 
     @Autowired
-    private JdbcTemplate template;
+    JdbcTemplate template;
 
 
     @Override
-    public InsulinRatio addRatio(InsulinRatio toAdd) {
+    public InsulinRatio addRatio(InsulinRatio toAdd) throws InvalidRatioValueException, InvalidTimeException {
+        if (toAdd.getRatioFactor() == null) throw new InvalidRatioValueException("Invalid ratio factor entered");
+        if (toAdd.getStart() == null) throw new InvalidTimeException("Invalid start time entered.");
+        if (toAdd.getEnd() == null) throw new InvalidTimeException("Invalid end time entered.");
+
         Integer ratioId = template.queryForObject(
                 "INSERT INTO public.\"InsulinRatios\"(\n" +
                         "\t\"StartTime\", \"EndTime\", \"RatioFactor\")\n" +

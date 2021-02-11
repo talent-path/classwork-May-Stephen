@@ -45,7 +45,14 @@ public class BloodSugarPostgresDaoTests {
         record.setbsValue(140);
         record.setLabel("After lunch");
 
-        BloodSugarRecord returned = toTest.addBloodSugar(record);
+        BloodSugarRecord returned = null;
+        try {
+            returned = toTest.addBloodSugar(record);
+        } catch (InvalidLabelException e) {
+            e.getMessage();
+        } catch (InvalidBSValueException e) {
+            e.getMessage();
+        }
 
         assertEquals(2, returned.getbsValueId());
         assertEquals(140, returned.getbsValue());
@@ -66,7 +73,7 @@ public class BloodSugarPostgresDaoTests {
         record.setbsValue(null);
         record.setLabel("Snack");
 
-        assertThrows(DataIntegrityViolationException.class, () -> toTest.addBloodSugar(record));
+        assertThrows(InvalidBSValueException.class, () -> toTest.addBloodSugar(record));
     }
 
     @Test
@@ -76,6 +83,6 @@ public class BloodSugarPostgresDaoTests {
         record.setbsValue(100);
         record.setLabel(null);
 
-        assertThrows(DataIntegrityViolationException.class, () -> toTest.addBloodSugar(record));
+        assertThrows(InvalidLabelException.class, () -> toTest.addBloodSugar(record));
     }
 }

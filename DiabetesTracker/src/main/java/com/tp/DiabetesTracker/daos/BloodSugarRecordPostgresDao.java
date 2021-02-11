@@ -2,16 +2,15 @@ package com.tp.DiabetesTracker.daos;
 
 import com.tp.DiabetesTracker.daos.mappers.BloodSugarMapper;
 import com.tp.DiabetesTracker.daos.mappers.IntegerMapper;
+import com.tp.DiabetesTracker.exceptions.InvalidBSValueException;
+import com.tp.DiabetesTracker.exceptions.InvalidLabelException;
 import com.tp.DiabetesTracker.models.BloodSugarRecord;
-import com.tp.DiabetesTracker.models.PersonalInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.List;
 
 @Component
@@ -23,7 +22,10 @@ public class BloodSugarRecordPostgresDao implements BloodSugarRecordDao {
 
 
     @Override
-    public BloodSugarRecord addBloodSugar(BloodSugarRecord toAdd) {
+    public BloodSugarRecord addBloodSugar(BloodSugarRecord toAdd) throws InvalidLabelException, InvalidBSValueException {
+        if (toAdd.getLabel() == null) throw new InvalidLabelException("Invalid Label type.");
+        if (toAdd.getbsValue() == null) throw new InvalidBSValueException("Invalid Blood Sugar Value.");
+
         Integer bsValueId = template.queryForObject(
                 "INSERT INTO \"BloodSugarValue\" (\"BSValue\", \"Time\", \"Date\", \"Label\")\n" +
                         "VALUES (?, CURRENT_TIME, CURRENT_DATE, ?) RETURNING \"BSValueId\";",
@@ -44,8 +46,28 @@ public class BloodSugarRecordPostgresDao implements BloodSugarRecordDao {
     }
 
 
-
-
+//    @Override
+//    public List<BloodSugarRecord> getByDate(BloodSugarRecord recordByDate) {
+//
+//        List<BloodSugarRecord> byDate = template.query("SELECT * FROM \"BloodSugarValue\"\n" +
+//                "WHERE \"Date\" = ?",
+//                new BloodSugarMapper(),
+//                recordByDate.getDate());
+//
+//        return byDate;
+//    }
+//
+//    @Override
+//    public BloodSugarRecord getByDate(LocalDate date) {
+//        BloodSugarRecord byDate = template.queryForObject("SELECT * FROM \"BloodSugarValue\"\n",
+//                new BloodSugarMapper());
+//
+//        getByDate(byDate);
+//
+//        return byDate;
+//
+//
+//    }
 
 
 }
