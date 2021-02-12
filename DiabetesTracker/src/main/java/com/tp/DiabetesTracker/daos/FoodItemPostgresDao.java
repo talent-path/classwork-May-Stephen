@@ -1,11 +1,14 @@
 package com.tp.DiabetesTracker.daos;
 
+import com.tp.DiabetesTracker.daos.mappers.FoodItemMapper;
 import com.tp.DiabetesTracker.daos.mappers.IntegerMapper;
 import com.tp.DiabetesTracker.models.FoodItem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 
 @Component
@@ -34,4 +37,13 @@ public class FoodItemPostgresDao implements FoodItemDao{
 
         return toAdd;
     }
+
+    @Override
+    public List<FoodItem> getAllItems() {
+        List<FoodItem> allItems = template.query("SELECT * FROM \"FoodItems\"", new FoodItemMapper());
+                
+                return allItems;
+    }
+
+
 }

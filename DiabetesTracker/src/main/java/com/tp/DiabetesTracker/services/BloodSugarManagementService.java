@@ -58,4 +58,7 @@ public class BloodSugarManagementService {
     public FoodItem addFoodItem(FoodItem toAdd) {
         return foodDao.addFoodItem(toAdd);
     }
+
+    public List<FoodItem> getAllItems() { return foodDao.getAllItems();
+    }
 }
