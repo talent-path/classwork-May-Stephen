@@ -1,10 +1,12 @@
 package com.tp.DiabetesTracker.services;
 
 import com.tp.DiabetesTracker.daos.BloodSugarRecordDao;
+import com.tp.DiabetesTracker.daos.FoodItemDao;
 import com.tp.DiabetesTracker.daos.InsulinRatioDao;
 import com.tp.DiabetesTracker.daos.PersonalInfoDao;
 import com.tp.DiabetesTracker.exceptions.*;
 import com.tp.DiabetesTracker.models.BloodSugarRecord;
+import com.tp.DiabetesTracker.models.FoodItem;
 import com.tp.DiabetesTracker.models.InsulinRatio;
 import com.tp.DiabetesTracker.models.PersonalInfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +29,9 @@ public class BloodSugarManagementService {
     @Autowired
     InsulinRatioDao RatioDao;
 
+    @Autowired
+    FoodItemDao foodDao;
+
     public BloodSugarRecord addBloodSugar(BloodSugarRecord bg) throws InvalidLabelException, InvalidBSValueException {
         return dao.addBloodSugar(bg);
     }
@@ -47,6 +52,10 @@ public class BloodSugarManagementService {
     }
 
 
-    public PersonalInfo editInfo(PersonalInfo toEdit) { return piDao.editWeight(toEdit);
+    public PersonalInfo editInfo(PersonalInfo toEdit) throws InvalidWeightException { return piDao.editWeight(toEdit);
+    }
+
+    public FoodItem addFoodItem(FoodItem toAdd) {
+        return foodDao.addFoodItem(toAdd);
     }
 }

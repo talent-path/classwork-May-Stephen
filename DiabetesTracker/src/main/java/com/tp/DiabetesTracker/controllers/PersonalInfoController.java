@@ -28,7 +28,12 @@ public class PersonalInfoController {
 
     @PutMapping("/editinfo/{userId}")
     public ResponseEntity editWeight(@RequestBody PersonalInfo toEdit) {
-        PersonalInfo editInfo = service.editInfo(toEdit);
+        PersonalInfo editInfo = null;
+        try {
+            editInfo = service.editInfo(toEdit);
+        } catch (InvalidWeightException e) {
+            e.printStackTrace();
+        }
         return ResponseEntity.ok(editInfo);
     }
 }
