@@ -55,7 +55,7 @@ public class BloodSugarManagementService {
     public PersonalInfo editInfo(PersonalInfo toEdit) throws InvalidWeightException { return piDao.editWeight(toEdit);
     }
 
-    public FoodItem addFoodItem(FoodItem toAdd) {
+    public FoodItem addFoodItem(FoodItem toAdd) throws InvalidProteinException, InvalidFiberException, InvalidMealIdException, InvalidCaloriesException, InvalidQuantityException, InvalidFoodNameException, InvalidDateException, InvalidFatException, InvalidCarbsException {
         return foodDao.addFoodItem(toAdd);
     }
 

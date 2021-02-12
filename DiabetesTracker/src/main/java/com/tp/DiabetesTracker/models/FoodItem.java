@@ -6,7 +6,7 @@ public class FoodItem {
 
     Integer foodId;
     String name;
-    Float quantity;
+    Double quantity;
     Integer carbs;
     Integer fat;
     Integer calories;
@@ -32,11 +32,11 @@ public class FoodItem {
         this.mealId = mealId;
     }
 
-    public Float getQuantity() {
+    public Double getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(Float quantity) {
+    public void setQuantity(Double quantity) {
         this.quantity = quantity;
     }
 

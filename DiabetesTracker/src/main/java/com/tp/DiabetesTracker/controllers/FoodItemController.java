@@ -1,6 +1,7 @@
 package com.tp.DiabetesTracker.controllers;
 
 
+import com.tp.DiabetesTracker.exceptions.*;
 import com.tp.DiabetesTracker.models.BloodSugarRecord;
 import com.tp.DiabetesTracker.models.FoodItem;
 import com.tp.DiabetesTracker.services.BloodSugarManagementService;
@@ -21,7 +22,12 @@ public class FoodItemController {
     @PostMapping("/fooditem")
     public ResponseEntity addFood(@RequestBody FoodItem toAdd) {
 
-        FoodItem enteredItem = service.addFoodItem(toAdd);
+        FoodItem enteredItem = null;
+        try {
+            enteredItem = service.addFoodItem(toAdd);
+        } catch (InvalidProteinException | InvalidFiberException | InvalidMealIdException | InvalidCaloriesException | InvalidQuantityException | InvalidFoodNameException | InvalidDateException | InvalidFatException | InvalidCarbsException e) {
+            e.printStackTrace();
+        }
 
         return ResponseEntity.ok(enteredItem);
     }

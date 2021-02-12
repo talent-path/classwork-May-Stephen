@@ -21,7 +21,7 @@ public class FoodItemMapper implements RowMapper<FoodItem> {
         mappedRecord.setProtein(resultSet.getInt("Protein"));
         mappedRecord.setFiber(resultSet.getInt("Fiber"));
         mappedRecord.setMealId(resultSet.getInt("MealId"));
-        mappedRecord.setQuantity(resultSet.getFloat("Quantity"));
+        mappedRecord.setQuantity(resultSet.getDouble("Quantity"));
 
         return mappedRecord;
 
