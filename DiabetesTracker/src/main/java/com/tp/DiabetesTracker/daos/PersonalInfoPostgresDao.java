@@ -46,17 +46,18 @@ public class PersonalInfoPostgresDao implements PersonalInfoDao {
 
     }
 
-    @Override
-    public PersonalInfo editWeight(PersonalInfo toEdit) {
-        Integer userId = template.update("UPDATE \"PersonalInfo\"\n" +
-                "SET \"Weight(lbs.)\" = ?\n" +
-                "WHERE \"UserId\" = '1';",
 
-        toEdit.getWeight(),
-        toEdit.getHeight(),
-        toEdit.getName(),
-        toEdit.getMinBS(),
-        toEdit.getMaxBS());
+    // works, but is printing out null for all values other than weight
+    // Column out of bounds exception, won't work with all other toEdit.getName(), etc.....
+    @Override
+    public PersonalInfo editWeight(PersonalInfo toEdit) throws InvalidWeightException {
+
+        if(toEdit.getWeight() == null) throw new InvalidWeightException("Invalid weight provided.");
+        template.update("UPDATE \"PersonalInfo\"\n" +
+                        "SET \"Weight(lbs.)\" = ?\n" +
+                        "WHERE \"UserId\" = '1';",
+                toEdit.getWeight());
+
 
         return toEdit;
     }

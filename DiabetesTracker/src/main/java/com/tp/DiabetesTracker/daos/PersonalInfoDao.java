@@ -9,5 +9,5 @@ public interface PersonalInfoDao {
 
 
 
-    PersonalInfo editWeight(PersonalInfo toEdit);
+    PersonalInfo editWeight(PersonalInfo toEdit) throws InvalidWeightException;
 }
