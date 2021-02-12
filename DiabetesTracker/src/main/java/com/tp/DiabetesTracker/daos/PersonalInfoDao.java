@@ -8,4 +8,6 @@ public interface PersonalInfoDao {
     PersonalInfo addInfo(PersonalInfo toAdd) throws InvalidNameException, InvalidHeightException, InvalidWeightException, InvalidMinBSException, InvalidMaxBSException;
 
 
+
+    PersonalInfo editWeight(PersonalInfo toEdit);
 }

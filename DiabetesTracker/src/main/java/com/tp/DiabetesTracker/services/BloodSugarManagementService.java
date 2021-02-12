@@ -3,10 +3,7 @@ package com.tp.DiabetesTracker.services;
 import com.tp.DiabetesTracker.daos.BloodSugarRecordDao;
 import com.tp.DiabetesTracker.daos.InsulinRatioDao;
 import com.tp.DiabetesTracker.daos.PersonalInfoDao;
-import com.tp.DiabetesTracker.exceptions.InvalidBSValueException;
-import com.tp.DiabetesTracker.exceptions.InvalidLabelException;
-import com.tp.DiabetesTracker.exceptions.InvalidRatioValueException;
-import com.tp.DiabetesTracker.exceptions.InvalidTimeException;
+import com.tp.DiabetesTracker.exceptions.*;
 import com.tp.DiabetesTracker.models.BloodSugarRecord;
 import com.tp.DiabetesTracker.models.InsulinRatio;
 import com.tp.DiabetesTracker.models.PersonalInfo;
@@ -38,7 +35,7 @@ public class BloodSugarManagementService {
         return dao.getAllRecords();
     }
 
-    public PersonalInfo addInfo(PersonalInfo toAdd) {
+    public PersonalInfo addInfo(PersonalInfo toAdd) throws InvalidMinBSException, InvalidNameException, InvalidWeightException, InvalidMaxBSException, InvalidHeightException {
         return piDao.addInfo(toAdd);
     }
 
@@ -50,4 +47,6 @@ public class BloodSugarManagementService {
     }
 
 
+    public PersonalInfo editInfo(PersonalInfo toEdit) { return piDao.editWeight(toEdit);
+    }
 }

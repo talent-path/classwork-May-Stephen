@@ -17,7 +17,7 @@ import java.sql.SQLException;
 public class PersonalInfoPostgresDao implements PersonalInfoDao {
 
     @Autowired
-    private JdbcTemplate template;
+    JdbcTemplate template;
 
 
     @Override
@@ -33,12 +33,12 @@ public class PersonalInfoPostgresDao implements PersonalInfoDao {
                 "INSERT INTO public.\"PersonalInfo\"(\n" +
                         "\t\"name\", \"Height(in.)\", \"Weight(lbs.)\", \"MinBS\", \"MaxBS\")\n" +
                         "\tVALUES (?, ?, ?, ?, ?) RETURNING \"UserId\";",
-                new IntegerMapper("UserOd"),
+                new IntegerMapper("UserId"),
                 toAdd.getName(),
                 toAdd.getHeight(),
-                toAdd.getWeight());
-                toAdd.getMinBS();
-                toAdd.getMaxBS();
+                toAdd.getWeight(),
+                toAdd.getMinBS(),
+                toAdd.getMaxBS());
 
         toAdd.setUserId(userId);
 
@@ -46,7 +46,20 @@ public class PersonalInfoPostgresDao implements PersonalInfoDao {
 
     }
 
+    @Override
+    public PersonalInfo editWeight(PersonalInfo toEdit) {
+        Integer userId = template.update("UPDATE \"PersonalInfo\"\n" +
+                "SET \"Weight(lbs.)\" = ?\n" +
+                "WHERE \"UserId\" = '1';",
 
+        toEdit.getWeight(),
+        toEdit.getHeight(),
+        toEdit.getName(),
+        toEdit.getMinBS(),
+        toEdit.getMaxBS());
+
+        return toEdit;
+    }
 
 
 }
