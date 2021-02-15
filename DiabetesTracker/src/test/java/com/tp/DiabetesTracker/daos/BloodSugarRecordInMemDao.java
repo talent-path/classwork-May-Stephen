@@ -1,6 +1,7 @@
 package com.tp.DiabetesTracker.daos;
 
 
+import com.tp.DiabetesTracker.exceptions.InvalidDateException;
 import com.tp.DiabetesTracker.models.BloodSugarRecord;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;
@@ -48,7 +49,12 @@ public class BloodSugarRecordInMemDao implements BloodSugarRecordDao{
         return copyList;
     }
 
+    @Override
+    public List<BloodSugarRecord> getRecordsByDay()  {
+        //TODO: Finish the memDao method
+        throw new UnsupportedOperationException("getByDay expected error");
 
+    }
 
 
 }

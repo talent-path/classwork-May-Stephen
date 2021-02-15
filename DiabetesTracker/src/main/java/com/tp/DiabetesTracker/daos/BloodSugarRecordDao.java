@@ -13,4 +13,5 @@ public interface BloodSugarRecordDao {
 
     List<BloodSugarRecord> getAllRecords();
 
+    List<BloodSugarRecord> getRecordsByDay();
 }

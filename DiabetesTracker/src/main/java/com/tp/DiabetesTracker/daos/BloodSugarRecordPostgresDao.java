@@ -31,7 +31,9 @@ public class BloodSugarRecordPostgresDao implements BloodSugarRecordDao {
                         "VALUES (?, CURRENT_TIME, CURRENT_DATE, ?) RETURNING \"BSValueId\";",
                 new IntegerMapper("BSValueId"),
                 toAdd.getbsValue(),
-                toAdd.getLabel());
+                toAdd.getLabel(),
+                toAdd.getDate(),
+                toAdd.getTime());
 
         toAdd.setbsValueId(bsValueId);
 
@@ -43,6 +45,16 @@ public class BloodSugarRecordPostgresDao implements BloodSugarRecordDao {
         List<BloodSugarRecord> allRecords = template.query("SELECT * FROM \"BloodSugarValue\"", new BloodSugarMapper());
 
         return allRecords;
+    }
+
+    @Override
+    public List<BloodSugarRecord> getRecordsByDay() {
+        List<BloodSugarRecord> recordsByDay = template.query("SELECT \"BSValueId\", \"BSValue\", \"Time\", \"Date\", \"Label\"\n" +
+                "\tFROM public.\"BloodSugarValue\"\n" +
+                "\tWHERE \"Date\" = ?;", new BloodSugarMapper());
+
+
+        return recordsByDay;
     }
 
 

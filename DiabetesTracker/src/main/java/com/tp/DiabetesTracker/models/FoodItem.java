@@ -15,6 +15,13 @@ public class FoodItem {
     Integer mealId;
     LocalDate date;
 
+    public FoodItem(FoodItem toAdd) {
+    }
+
+    public FoodItem() {
+
+    }
+
     public LocalDate getDate() {
         return date;
     }

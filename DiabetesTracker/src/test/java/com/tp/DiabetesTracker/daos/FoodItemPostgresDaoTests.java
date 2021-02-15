@@ -85,14 +85,6 @@ public class FoodItemPostgresDaoTests {
 
     }
 
-//    @Test
-//    public void addBloodSugarRecordNullValue() {
-//        BloodSugarRecord record = new BloodSugarRecord();
-//        record.setbsValue(null);
-//        record.setLabel("Snack");
-//
-//        assertThrows(InvalidBSValueException.class, () -> toTest.addBloodSugar(record));
-//    }
 
     @Test
     public void addFoodItemNullNameTest() {

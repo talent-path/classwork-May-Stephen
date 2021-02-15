@@ -1,32 +1,30 @@
 package com.tp.DiabetesTracker.models;
 
-import java.sql.Time;
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.time.LocalDate;
-import java.time.LocalTime;
-import java.util.Date;
 
 public class BloodSugarRecord {
 
     Integer bsValueId;
     Integer bsValue;
     String label;
-    LocalDate date;
-    LocalTime time;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyy-MM-dd")
+    String date;
+    String time;
 
 
-    public LocalDate getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
-        this.date = date;
-    }
 
-    public LocalTime getTime() {
+
+    public String getTime() {
         return time;
     }
 
-    public void setTime(LocalTime time) {
+    public void setTime(String time) {
         this.time = time;
     }
 
@@ -62,6 +60,11 @@ public class BloodSugarRecord {
     public void setLabel(String label) {
         this.label = label;
     }
+
+
+    public void setDate(String date) { this.date = date;
+    }
+
 
 
 }

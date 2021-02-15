@@ -5,6 +5,7 @@ import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
 
 public class BloodSugarMapper implements RowMapper<BloodSugarRecord> {
 
@@ -14,6 +15,8 @@ public class BloodSugarMapper implements RowMapper<BloodSugarRecord> {
         mappedRecord.setbsValueId(resultSet.getInt("BSValueId"));
         mappedRecord.setbsValue(resultSet.getInt("BSValue"));
         mappedRecord.setLabel(resultSet.getString("Label"));
+        mappedRecord.setDate(String.valueOf(resultSet.getDate("Date")));
+        mappedRecord.setTime(String.valueOf(resultSet.getTime("Time")));
 
 
         return mappedRecord;

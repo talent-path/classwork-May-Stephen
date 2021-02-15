@@ -61,4 +61,7 @@ public class BloodSugarManagementService {
 
     public List<FoodItem> getAllItems() { return foodDao.getAllItems();
     }
+
+    public List<BloodSugarRecord> getRecordsByDay() { return dao.getRecordsByDay();
+    }
 }

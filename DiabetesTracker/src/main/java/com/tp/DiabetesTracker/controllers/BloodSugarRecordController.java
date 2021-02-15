@@ -2,7 +2,9 @@ package com.tp.DiabetesTracker.controllers;
 
 
 import com.tp.DiabetesTracker.exceptions.InvalidBSValueException;
+import com.tp.DiabetesTracker.exceptions.InvalidDateException;
 import com.tp.DiabetesTracker.exceptions.InvalidLabelException;
+import com.tp.DiabetesTracker.exceptions.InvalidTimeException;
 import com.tp.DiabetesTracker.models.BloodSugarRecord;
 import com.tp.DiabetesTracker.services.BloodSugarManagementService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,6 +41,10 @@ public class BloodSugarRecordController {
     public List<BloodSugarRecord> getAllRecords() {
         return service.getAllRecords();
     }
+
+
+    @GetMapping("/day/{Date}")
+    public List<BloodSugarRecord> getRecordByDay() { return service.getRecordsByDay();}
 }
 
 
