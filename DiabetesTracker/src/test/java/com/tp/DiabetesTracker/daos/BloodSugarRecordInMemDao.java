@@ -50,11 +50,11 @@ public class BloodSugarRecordInMemDao implements BloodSugarRecordDao{
     }
 
     @Override
-    public List<BloodSugarRecord> getRecordsByDay()  {
-        //TODO: Finish the memDao method
-        throw new UnsupportedOperationException("getByDay expected error");
-
+    public List<BloodSugarRecord> getRecordsByDate() {
+        return null;
     }
+
+
 
 
 }

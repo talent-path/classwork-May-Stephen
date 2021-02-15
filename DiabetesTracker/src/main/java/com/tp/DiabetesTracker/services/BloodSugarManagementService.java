@@ -12,8 +12,6 @@ import com.tp.DiabetesTracker.models.PersonalInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 
@@ -62,6 +60,8 @@ public class BloodSugarManagementService {
     public List<FoodItem> getAllItems() { return foodDao.getAllItems();
     }
 
-    public List<BloodSugarRecord> getRecordsByDay() { return dao.getRecordsByDay();
+
+    public List<BloodSugarRecord> getRecordByDate() {
+        return dao.getRecordsByDate();
     }
 }

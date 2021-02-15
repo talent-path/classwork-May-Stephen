@@ -48,14 +48,16 @@ public class BloodSugarRecordPostgresDao implements BloodSugarRecordDao {
     }
 
     @Override
-    public List<BloodSugarRecord> getRecordsByDay() {
-        List<BloodSugarRecord> recordsByDay = template.query("SELECT \"BSValueId\", \"BSValue\", \"Time\", \"Date\", \"Label\"\n" +
+    public List<BloodSugarRecord> getRecordsByDate() {
+        List<BloodSugarRecord> recordsByDate = template.query("SELECT *\n" +
                 "\tFROM public.\"BloodSugarValue\"\n" +
-                "\tWHERE \"Date\" = ?;", new BloodSugarMapper());
+                "\t\tWHERE \"Date\" = CURRENT_DATE;", new BloodSugarMapper());
 
-
-        return recordsByDay;
+        return recordsByDate;
     }
+
+
+}
 
 
 //    @Override
@@ -82,7 +84,7 @@ public class BloodSugarRecordPostgresDao implements BloodSugarRecordDao {
 //    }
 
 
-}
+
 
 
 
