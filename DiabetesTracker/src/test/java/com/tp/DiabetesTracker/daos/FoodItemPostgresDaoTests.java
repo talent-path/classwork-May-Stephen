@@ -16,6 +16,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @SpringBootTest
 @ActiveProfiles("daoTesting")
@@ -82,15 +83,158 @@ public class FoodItemPostgresDaoTests {
 
         List<FoodItem> allItems = toTest.getAllItems();
 
-//        assertEquals("Banana", allItems.get(1).getName());
-//        assertEquals(21, allItems.get(1).getCarbs());
-//        assertEquals(2.0, allItems.get(1).getQuantity());
-//        assertEquals(4, allItems.get(1).getProtein());
-//        assertEquals(4, allItems.get(1).getFiber());
-//        assertEquals(2, allItems.get(1).getMealId());
-//        assertEquals(4, allItems.get(1).getFat());
-//        assertEquals(LocalDate.of(2021, 2, 12), allItems.get(1).getDate());
-//        assertEquals(68, allItems.get(1).getCalories());
     }
 
+//    @Test
+//    public void addBloodSugarRecordNullValue() {
+//        BloodSugarRecord record = new BloodSugarRecord();
+//        record.setbsValue(null);
+//        record.setLabel("Snack");
+//
+//        assertThrows(InvalidBSValueException.class, () -> toTest.addBloodSugar(record));
+//    }
+
+    @Test
+    public void addFoodItemNullNameTest() {
+        FoodItem item = new FoodItem();
+        item.setName(null);
+        item.setCarbs(21);
+        item.setFat(4);
+        item.setCalories(68);
+        item.setProtein(4);
+        item.setFiber(4);
+        item.setMealId(2);
+        item.setQuantity(2.0);
+        item.setDate(LocalDate.of(2021, 2, 12));
+
+        assertThrows(InvalidFoodNameException.class, () -> toTest.addFoodItem(item));
+    }
+
+    @Test
+    public void addFoodItemNullCarbsTest() {
+        FoodItem item = new FoodItem();
+        item.setName("Banana");
+        item.setCarbs(null);
+        item.setFat(4);
+        item.setCalories(68);
+        item.setProtein(4);
+        item.setFiber(4);
+        item.setMealId(2);
+        item.setQuantity(2.0);
+        item.setDate(LocalDate.of(2021, 2, 12));
+
+        assertThrows(InvalidCarbsException.class, () -> toTest.addFoodItem(item));
+    }
+
+    @Test
+    public void addFoodItemNullFatTest() {
+        FoodItem item = new FoodItem();
+        item.setName("Banana");
+        item.setCarbs(21);
+        item.setFat(null);
+        item.setCalories(68);
+        item.setProtein(4);
+        item.setFiber(4);
+        item.setMealId(2);
+        item.setQuantity(2.0);
+        item.setDate(LocalDate.of(2021, 2, 12));
+
+        assertThrows(InvalidFatException.class, () -> toTest.addFoodItem(item));
+    }
+
+    @Test
+    public void addFoodItemNullCaloriesTest() {
+        FoodItem item = new FoodItem();
+        item.setName("Banana");
+        item.setCarbs(21);
+        item.setFat(4);
+        item.setCalories(null);
+        item.setProtein(4);
+        item.setFiber(4);
+        item.setMealId(2);
+        item.setQuantity(2.0);
+        item.setDate(LocalDate.of(2021, 2, 12));
+
+        assertThrows(InvalidCaloriesException.class, () -> toTest.addFoodItem(item));
+    }
+
+    @Test
+    public void addFoodItemNullProteinTest() {
+        FoodItem item = new FoodItem();
+        item.setName("Banana");
+        item.setCarbs(21);
+        item.setFat(4);
+        item.setCalories(68);
+        item.setProtein(null);
+        item.setFiber(4);
+        item.setMealId(2);
+        item.setQuantity(2.0);
+        item.setDate(LocalDate.of(2021, 2, 12));
+
+        assertThrows(InvalidProteinException.class, () -> toTest.addFoodItem(item));
+    }
+
+    @Test
+    public void addFoodItemNullFiberTest() {
+        FoodItem item = new FoodItem();
+        item.setName("Banana");
+        item.setCarbs(21);
+        item.setFat(4);
+        item.setCalories(68);
+        item.setProtein(4);
+        item.setFiber(null);
+        item.setMealId(2);
+        item.setQuantity(2.0);
+        item.setDate(LocalDate.of(2021, 2, 12));
+
+        assertThrows(InvalidFiberException.class, () -> toTest.addFoodItem(item));
+    }
+
+    @Test
+    public void addFoodItemNullMealIdTest() {
+        FoodItem item = new FoodItem();
+        item.setName("Banana");
+        item.setCarbs(21);
+        item.setFat(4);
+        item.setCalories(68);
+        item.setProtein(4);
+        item.setFiber(4);
+        item.setMealId(null);
+        item.setQuantity(2.0);
+        item.setDate(LocalDate.of(2021, 2, 12));
+
+        assertThrows(InvalidMealIdException.class, () -> toTest.addFoodItem(item));
+    }
+
+    @Test
+    public void addFoodItemNullQuantityTest() {
+        FoodItem item = new FoodItem();
+        item.setName("Banana");
+        item.setCarbs(21);
+        item.setFat(4);
+        item.setCalories(68);
+        item.setProtein(4);
+        item.setFiber(4);
+        item.setMealId(2);
+        item.setQuantity(null);
+        item.setDate(LocalDate.of(2021, 2, 12));
+
+        assertThrows(InvalidQuantityException.class, () -> toTest.addFoodItem(item));
+    }
+
+    @Test
+    public void addFoodItemNullDateTest() {
+        FoodItem item = new FoodItem();
+        item.setName("Banana");
+        item.setCarbs(21);
+        item.setFat(4);
+        item.setCalories(68);
+        item.setProtein(4);
+        item.setFiber(4);
+        item.setMealId(2);
+        item.setQuantity(2.0);
+        item.setDate(null);
+
+        assertThrows(InvalidDateException.class, () -> toTest.addFoodItem(item));
+    }
 }
