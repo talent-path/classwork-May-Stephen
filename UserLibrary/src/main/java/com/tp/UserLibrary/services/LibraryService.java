@@ -42,7 +42,7 @@ public class LibraryService {
     return book;
     }
 
-    public void deleteBook(Integer bookId) throws InvalidBookIdException, NullBookIdException {
+    public void deleteBook(Integer bookId){
         dao.deleteBook(bookId);
     }
 

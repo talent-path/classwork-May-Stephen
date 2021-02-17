@@ -53,12 +53,9 @@ public class LibraryController {
 
     @DeleteMapping("/delete/{bookId}")
     public String deleteBook(@PathVariable Integer bookId) {
-        try{
+
             service.deleteBook(bookId);
             return "Book " + bookId + " deleted successfully.";
-        }
-        catch(InvalidBookIdException | NullBookIdException ex) {
-            return ex.getMessage();
         }
     }
 
@@ -69,6 +66,6 @@ public class LibraryController {
 //
 //        }
 //    }
-}
+
 
 

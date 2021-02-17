@@ -47,6 +47,8 @@ public class BloodSugarRecordPostgresDao implements BloodSugarRecordDao {
         return allRecords;
     }
 
+
+    // TODO: Update to allow for days other than today
     @Override
     public List<BloodSugarRecord> getRecordsByDate() {
         List<BloodSugarRecord> recordsByDate = template.query("SELECT *\n" +
@@ -60,28 +62,6 @@ public class BloodSugarRecordPostgresDao implements BloodSugarRecordDao {
 }
 
 
-//    @Override
-//    public List<BloodSugarRecord> getByDate(BloodSugarRecord recordByDate) {
-//
-//        List<BloodSugarRecord> byDate = template.query("SELECT * FROM \"BloodSugarValue\"\n" +
-//                "WHERE \"Date\" = ?",
-//                new BloodSugarMapper(),
-//                recordByDate.getDate());
-//
-//        return byDate;
-//    }
-//
-//    @Override
-//    public BloodSugarRecord getByDate(LocalDate date) {
-//        BloodSugarRecord byDate = template.queryForObject("SELECT * FROM \"BloodSugarValue\"\n",
-//                new BloodSugarMapper());
-//
-//        getByDate(byDate);
-//
-//        return byDate;
-//
-//
-//    }
 
 
 

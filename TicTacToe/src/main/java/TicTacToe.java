@@ -19,32 +19,39 @@ public class TicTacToe {
         printBoard(board);
         while (!gameOver) {
 
-
+                // place in for loop, print out wins and losses
                 //int numGames = Console.readInt("How many games would you like to play (max 9)? ", 1, 9);
+
+            // prompt user to choose a tile
                     int tile = Console.readInt("Enter a tile to place your piece in (1-9): ", 1, 9);
                     tileOccupied(board);
-                    if (!isOccupied) {
+                    if (isOccupied) {
                         tile = Console.readInt("Enter a tile to place your piece in (1-9): ", 1, 9);
                     }
+
                     tileChoice(board, tile, "user");
                     //isTileOccupied(board);
+                    // check if player has won
                     checkWinner(board);
                     if(gameOver == true) {
                         break;
                     }
+
                     System.out.println();
                     System.out.println("CPU's move:");
                     System.out.println();
+
                     Random rand = new Random();
                     int cpuTile = rand.nextInt(9) + 1;
                     tileOccupied(board);
-                    if (!isOccupied) {
+                    if (isOccupied) {
                         cpuTile = rand.nextInt(9) + 1;
                     }
                     tileChoice(board, cpuTile, "cpu");
                     //isTileOccupied(board);
-                    System.out.println();
 
+                    System.out.println();
+                    // check if cpu has won
                     checkWinner(board);
                     if(gameOver == true) {
                         break;
@@ -55,7 +62,7 @@ public class TicTacToe {
     }
 
 
-
+    // print out the board
     public static void printBoard(char[][] board) {
         for (char[] row : board) {
             for (char i : row) {
@@ -67,7 +74,8 @@ public class TicTacToe {
     }
 
     public static void tileChoice(char[][] board, int tile, String player) {
-
+        // decide whether an X or a O is placed
+        // whose turn it is
         char team = ' ';
 
             if (player.equals("user")) {

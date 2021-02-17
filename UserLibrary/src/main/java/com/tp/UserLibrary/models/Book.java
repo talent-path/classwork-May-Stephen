@@ -1,24 +1,29 @@
 package com.tp.UserLibrary.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Book {
-    private Integer bookId;
-    private String title;
-    private List<String> authors;
-    private Integer year;
-
-
-    public Book(Book that) {
-
-        this.title = that.getTitle();
-        this.authors = that.getAuthors();
-        this.year = that.getYear();
-    }
+    Integer bookId;
+    String title;
+    List<String> authors;
+    Integer year;
 
     public Book() {
 
     }
+
+    public Book(Book that) {
+        this.bookId = that.bookId;
+        this.title = that.title;
+
+        this.year = that.year;
+
+        this.authors = new ArrayList<>();
+        this.authors.addAll(that.authors);
+    }
+
+
 
     public Integer getBookId() {
         return bookId;
@@ -37,14 +42,18 @@ public class Book {
     }
 
     public void setAuthors(List<String> authors) {
+        this.authors = authors;
     }
 
     public void setBookId(Integer bookId) {
+        this.bookId = bookId;
     }
 
     public void setTitle(String title) {
+        this.title = title;
     }
 
     public void setYear(Integer year) {
+        this.year = year;
     }
 }

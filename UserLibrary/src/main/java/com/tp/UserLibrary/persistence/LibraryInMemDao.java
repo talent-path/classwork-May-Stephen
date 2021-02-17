@@ -12,6 +12,7 @@ public class LibraryInMemDao implements LibraryDao {
 
     List<Book> allBooks = new ArrayList<>();
 
+
     @Override
     public List<Book> getAllBooks() {
         List<Book> copyList = new ArrayList<>();
@@ -22,6 +23,8 @@ public class LibraryInMemDao implements LibraryDao {
 
         return copyList;
     }
+
+
 
 
     @Override
@@ -53,7 +56,7 @@ public class LibraryInMemDao implements LibraryDao {
 
 
         Book copy = new Book(partialBook);
-        copy.setBookId(id);
+
         allBooks.add(copy);
         return copy;
     }
@@ -100,7 +103,7 @@ public class LibraryInMemDao implements LibraryDao {
     }
 
     @Override
-    public void deleteBook(Integer bookId) throws InvalidBookIdException {
+    public String deleteBook(Integer bookId){
         int removeIndex = -1;
 
         for( int i = 0; i < allBooks.size(); i++) {
@@ -108,13 +111,10 @@ public class LibraryInMemDao implements LibraryDao {
                 removeIndex = i;
                 break;
             }
+
         }
 
-        if(removeIndex != -1){
-            allBooks.remove(removeIndex);
-        } else {
-            throw new InvalidBookIdException("Could not find book with ID " + bookId);
-        }
+        return "Book deleted.";
     }
 
 

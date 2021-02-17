@@ -143,16 +143,5 @@ public class LibraryInMemDaoTests {
         assertThrows(InvalidTitleException.class, () -> toTest.addBook(partialBook));
     }
 
-    @Test
-    public void testGetAllBooksCorrectId() {
-        Book partialBook = new Book();
-        partialBook.setTitle("Test title");
-        partialBook.setYear(2020);
-        List<String> authors = new ArrayList<>();
-        authors.add("Test author");
-        partialBook.setAuthors(authors);
-
-        assertThrows(InvalidTitleException.class, () -> toTest.getAllBooks(partialBook));
-    }
 }
 

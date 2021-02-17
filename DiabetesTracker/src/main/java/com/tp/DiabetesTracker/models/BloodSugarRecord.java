@@ -9,7 +9,7 @@ public class BloodSugarRecord {
     Integer bsValueId;
     Integer bsValue;
     String label;
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyy-MM-dd")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     String date;
     String time;
 
