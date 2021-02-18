@@ -12,13 +12,15 @@
     </header>
     <main>
         <div style="text-align: center;">
-            <div style="border: 10px solid #000000; width: 100px; height: 100px; margin-left: 10px; display: inline-block; background-color: #8d8686d7"></div>
-            <div style="border: 10px solid #000000; width: 100px; height: 100px; margin-left: 20px; display: inline-block; background-color: #8d8686d7"></div>
-            <div style="border: 10px solid #000000; width: 100px; height: 100px; margin-left: 20px; display: inline-block; background-color: #8d8686d7"></div>
-            <div style="border: 10px solid #000000; width: 100px; height: 100px; margin-left: 20px; display: inline-block; background-color: #8d8686d7"></div>
+            <div id="box1" style="border: 10px solid #000000; width: 100px; height: 100px; margin-left: 10px; display: inline-block; background-color: #8d8686d7"></div>
+                
+            <div id="box2" style="border: 10px solid #000000; width: 100px; height: 100px; margin-left: 20px; display: inline-block; background-color: #8d8686d7"></div>
+            <div id="box3" style="border: 10px solid #000000; width: 100px; height: 100px; margin-left: 20px; display: inline-block; background-color: #8d8686d7"></div>
+            <div id="box4" style="border: 10px solid #000000; width: 100px; height: 100px; margin-left: 20px; display: inline-block; background-color: #8d8686d7"></div>
         </div>
         <br/>
-        <input style="text-align: center; margin-left: 640px" type="text" placeholder="Enter a guess here" ></input>
+            <input id="guess" name ="guess" style="text-align: center; margin-left: 640px;" maxlength="4" type="text" placeholder="Enter a guess here"  ></input>
+            <input id = "guessSubmit" onclick="checkGuess()" type="button" ></input> 
     </main>
 
     <script type="text/javascript" src="index.js"></script>
