@@ -28,14 +28,22 @@ const getByName = function() {
                 let cardImage = document.createElement("img");
                     cardImage.id = "card" + i;
                     cardImage.class = "cards";
+                    
+                    
+                    cardImage.style.margin = "20px";
+                    cardImage.style.height = "300px";
+                    cardImage.style.width = "240px";
                     let imageUrl = `${data.data[i].images.small}`;
+                    // if (imageUrl === `https://images.pokemontcg.io/bwp/BW004.png` ||
+                    //  'https://images.pokemontcg.io/bwp/BW005.png'){
+                    //         imageUrl = `${data.data[i].images.large}`;
+                    //     }
                     cardImage.src = imageUrl;
-                    cardImage.style.margin = "17px";
                     document.getElementById("results").appendChild(cardImage);
             }
         }
     );
-    i = 0;
+
 }
 
 const getByType = function() {
@@ -46,19 +54,32 @@ const getByType = function() {
         function(data, textStatus, jqXHR) {
             let count = `${data.count}`;
 
-            for( i = 0; i < count; i++) {
+            for( i = 0; i < 70; i++) {
+                let page = 1;
                 let cardImage = document.createElement("img");
                     cardImage.id = "card" + i;
                     cardImage.class = "cards";
-                    cardImage.style.margin = "17px";
+                    cardImage.style.margin = "20px";
+                    cardImage.style.height = "300px";
+                    cardImage.style.width = "240px";
                     let imageUrl = `${data.data[i].images.small}`;
+                    // if (imageUrl === `https://images.pokemontcg.io/bwp/BW004.png` || 'https://images.pokemontcg.io/bwp/BW005.png'){
+                    //         imageUrl = `${data.data[i].images.large}`;
+                    //     }
                     cardImage.src = imageUrl;
                     document.getElementById("results").appendChild(cardImage);
+                    
+                    
             }
+            console.log(data);
         }
         
     );
     
+}
+
+const printCards = function() {
+
 }
 
 
