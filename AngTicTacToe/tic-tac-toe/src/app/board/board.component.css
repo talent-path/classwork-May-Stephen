@@ -1,0 +1,30 @@
+.board{
+    text-align: center;
+    width: 100vmin;
+    height: 100vmin;
+    display: inline-block;
+    background-color: grey;
+    border-style: solid;
+    border-color: black;
+    border-width: 10%;
+
+    
+    
+}
+
+.rowDiv{
+    height: 33.3%;
+    width: 100%;
+    
+}
+
+.page {
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 50%;
+    margin-left: 20px;
+}

@@ -1,0 +1,11 @@
+
+ <div class="page">
+    <h1>Tic Tac Toe!</h1>
+    <div class="board">
+        <div *ngFor="let row of board.allSquares; index as r" class="rowDiv">
+            <app-square *ngFor="let s of board.allSquares[r]; index as c" [isX]="s" [row]="r" [col]="c"></app-square>
+        </div>
+    </div>
+
+    <button class="button" onclick="resetBoard()">Reset</button>
+</div>
