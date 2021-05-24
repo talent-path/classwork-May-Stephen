@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f9ad155c-a469-4f06-a1b6-6d3b301fd618" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/DiabetesTrackerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/controllers/BloodSugarRecordController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/controllers/FoodItemController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/controllers/InsulinRatioController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/controllers/PersonalInfoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/daos/BloodSugarRecordDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/daos/BloodSugarRecordPostgresDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/daos/FoodItemDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/daos/FoodItemPostgresDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/daos/InsulinRatioDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/daos/InsulinRatioPostgresDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/daos/PersonalInfoDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/daos/PersonalInfoPostgresDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/daos/mappers/BloodSugarMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/daos/mappers/FoodItemMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/daos/mappers/InsulinRatioMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/daos/mappers/IntegerMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/daos/mappers/PersonalInfoMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/exceptions/InvalidBSValueException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/exceptions/InvalidCaloriesException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/exceptions/InvalidCarbsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/exceptions/InvalidDateException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/exceptions/InvalidFatException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/exceptions/InvalidFiberException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/exceptions/InvalidFoodNameException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/exceptions/InvalidHeightException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/exceptions/InvalidLabelException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/exceptions/InvalidMaxBSException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/exceptions/InvalidMealIdException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/exceptions/InvalidMinBSException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/exceptions/InvalidNameException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/exceptions/InvalidProteinException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/exceptions/InvalidQuantityException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/exceptions/InvalidRatioValueException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/exceptions/InvalidTimeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/exceptions/InvalidWeightException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/models/BloodSugarRecord.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/models/FoodItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/models/InsulinRatio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/models/PersonalInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tp/DiabetesTracker/services/BloodSugarManagementService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/tp/DiabetesTracker/DiabetesTrackerApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/tp/DiabetesTracker/daos/BloodSugarPostgresDaoTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/tp/DiabetesTracker/daos/BloodSugarRecordInMemDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/tp/DiabetesTracker/daos/FoodItemInMemDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/tp/DiabetesTracker/daos/FoodItemPostgresDaoTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/tp/DiabetesTracker/daos/InsulinRatioInMemDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/tp/DiabetesTracker/daos/InsulinRatioPostgresDaoTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/tp/DiabetesTracker/daos/PersonalInfoInMemDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/tp/DiabetesTracker/daos/PersonalInfoPostgresDaoTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/tp/DiabetesTracker/services/BloodSugarManagementTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TSChess/Pieces/King.js" beforeDir="false" afterPath="$PROJECT_DIR$/../TSChess/Pieces/King.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1oFpTaaDeqZLEITDUygqTJkocHn" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.tp.DiabetesTracker.daos" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.DiabetesTrackerApplication">
+    <configuration name="DiabetesTrackerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tp.DiabetesTracker.DiabetesTrackerApplication" />
+      <module name="DiabetesTracker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tp.DiabetesTracker.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BloodSugarPostgresDaoTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DiabetesTracker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tp.DiabetesTracker.daos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tp.DiabetesTracker.daos" />
+      <option name="MAIN_CLASS_NAME" value="com.tp.DiabetesTracker.daos.BloodSugarPostgresDaoTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FoodItemPostgresDaoTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DiabetesTracker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tp.DiabetesTracker.daos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tp.DiabetesTracker.daos" />
+      <option name="MAIN_CLASS_NAME" value="com.tp.DiabetesTracker.daos.FoodItemPostgresDaoTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InsulinRatioPostgresDaoTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DiabetesTracker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tp.DiabetesTracker.daos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tp.DiabetesTracker.daos" />
+      <option name="MAIN_CLASS_NAME" value="com.tp.DiabetesTracker.daos.InsulinRatioPostgresDaoTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.tp.DiabetesTracker.daos in DiabetesTracker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DiabetesTracker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tp.DiabetesTracker.daos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tp.DiabetesTracker.daos" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.DiabetesTrackerApplication" />
+        <item itemvalue="JUnit.FoodItemPostgresDaoTests" />
+        <item itemvalue="JUnit.InsulinRatioPostgresDaoTests" />
+        <item itemvalue="JUnit.BloodSugarPostgresDaoTests" />
+        <item itemvalue="JUnit.com.tp.DiabetesTracker.daos in DiabetesTracker" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f9ad155c-a469-4f06-a1b6-6d3b301fd618" name="Default Changelist" comment="" />
+      <created>1612892202435</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612892202435</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

@@ -44,10 +44,20 @@ var King = /** @class */ (function (_super) {
         _this.inCheck = function (moveOn, currentSpot, endSpot, isWhite) {
             var opposingPieces = [];
             for (var _i = 0, _a = moveOn.allSquares; _i < _a.length; _i++) {
-                var oppSquare = _a[_i];
-                console.log(oppSquare);
+                var row = _a[_i];
+                console.log(row);
+                for (var _b = 0, row_1 = row; _b < row_1.length; _b++) {
+                    var piece = row_1[_b];
+                    if (piece !== null && piece.isWhite != this.isWhite) {
+                        opposingPieces.push(piece);
+                    }
+                }
             }
             return false;
+            // let queensMoves : Move[] = new Queen(this.isWhite).generateMoves(moveOn, currentSpot);
+            // let knightsMoves : Move[] = new Knight(this.isWhite).generateMoves(moveOn, currentSpot);
+            // let allEnemyMoves = queensMoves.concat(knightsMoves);
+            // return false;
         };
         return _this;
     }
