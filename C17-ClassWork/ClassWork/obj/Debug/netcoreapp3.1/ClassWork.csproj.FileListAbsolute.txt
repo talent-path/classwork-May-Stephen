@@ -1,0 +1,12 @@
+/Users/stephenmay/Desktop/classwork-May-Stephen/hello-world/ClassWork/ClassWork/bin/Debug/netcoreapp3.1/ClassWork.deps.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/hello-world/ClassWork/ClassWork/bin/Debug/netcoreapp3.1/ClassWork.runtimeconfig.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/hello-world/ClassWork/ClassWork/bin/Debug/netcoreapp3.1/ClassWork.runtimeconfig.dev.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/hello-world/ClassWork/ClassWork/bin/Debug/netcoreapp3.1/ClassWork.dll
+/Users/stephenmay/Desktop/classwork-May-Stephen/hello-world/ClassWork/ClassWork/bin/Debug/netcoreapp3.1/ClassWork.pdb
+/Users/stephenmay/Desktop/classwork-May-Stephen/hello-world/ClassWork/ClassWork/obj/Debug/netcoreapp3.1/ClassWork.csprojAssemblyReference.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/hello-world/ClassWork/ClassWork/obj/Debug/netcoreapp3.1/ClassWork.AssemblyInfoInputs.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/hello-world/ClassWork/ClassWork/obj/Debug/netcoreapp3.1/ClassWork.AssemblyInfo.cs
+/Users/stephenmay/Desktop/classwork-May-Stephen/hello-world/ClassWork/ClassWork/obj/Debug/netcoreapp3.1/ClassWork.csproj.CoreCompileInputs.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/hello-world/ClassWork/ClassWork/obj/Debug/netcoreapp3.1/ClassWork.dll
+/Users/stephenmay/Desktop/classwork-May-Stephen/hello-world/ClassWork/ClassWork/obj/Debug/netcoreapp3.1/ClassWork.pdb
+/Users/stephenmay/Desktop/classwork-May-Stephen/hello-world/ClassWork/ClassWork/obj/Debug/netcoreapp3.1/ClassWork.genruntimeconfig.cache

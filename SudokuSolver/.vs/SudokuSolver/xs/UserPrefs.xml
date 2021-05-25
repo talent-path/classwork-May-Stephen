@@ -1,16 +1,16 @@
 ﻿<Properties StartupConfiguration="{87A971A2-8C89-4062-BF70-FA2B9DC44AE1}|Default">
   <MonoDevelop.Ide.ItemProperties.SudokuSolver PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SudokuSolver/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SudokuSolver/SudokuBoard.cs">
     <Files>
-      <File FileName="SudokuSolver/SudokuBoard.cs" Line="1" Column="1" />
-      <File FileName="SudokuSolver/Program.cs" Line="1" Column="1" />
+      <File FileName="SudokuSolver/SudokuBoard.cs" Line="61" Column="1" />
+      <File FileName="SudokuSolver/Program.cs" Line="24" Column="35" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SudokuSolver" expanded="True">
             <Node name="SudokuSolver" expanded="True">
-              <Node name="Program.cs" selected="True" />
+              <Node name="SudokuBoard.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -23,7 +23,9 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/stephenmay/Desktop/classwork-May-Stephen/SudokuSolver/SudokuSolver/SudokuBoard.cs" relfile="SudokuSolver/SudokuBoard.cs" line="57" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

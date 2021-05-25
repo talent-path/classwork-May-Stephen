@@ -5,18 +5,22 @@ namespace SudokuSolver
     public class SudokuBoard
     {
         private int[,] _vals = new int[9, 9];
+
         public List<int>[,] AllowableVals { get; } = new List<int>[9, 9];
+
         public SudokuBoard(int[,] vals)
         {
             //faster
             Array.Copy(vals, _vals, 81);
             PopulateAllowableVals();
         }
+
         public SudokuBoard(SudokuBoard board)
         {
             Array.Copy(board._vals, _vals, 81);
             PopulateAllowableVals();
         }
+
         public bool Solve()
         {
             int minCount = getMinCount(AllowableVals);
@@ -24,23 +28,29 @@ namespace SudokuSolver
             {
                 for (int col = 0; col < 9; col++)
                 {
-                    if (AllowableVals[row, col] != null && AllowableVals[row, col].Count == minCount)
+                    if (AllowableVals[row, col].Count == minCount)
                     {
                         //Iterate through all allowable values
                         for (int i = 0; i < AllowableVals[row, col].Count; i++)
                         {
                             //Try each value, if not winnable, break
                             SetValue(row, col, AllowableVals[row, col][i]);
-                            if (Solve())
+                            if (CheckWin())
                             {
                                 return true;
                             }
+                           
                         }
                         return false;
                     }
+
+                    
                 }
+
             }
+            return false;
         }
+
         public int getMinCount(List<int>[,] AllowableVals)
         {
             int min = 9;
@@ -48,7 +58,7 @@ namespace SudokuSolver
             {
                 for (int col = 0; col < 9; col++)
                 {
-                    if (AllowableVals[row, col].Count < min)
+                    if (AllowableVals[row, col].Count < min && AllowableVals[row, col].Count > 0)
                     {
                         min = AllowableVals[row, col].Count;
                     }
@@ -56,7 +66,8 @@ namespace SudokuSolver
             }
             return min;
         }
-        public bool checkWin()
+
+        public bool CheckWin()
         {
             for (int row = 0; row < 9; row++)
             {
@@ -72,6 +83,7 @@ namespace SudokuSolver
             Console.WriteLine("You won!!!");
             return true;
         }
+
         private void PopulateAllowableVals()
         {
             for (int i = 0; i < 9; i++)
@@ -89,6 +101,7 @@ namespace SudokuSolver
                 }
             }
         }
+
         internal void SetValue(int row, int col, int v)
         {
             //update _vals
@@ -100,6 +113,7 @@ namespace SudokuSolver
         /// Compute the allowed values at a given position.
         /// </summary>
         /// <returns>A list of numbers that could go at the current location.</returns>
+
         private List<int> ComputeAllowedVals(int row, int col)
         {
             List<int> allAllowed = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
