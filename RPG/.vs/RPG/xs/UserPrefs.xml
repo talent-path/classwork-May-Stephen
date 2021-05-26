@@ -1,0 +1,49 @@
+﻿<Properties StartupConfiguration="{C6D9DD56-F394-4CDD-B207-4438ABC376F3}|Default">
+  <MonoDevelop.Ide.ItemProperties.RPG PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="RPG/Classes/Monster.cs">
+    <Files>
+      <File FileName="RPG/Weapons/Crossbow.cs" Line="32" Column="6" />
+      <File FileName="RPG/ArmorType/Shirt.cs" />
+      <File FileName="RPG/ArmorType/Shield.cs" />
+      <File FileName="RPG/ArmorType/Helmet.cs" />
+      <File FileName="RPG/Abstracts/Weapon.cs" />
+      <File FileName="RPG/Classes/Brute.cs" />
+      <File FileName="RPG/Interface/IFighter.cs" />
+      <File FileName="RPG/Abstracts/Fighter.cs" />
+      <File FileName="RPG/Interface/IHealthy.cs" />
+      <File FileName="RPG/Interface/IWeapon.cs" />
+      <File FileName="RPG/Abstracts/Clothing.cs" />
+      <File FileName="RPG/Classes/Ninja.cs" />
+      <File FileName="RPG/Classes/Troll.cs" />
+      <File FileName="RPG/Program.cs" />
+      <File FileName="RPG/Weapons/Fists.cs" Line="25" Column="10" />
+      <File FileName="RPG/Classes/Monster.cs" Line="11" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="RPG" expanded="True">
+            <Node name="RPG" expanded="True">
+              <Node name="Abstracts" expanded="True" />
+              <Node name="ArmorType" expanded="True" />
+              <Node name="Classes" expanded="True">
+                <Node name="Monster.cs" selected="True" />
+              </Node>
+              <Node name="Interface" expanded="True" />
+              <Node name="Weapons" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

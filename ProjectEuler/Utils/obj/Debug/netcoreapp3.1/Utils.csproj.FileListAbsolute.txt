@@ -1,0 +1,9 @@
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Utils/bin/Debug/netcoreapp3.1/Utils.deps.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Utils/bin/Debug/netcoreapp3.1/Utils.dll
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Utils/bin/Debug/netcoreapp3.1/Utils.pdb
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Utils/obj/Debug/netcoreapp3.1/Utils.csprojAssemblyReference.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Utils/obj/Debug/netcoreapp3.1/Utils.AssemblyInfoInputs.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Utils/obj/Debug/netcoreapp3.1/Utils.AssemblyInfo.cs
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Utils/obj/Debug/netcoreapp3.1/Utils.csproj.CoreCompileInputs.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Utils/obj/Debug/netcoreapp3.1/Utils.dll
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Utils/obj/Debug/netcoreapp3.1/Utils.pdb
