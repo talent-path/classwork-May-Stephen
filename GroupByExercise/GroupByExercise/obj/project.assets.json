@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/stephenmay/Desktop/classwork-May-Stephen/RPG/RPG/RPG.csproj",
-      "projectName": "RPG",
-      "projectPath": "/Users/stephenmay/Desktop/classwork-May-Stephen/RPG/RPG/RPG.csproj",
+      "projectUniqueName": "/Users/stephenmay/Desktop/classwork-May-Stephen/GroupByExercise/GroupByExercise/GroupByExercise.csproj",
+      "projectName": "GroupByExercise",
+      "projectPath": "/Users/stephenmay/Desktop/classwork-May-Stephen/GroupByExercise/GroupByExercise/GroupByExercise.csproj",
       "packagesPath": "/Users/stephenmay/.nuget/packages/",
-      "outputPath": "/Users/stephenmay/Desktop/classwork-May-Stephen/RPG/RPG/obj/",
+      "outputPath": "/Users/stephenmay/Desktop/classwork-May-Stephen/GroupByExercise/GroupByExercise/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/stephenmay/.config/NuGet/NuGet.Config"

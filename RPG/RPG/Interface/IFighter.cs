@@ -1,7 +1,7 @@
 ﻿using System;
 namespace RPG.Interface
 {
-    public interface IFighter : IHealthy
+    public interface IFighter : IHealthy, IWeapon
     {
 
         public int Attack(IFighter toAttack);

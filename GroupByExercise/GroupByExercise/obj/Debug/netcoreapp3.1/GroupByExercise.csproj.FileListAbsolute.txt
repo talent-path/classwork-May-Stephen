@@ -1,0 +1,12 @@
+/Users/stephenmay/Desktop/classwork-May-Stephen/GroupByExercise/GroupByExercise/bin/Debug/netcoreapp3.1/GroupByExercise.deps.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/GroupByExercise/GroupByExercise/bin/Debug/netcoreapp3.1/GroupByExercise.runtimeconfig.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/GroupByExercise/GroupByExercise/bin/Debug/netcoreapp3.1/GroupByExercise.runtimeconfig.dev.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/GroupByExercise/GroupByExercise/bin/Debug/netcoreapp3.1/GroupByExercise.dll
+/Users/stephenmay/Desktop/classwork-May-Stephen/GroupByExercise/GroupByExercise/bin/Debug/netcoreapp3.1/GroupByExercise.pdb
+/Users/stephenmay/Desktop/classwork-May-Stephen/GroupByExercise/GroupByExercise/obj/Debug/netcoreapp3.1/GroupByExercise.csprojAssemblyReference.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/GroupByExercise/GroupByExercise/obj/Debug/netcoreapp3.1/GroupByExercise.AssemblyInfoInputs.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/GroupByExercise/GroupByExercise/obj/Debug/netcoreapp3.1/GroupByExercise.AssemblyInfo.cs
+/Users/stephenmay/Desktop/classwork-May-Stephen/GroupByExercise/GroupByExercise/obj/Debug/netcoreapp3.1/GroupByExercise.csproj.CoreCompileInputs.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/GroupByExercise/GroupByExercise/obj/Debug/netcoreapp3.1/GroupByExercise.dll
+/Users/stephenmay/Desktop/classwork-May-Stephen/GroupByExercise/GroupByExercise/obj/Debug/netcoreapp3.1/GroupByExercise.pdb
+/Users/stephenmay/Desktop/classwork-May-Stephen/GroupByExercise/GroupByExercise/obj/Debug/netcoreapp3.1/GroupByExercise.genruntimeconfig.cache
