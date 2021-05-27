@@ -1,0 +1,12 @@
+/Users/stephenmay/Desktop/classwork-May-Stephen/NasdaqReader/NasdaqReader/bin/Debug/netcoreapp3.1/NasdaqReader.deps.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/NasdaqReader/NasdaqReader/bin/Debug/netcoreapp3.1/NasdaqReader.runtimeconfig.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/NasdaqReader/NasdaqReader/bin/Debug/netcoreapp3.1/NasdaqReader.runtimeconfig.dev.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/NasdaqReader/NasdaqReader/bin/Debug/netcoreapp3.1/NasdaqReader.dll
+/Users/stephenmay/Desktop/classwork-May-Stephen/NasdaqReader/NasdaqReader/bin/Debug/netcoreapp3.1/NasdaqReader.pdb
+/Users/stephenmay/Desktop/classwork-May-Stephen/NasdaqReader/NasdaqReader/obj/Debug/netcoreapp3.1/NasdaqReader.csprojAssemblyReference.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/NasdaqReader/NasdaqReader/obj/Debug/netcoreapp3.1/NasdaqReader.AssemblyInfoInputs.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/NasdaqReader/NasdaqReader/obj/Debug/netcoreapp3.1/NasdaqReader.AssemblyInfo.cs
+/Users/stephenmay/Desktop/classwork-May-Stephen/NasdaqReader/NasdaqReader/obj/Debug/netcoreapp3.1/NasdaqReader.csproj.CoreCompileInputs.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/NasdaqReader/NasdaqReader/obj/Debug/netcoreapp3.1/NasdaqReader.dll
+/Users/stephenmay/Desktop/classwork-May-Stephen/NasdaqReader/NasdaqReader/obj/Debug/netcoreapp3.1/NasdaqReader.pdb
+/Users/stephenmay/Desktop/classwork-May-Stephen/NasdaqReader/NasdaqReader/obj/Debug/netcoreapp3.1/NasdaqReader.genruntimeconfig.cache
