@@ -1,0 +1,12 @@
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/BellCurveWarmUp/bin/Debug/netcoreapp3.1/BellCurveWarmUp.deps.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/BellCurveWarmUp/bin/Debug/netcoreapp3.1/BellCurveWarmUp.runtimeconfig.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/BellCurveWarmUp/bin/Debug/netcoreapp3.1/BellCurveWarmUp.runtimeconfig.dev.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/BellCurveWarmUp/bin/Debug/netcoreapp3.1/BellCurveWarmUp.dll
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/BellCurveWarmUp/bin/Debug/netcoreapp3.1/BellCurveWarmUp.pdb
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/BellCurveWarmUp/obj/Debug/netcoreapp3.1/BellCurveWarmUp.csprojAssemblyReference.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/BellCurveWarmUp/obj/Debug/netcoreapp3.1/BellCurveWarmUp.AssemblyInfoInputs.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/BellCurveWarmUp/obj/Debug/netcoreapp3.1/BellCurveWarmUp.AssemblyInfo.cs
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/BellCurveWarmUp/obj/Debug/netcoreapp3.1/BellCurveWarmUp.csproj.CoreCompileInputs.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/BellCurveWarmUp/obj/Debug/netcoreapp3.1/BellCurveWarmUp.dll
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/BellCurveWarmUp/obj/Debug/netcoreapp3.1/BellCurveWarmUp.pdb
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/BellCurveWarmUp/obj/Debug/netcoreapp3.1/BellCurveWarmUp.genruntimeconfig.cache
