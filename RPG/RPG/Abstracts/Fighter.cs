@@ -9,6 +9,8 @@ namespace RPG.Abstracts
         public abstract int TotalHealth { get; set; }
         public abstract Weapon weapon { get; set; }
         public abstract Clothing armor { get; set; }
+        public int Damage { get; set; }
+        public int Durability { get; set; }
 
         public Fighter() { }
 
