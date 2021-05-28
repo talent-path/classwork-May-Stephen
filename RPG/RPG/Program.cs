@@ -47,44 +47,25 @@ namespace RPG
         {
             Console.WriteLine("Welcome to an RPG Adventure!");
 
-            char[,] board = new char[15, 15];
+            char[,] newBoard = new char[15, 15];
             
             char player = 'X';
-            char enemy = 'O';
-            int roomNum = 5;
+            
+            int roomNum = 0;
             int numEnemies = roomNum + 1;
 
             char empty = '_';
 
-            for (int row = 0; row < 15; row++)
-            {
-                for (int col = 0; col < 15; col++)
-                {
-                    if (row == 0 && col == 0)
-                    {
-                        board[row, col] = player;
-                    }
-                    else if (row == 14 && col == 14)
-                    {
-                        board[row, col] = '@';
-                    }
-                    else
-                    {
-                        board[row, col] = empty;
-                    }
 
-                }
-
-            }
 
             //Generate random enemy locations
-
-            GenerateEnemies(board, enemy, numEnemies);
-            GenerateBoard(board);
+            char[,] board = CreateArray(newBoard, player, empty);
+            GenerateEnemies(board, numEnemies);
+            GenerateBoard(board, roomNum);
 
    
 
-            PlayerMove(board, player, empty);
+            PlayerMove(board, player, empty, roomNum);
 
 
 
@@ -126,10 +107,35 @@ namespace RPG
             //Console.WriteLine("You made it to round " + roundNum);
         }
 
-        private static void GenerateEnemies(char[,] board, char enemy, int numEnemies)
+        private static char[,] CreateArray(char[,] board, char player, char empty)
+        {
+            for (int row = 0; row < 15; row++)
+            {
+                for (int col = 0; col < 15; col++)
+                {
+                    if (row == 0 && col == 0)
+                    {
+                        board[row, col] = player;
+                    }
+                    else if (row == 14 && col == 14)
+                    {
+                        board[row, col] = '@';
+                    }
+                    else
+                    {
+                        board[row, col] = empty;
+                    }
+
+                }
+
+            }
+            return board;
+        }
+
+        private static void GenerateEnemies(char[,] board, int numEnemies)
         {
             Random rand = new Random();
-            
+            char enemy = 'O';
             int enemiesPlaced = 0;
             while (enemiesPlaced != numEnemies)
             {
@@ -235,10 +241,10 @@ namespace RPG
 
         // Print board in console
 
-        private static void GenerateBoard(char[,] board)
+        private static void GenerateBoard(char[,] board, int roomNum)
         {
             Console.Clear();
-            Console.WriteLine("New Board");
+            Console.WriteLine("You have made it to room " + roomNum);
             Random rand = new Random();
             
 
@@ -259,12 +265,21 @@ namespace RPG
 
         // Allow player to move around on board
 
-        private static void PlayerMove(char[,] board, char player, char empty)
+        private static void PlayerMove(char[,] board, char player, char empty, int roomNum)
         {
             if (board[14, 14] == player)
             {
                 Console.Clear();
                 Console.WriteLine("Congrats! You made it through the room!");
+                roomNum++;
+                if (roomNum < 223)
+                {
+                    char[,] newRoom = CreateArray(board, player, empty);
+                    GenerateEnemies(newRoom, roomNum + 1);
+                    GenerateBoard(newRoom, roomNum);
+                    PlayerMove(board, player, empty, roomNum);
+
+                }
             }
             else
                 {
@@ -288,7 +303,7 @@ namespace RPG
                                         if (col == 14)
                                         {
                                             Console.WriteLine("Invalid choice, can't go right. Choose again.");
-                                            PlayerMove(board, player, empty);
+                                            PlayerMove(board, player, empty, roomNum);
                                         }
                                         else
                                         {
@@ -296,8 +311,8 @@ namespace RPG
                                             Console.WriteLine("You moved right.");
                                             board[row, col + 1] = player;
                                             board[row, col] = empty;
-                                            GenerateBoard(board);
-                                            PlayerMove(board, player, empty);
+                                            GenerateBoard(board, roomNum);
+                                            PlayerMove(board, player, empty, roomNum);
                                         }
 
                                         break;
@@ -307,7 +322,7 @@ namespace RPG
                                         if (col == 0)
                                         {
                                             Console.WriteLine("Invalid choice, can't go left. Choose again.");
-                                            PlayerMove(board, player, empty);
+                                            PlayerMove(board, player, empty, roomNum);
                                         }
                                         else
                                         {
@@ -315,8 +330,8 @@ namespace RPG
                                             Console.WriteLine("You moved left.");
                                             board[row, col - 1] = player;
                                             board[row, col] = empty;
-                                            GenerateBoard(board);
-                                            PlayerMove(board, player, empty);
+                                            GenerateBoard(board, roomNum);
+                                            PlayerMove(board, player, empty, roomNum);
                                         }
 
                                         break;
@@ -326,7 +341,7 @@ namespace RPG
                                         if (row == 14)
                                         {
                                             Console.WriteLine("Invalid choice, can't go down");
-                                            PlayerMove(board, player, empty);
+                                            PlayerMove(board, player, empty, roomNum);
                                         }
                                         else
                                         {
@@ -334,8 +349,8 @@ namespace RPG
                                             Console.WriteLine("You moved down.");
                                             board[row + 1, col] = player;
                                             board[row, col] = empty;
-                                            GenerateBoard(board);
-                                            PlayerMove(board, player, empty);
+                                            GenerateBoard(board, roomNum);
+                                            PlayerMove(board, player, empty, roomNum);
 
                                         }
                                         break;
@@ -345,7 +360,7 @@ namespace RPG
                                         if (row == 0)
                                         {
                                             Console.WriteLine("Invalid choice, can't go up");
-                                            PlayerMove(board, player, empty);
+                                            PlayerMove(board, player, empty, roomNum);
                                         }
                                         else
                                         {
@@ -353,8 +368,8 @@ namespace RPG
                                             Console.WriteLine("You moved up.");
                                             board[row - 1, col] = player;
                                             board[row, col] = empty;
-                                            GenerateBoard(board);
-                                            PlayerMove(board, player, empty);
+                                            GenerateBoard(board, roomNum);
+                                            PlayerMove(board, player, empty, roomNum);
                                         }
 
                                         break;
