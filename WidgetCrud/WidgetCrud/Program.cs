@@ -46,7 +46,16 @@ namespace WidgetCrud
 
         private static void GetWidgetsByPage()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("How many widgets per page?");
+            int pageSize = int.Parse(Console.ReadLine());
+            Console.WriteLine("What page would you like to view?");
+            int pageNum = int.Parse(Console.ReadLine());
+            IEnumerable<Widget> page = dao.GetAllWidgetsForPage(pageSize, pageNum);
+            foreach (Widget widget in page)
+            {
+                Console.WriteLine($"Name: {widget.Name}, Category: {widget.Category}, Price: {widget.Price}");
+            }
+            Console.WriteLine();
         }
 
         private static void GetWidgetsByCat()
@@ -74,9 +83,10 @@ namespace WidgetCrud
 
         private static void EditWidget()
         {
-            Console.WriteLine("Enter the ID for the widget you would like to update: ");
-            int id = int.Parse(Console.ReadLine());
-            
+            Widget widget = new Widget();
+            dao.UpdateWidget(widget);
+            Console.WriteLine("Widget updated.");
+            Console.WriteLine();
         }
 
         private static void RemoveWidgetById()
@@ -94,8 +104,8 @@ namespace WidgetCrud
             Widget toAdd = new Widget();
             dao.AddWidget(toAdd);
             Console.WriteLine($"Widget {toAdd.Id} created.");
-            return toAdd.Id;
             Console.WriteLine();
+            return toAdd.Id;
         }
 
         private static int PrintMainMenu()

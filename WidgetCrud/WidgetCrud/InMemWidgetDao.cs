@@ -6,8 +6,16 @@ namespace WidgetCrud
 {
     public class InMemWidgetDao
     {
-        List<Widget> _allWidgets = new List<Widget>();
-        int id = 0;
+        List<Widget> _allWidgets = new List<Widget>
+        {
+            new Widget { Id = 1, Name="Bread", Category="Food", Price=2.00m},
+            new Widget { Id = 2, Name="Milk", Category="Food", Price=1.00m},
+            new Widget { Id = 3, Name="Shirt", Category="Clothing", Price=15.00m},
+            new Widget { Id = 4, Name="Laptop", Category="Electronics", Price=800.00m},
+        };
+
+
+        int id = 4;
 
         public InMemWidgetDao()
         {
@@ -37,7 +45,28 @@ namespace WidgetCrud
 
         public void UpdateWidget( Widget updated)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Enter the ID for the widget you would like to update: ");
+            updated.Id = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter the new name: ");
+            updated.Name = Console.ReadLine();
+
+            Console.WriteLine("Enter the new category: ");
+            updated.Category = Console.ReadLine();
+
+            Console.WriteLine("Enter the new price: ");
+            updated.Price = decimal.Parse(Console.ReadLine());
+
+            foreach( Widget w in _allWidgets)
+            {
+                if (w.Id == updated.Id)
+                {
+                    w.Name = updated.Name;
+                    w.Category = updated.Category;
+                    w.Price = updated.Price;
+                }
+            }
+
         }
 
         public Widget GetWidgetById( int id)
@@ -56,10 +85,11 @@ namespace WidgetCrud
 
         public IEnumerable<Widget> GetAllWidgetsForPage( int pageSize, int pageNumber)
         {
-            //assuming each page is pageSize wide, return the pageNumberth page of widgets
-            //order by name?
+            var ascWidgets = _allWidgets.OrderBy(x => x.Id);
+            IEnumerable<Widget> page = ascWidgets.Skip((pageNumber - 1) * pageSize).Take(pageSize);
 
-            throw new NotImplementedException();
+          
+            return page;
         }
     }
 }

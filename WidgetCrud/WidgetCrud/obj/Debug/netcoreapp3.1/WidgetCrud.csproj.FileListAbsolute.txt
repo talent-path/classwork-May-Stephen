@@ -10,3 +10,15 @@
 /Users/stephenmay/Programming/C17/classwork-c17-notes/WidgetCrud/WidgetCrud/obj/Debug/netcoreapp3.1/WidgetCrud.dll
 /Users/stephenmay/Programming/C17/classwork-c17-notes/WidgetCrud/WidgetCrud/obj/Debug/netcoreapp3.1/WidgetCrud.pdb
 /Users/stephenmay/Programming/C17/classwork-c17-notes/WidgetCrud/WidgetCrud/obj/Debug/netcoreapp3.1/WidgetCrud.genruntimeconfig.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/WidgetCrud/WidgetCrud/bin/Debug/netcoreapp3.1/WidgetCrud.deps.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/WidgetCrud/WidgetCrud/bin/Debug/netcoreapp3.1/WidgetCrud.runtimeconfig.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/WidgetCrud/WidgetCrud/bin/Debug/netcoreapp3.1/WidgetCrud.runtimeconfig.dev.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/WidgetCrud/WidgetCrud/bin/Debug/netcoreapp3.1/WidgetCrud.dll
+/Users/stephenmay/Desktop/classwork-May-Stephen/WidgetCrud/WidgetCrud/bin/Debug/netcoreapp3.1/WidgetCrud.pdb
+/Users/stephenmay/Desktop/classwork-May-Stephen/WidgetCrud/WidgetCrud/obj/Debug/netcoreapp3.1/WidgetCrud.csprojAssemblyReference.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/WidgetCrud/WidgetCrud/obj/Debug/netcoreapp3.1/WidgetCrud.AssemblyInfoInputs.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/WidgetCrud/WidgetCrud/obj/Debug/netcoreapp3.1/WidgetCrud.AssemblyInfo.cs
+/Users/stephenmay/Desktop/classwork-May-Stephen/WidgetCrud/WidgetCrud/obj/Debug/netcoreapp3.1/WidgetCrud.csproj.CoreCompileInputs.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/WidgetCrud/WidgetCrud/obj/Debug/netcoreapp3.1/WidgetCrud.dll
+/Users/stephenmay/Desktop/classwork-May-Stephen/WidgetCrud/WidgetCrud/obj/Debug/netcoreapp3.1/WidgetCrud.pdb
+/Users/stephenmay/Desktop/classwork-May-Stephen/WidgetCrud/WidgetCrud/obj/Debug/netcoreapp3.1/WidgetCrud.genruntimeconfig.cache

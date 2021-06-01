@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/stephenmay/Programming/C17/classwork-c17-notes/WidgetCrud/WidgetCrud/WidgetCrud.csproj": {}
+    "/Users/stephenmay/Desktop/classwork-May-Stephen/WidgetCrud/WidgetCrud/WidgetCrud.csproj": {}
   },
   "projects": {
-    "/Users/stephenmay/Programming/C17/classwork-c17-notes/WidgetCrud/WidgetCrud/WidgetCrud.csproj": {
+    "/Users/stephenmay/Desktop/classwork-May-Stephen/WidgetCrud/WidgetCrud/WidgetCrud.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/stephenmay/Programming/C17/classwork-c17-notes/WidgetCrud/WidgetCrud/WidgetCrud.csproj",
+        "projectUniqueName": "/Users/stephenmay/Desktop/classwork-May-Stephen/WidgetCrud/WidgetCrud/WidgetCrud.csproj",
         "projectName": "WidgetCrud",
-        "projectPath": "/Users/stephenmay/Programming/C17/classwork-c17-notes/WidgetCrud/WidgetCrud/WidgetCrud.csproj",
+        "projectPath": "/Users/stephenmay/Desktop/classwork-May-Stephen/WidgetCrud/WidgetCrud/WidgetCrud.csproj",
         "packagesPath": "/Users/stephenmay/.nuget/packages/",
-        "outputPath": "/Users/stephenmay/Programming/C17/classwork-c17-notes/WidgetCrud/WidgetCrud/obj/",
+        "outputPath": "/Users/stephenmay/Desktop/classwork-May-Stephen/WidgetCrud/WidgetCrud/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/stephenmay/.config/NuGet/NuGet.Config"
