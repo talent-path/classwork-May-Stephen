@@ -1,0 +1,9 @@
+/Users/stephenmay/Desktop/classwork-May-Stephen/GenericsDemo/GenericHeap/bin/Debug/netcoreapp3.1/GenericHeap.deps.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/GenericsDemo/GenericHeap/bin/Debug/netcoreapp3.1/GenericHeap.dll
+/Users/stephenmay/Desktop/classwork-May-Stephen/GenericsDemo/GenericHeap/bin/Debug/netcoreapp3.1/GenericHeap.pdb
+/Users/stephenmay/Desktop/classwork-May-Stephen/GenericsDemo/GenericHeap/obj/Debug/netcoreapp3.1/GenericHeap.csprojAssemblyReference.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/GenericsDemo/GenericHeap/obj/Debug/netcoreapp3.1/GenericHeap.AssemblyInfoInputs.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/GenericsDemo/GenericHeap/obj/Debug/netcoreapp3.1/GenericHeap.AssemblyInfo.cs
+/Users/stephenmay/Desktop/classwork-May-Stephen/GenericsDemo/GenericHeap/obj/Debug/netcoreapp3.1/GenericHeap.csproj.CoreCompileInputs.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/GenericsDemo/GenericHeap/obj/Debug/netcoreapp3.1/GenericHeap.dll
+/Users/stephenmay/Desktop/classwork-May-Stephen/GenericsDemo/GenericHeap/obj/Debug/netcoreapp3.1/GenericHeap.pdb

@@ -1,0 +1,17 @@
+/Users/stephenmay/Desktop/classwork-May-Stephen/GenericsDemo/GenericsDemo/bin/Debug/netcoreapp3.1/GenericsDemo.deps.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/GenericsDemo/GenericsDemo/bin/Debug/netcoreapp3.1/GenericsDemo.runtimeconfig.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/GenericsDemo/GenericsDemo/bin/Debug/netcoreapp3.1/GenericsDemo.runtimeconfig.dev.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/GenericsDemo/GenericsDemo/bin/Debug/netcoreapp3.1/GenericsDemo.dll
+/Users/stephenmay/Desktop/classwork-May-Stephen/GenericsDemo/GenericsDemo/bin/Debug/netcoreapp3.1/GenericsDemo.pdb
+/Users/stephenmay/Desktop/classwork-May-Stephen/GenericsDemo/GenericsDemo/bin/Debug/netcoreapp3.1/GenericHeap.dll
+/Users/stephenmay/Desktop/classwork-May-Stephen/GenericsDemo/GenericsDemo/bin/Debug/netcoreapp3.1/LinkedList.dll
+/Users/stephenmay/Desktop/classwork-May-Stephen/GenericsDemo/GenericsDemo/bin/Debug/netcoreapp3.1/LinkedList.pdb
+/Users/stephenmay/Desktop/classwork-May-Stephen/GenericsDemo/GenericsDemo/bin/Debug/netcoreapp3.1/GenericHeap.pdb
+/Users/stephenmay/Desktop/classwork-May-Stephen/GenericsDemo/GenericsDemo/obj/Debug/netcoreapp3.1/GenericsDemo.csprojAssemblyReference.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/GenericsDemo/GenericsDemo/obj/Debug/netcoreapp3.1/GenericsDemo.AssemblyInfoInputs.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/GenericsDemo/GenericsDemo/obj/Debug/netcoreapp3.1/GenericsDemo.AssemblyInfo.cs
+/Users/stephenmay/Desktop/classwork-May-Stephen/GenericsDemo/GenericsDemo/obj/Debug/netcoreapp3.1/GenericsDemo.csproj.CoreCompileInputs.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/GenericsDemo/GenericsDemo/obj/Debug/netcoreapp3.1/GenericsDemo.csproj.CopyComplete
+/Users/stephenmay/Desktop/classwork-May-Stephen/GenericsDemo/GenericsDemo/obj/Debug/netcoreapp3.1/GenericsDemo.dll
+/Users/stephenmay/Desktop/classwork-May-Stephen/GenericsDemo/GenericsDemo/obj/Debug/netcoreapp3.1/GenericsDemo.pdb
+/Users/stephenmay/Desktop/classwork-May-Stephen/GenericsDemo/GenericsDemo/obj/Debug/netcoreapp3.1/GenericsDemo.genruntimeconfig.cache
