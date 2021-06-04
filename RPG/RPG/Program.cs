@@ -4,6 +4,7 @@ using RPG.Interface;
 using RPG.Weapons;
 using RPG.ArmorType;
 using RPG.Classes;
+using System.Collections.Generic;
 
 namespace RPG
 {
@@ -47,7 +48,20 @@ namespace RPG
         {
             Console.WriteLine("Welcome to an RPG Adventure!");
 
-            char[,] newBoard = new char[15, 15];
+            // Create player character
+            Fighter fighter = ChooseFighter();
+            Weapon weapon = ChooseWeapon();
+            Clothing armor = ChooseArmor();
+
+
+            fighter.weapon = weapon;
+            fighter.armor = armor;
+
+            fighter.row = 0;
+            fighter.col = 0;
+
+            char[,] printBoard = new char[15, 15];
+            List<Fighter> enemies = new List<Fighter>();
             
             char player = 'X';
             
@@ -59,26 +73,16 @@ namespace RPG
 
 
             //Generate random enemy locations
-            char[,] board = CreateArray(newBoard, player, empty);
-            GenerateEnemies(board, numEnemies);
-            GenerateBoard(board, roomNum);
+            char[,] board = CreateArray(printBoard, player, empty);
+            GenerateEnemies(board, numEnemies, enemies);
+            PrintBoard(board, roomNum, fighter, enemies);
 
    
+            // Begin game loop
+            PlayerMove(board, player, empty, roomNum, enemies, fighter);
 
-            PlayerMove(board, player, empty, roomNum);
 
-
-
-            // Create character
-            //Fighter fighter = ChooseFighter();
-            //Weapon weapon = ChooseWeapon();
-            //Clothing armor = ChooseArmor();
-
-            //fighter.weapon = weapon;
-            //fighter.armor = armor;
-
-            //int roundNum = 1;
-            //int points = -1;
+          
 
             //Monster monster = new Monster();
             //monster.TotalHealth = 0;
@@ -96,9 +100,7 @@ namespace RPG
             //    }
             //    fighter.Attack(monster);
             //    monster.Attack(fighter);
-            //    Console.WriteLine("Round " + roundNum + " is over");
-            //    Console.WriteLine("Your figher has " + fighter.TotalHealth);
-            //    Console.WriteLine("Monster has " + monster.TotalHealth);
+            //    
             //    roundNum++;
 
             //}
@@ -132,13 +134,15 @@ namespace RPG
             return board;
         }
 
-        private static void GenerateEnemies(char[,] board, int numEnemies)
+        private static void GenerateEnemies(char[,] board, int numEnemies, List<Fighter> enemies)
         {
             Random rand = new Random();
-            char enemy = 'O';
+            char enemyChar = 'O';
             int enemiesPlaced = 0;
             while (enemiesPlaced != numEnemies)
             {
+                Fighter enemy = new Monster();
+                
                 int enemyRow = rand.Next(0, 14);
                 int enemyCol = rand.Next(0, 14);
                 if (enemyRow == 0 && enemyCol == 0)
@@ -146,11 +150,16 @@ namespace RPG
                     enemyRow = rand.Next(0, 14);
                     enemyCol = rand.Next(0, 14);
                 }
+                enemy.row = enemyRow;
+                enemy.col = enemyCol;
 
-                board[enemyRow, enemyCol] = enemy;
+                enemies.Add(enemy);
+
+                board[enemyRow, enemyCol] = enemyChar;
                 enemiesPlaced++;
                 
             }
+
             
         }
 
@@ -241,12 +250,26 @@ namespace RPG
 
         // Print board in console
 
-        private static void GenerateBoard(char[,] board, int roomNum)
+        private static void PrintBoard(char[,] board, int roomNum, Fighter fighter, List<Fighter> enemies)
         {
             Console.Clear();
             Console.WriteLine("You have made it to room " + roomNum);
-            Random rand = new Random();
+            Console.WriteLine("Row: " + fighter.row + ", Col: " + fighter.col);
+            Console.WriteLine($"You have {fighter.TotalHealth} health remaining.");
+            if (enemies.Count == 1)
+            {
+                Console.WriteLine($"There is 1 enemy in this room.");
+            }
+            else
+            {
+                Console.WriteLine($"There are {enemies.Count} enemies in this room!");
+            }
             
+            
+            foreach(IFighter enemy in enemies)
+            {
+                Console.WriteLine($"Enemy at row: {enemy.row} and col: {enemy.col}");
+            }
 
             for (int row = 0; row < board.GetLength(0); row++)
             {
@@ -265,21 +288,29 @@ namespace RPG
 
         // Allow player to move around on board
 
-        private static void PlayerMove(char[,] board, char player, char empty, int roomNum)
+        private static void PlayerMove(char[,] board, char player, char empty, int roomNum, List<Fighter> enemies, Fighter fighter)
         {
             if (board[14, 14] == player)
             {
                 Console.Clear();
                 Console.WriteLine("Congrats! You made it through the room!");
                 roomNum++;
+                enemies.Clear();
                 if (roomNum < 223)
                 {
                     char[,] newRoom = CreateArray(board, player, empty);
-                    GenerateEnemies(newRoom, roomNum + 1);
-                    GenerateBoard(newRoom, roomNum);
-                    PlayerMove(board, player, empty, roomNum);
+                    GenerateEnemies(newRoom, roomNum + 1, enemies);
+                    PrintBoard(newRoom, roomNum, fighter, enemies);
+                    fighter.row = 0;
+                    fighter.col = 0;
+                    PlayerMove(board, player, empty, roomNum, enemies, fighter);
 
                 }
+            }
+            else if (fighter.TotalHealth <= 0)
+            {
+                Console.Clear();
+                Console.WriteLine($"You were defeated! You made it to room {roomNum}.");
             }
             else
                 {
@@ -303,16 +334,29 @@ namespace RPG
                                         if (col == 14)
                                         {
                                             Console.WriteLine("Invalid choice, can't go right. Choose again.");
-                                            PlayerMove(board, player, empty, roomNum);
+                                            PlayerMove(board, player, empty, roomNum, enemies, fighter);
+                                        }
+                                        else if (EnemyPresent(fighter.row, fighter.col, enemies))
+                                        {
+
+                                            foreach (Fighter enemy in enemies)
+                                            {
+                                                 if (enemy.col == fighter.col + 1 && enemy.row == fighter.row)
+                                                {
+                                                    Battle(fighter, enemy, board, enemies);
+                                                }
+                                            }
+                                           
+
                                         }
                                         else
                                         {
-                                            Console.Clear();
                                             Console.WriteLine("You moved right.");
                                             board[row, col + 1] = player;
                                             board[row, col] = empty;
-                                            GenerateBoard(board, roomNum);
-                                            PlayerMove(board, player, empty, roomNum);
+                                            fighter.col += 1;
+                                            PrintBoard(board, roomNum, fighter, enemies);
+                                            EnemyMove(board, player, empty, roomNum, enemies, fighter, enemies.Count);
                                         }
 
                                         break;
@@ -322,7 +366,18 @@ namespace RPG
                                         if (col == 0)
                                         {
                                             Console.WriteLine("Invalid choice, can't go left. Choose again.");
-                                            PlayerMove(board, player, empty, roomNum);
+                                            PlayerMove(board, player, empty, roomNum, enemies, fighter);
+                                        }
+                                        else if (EnemyPresent(fighter.row, fighter.col - 1, enemies))
+                                        {
+                                            foreach (Fighter enemy in enemies)
+                                            {
+                                                if (enemy.col == fighter.col - 1 && enemy.row == fighter.row)
+                                                {
+                                                    Battle(fighter, enemy, board, enemies);
+                                                }
+                                            }
+
                                         }
                                         else
                                         {
@@ -330,8 +385,9 @@ namespace RPG
                                             Console.WriteLine("You moved left.");
                                             board[row, col - 1] = player;
                                             board[row, col] = empty;
-                                            GenerateBoard(board, roomNum);
-                                            PlayerMove(board, player, empty, roomNum);
+                                            fighter.col -= 1;
+                                            PrintBoard(board, roomNum, fighter, enemies);
+                                            EnemyMove(board, player, empty, roomNum, enemies, fighter, enemies.Count);
                                         }
 
                                         break;
@@ -340,8 +396,19 @@ namespace RPG
                                     {
                                         if (row == 14)
                                         {
-                                            Console.WriteLine("Invalid choice, can't go down");
-                                            PlayerMove(board, player, empty, roomNum);
+                                            Console.WriteLine("Invalid choice, can't go down. Choose again.");
+                                            PlayerMove(board, player, empty, roomNum, enemies, fighter);
+                                        }
+                                        else if (EnemyPresent(fighter.row + 1, fighter.col, enemies))
+                                        {
+                                            foreach (Fighter enemy in enemies)
+                                            {
+                                                if (enemy.col == fighter.col && enemy.row == fighter.row + 1)
+                                                {
+                                                    Battle(fighter, enemy, board, enemies);
+                                                }
+                                            }
+
                                         }
                                         else
                                         {
@@ -349,8 +416,9 @@ namespace RPG
                                             Console.WriteLine("You moved down.");
                                             board[row + 1, col] = player;
                                             board[row, col] = empty;
-                                            GenerateBoard(board, roomNum);
-                                            PlayerMove(board, player, empty, roomNum);
+                                            fighter.row += 1;
+                                            PrintBoard(board, roomNum, fighter, enemies);
+                                            EnemyMove(board, player, empty, roomNum, enemies, fighter, enemies.Count);
 
                                         }
                                         break;
@@ -359,8 +427,19 @@ namespace RPG
                                     {
                                         if (row == 0)
                                         {
-                                            Console.WriteLine("Invalid choice, can't go up");
-                                            PlayerMove(board, player, empty, roomNum);
+                                            Console.WriteLine("Invalid choice, can't go up. Choose again.");
+                                            PlayerMove(board, player, empty, roomNum, enemies, fighter);
+                                        }
+                                        else if (EnemyPresent(fighter.row - 1, fighter.col, enemies))
+                                        {
+                                            foreach (Fighter enemy in enemies)
+                                            {
+                                                if (enemy.col == fighter.col && enemy.row == fighter.row - 1)
+                                                {
+                                                    Battle(fighter, enemy, board, enemies);
+                                                }
+                                            }
+
                                         }
                                         else
                                         {
@@ -368,8 +447,9 @@ namespace RPG
                                             Console.WriteLine("You moved up.");
                                             board[row - 1, col] = player;
                                             board[row, col] = empty;
-                                            GenerateBoard(board, roomNum);
-                                            PlayerMove(board, player, empty, roomNum);
+                                            fighter.row -= 1;
+                                            PrintBoard(board, roomNum, fighter, enemies);
+                                            EnemyMove(board, player, empty, roomNum, enemies, fighter, enemies.Count);
                                         }
 
                                         break;
@@ -390,5 +470,93 @@ namespace RPG
             }
 
         }
+
+        private static void EnemyMove(char[,] board, char player, char empty, int roomNum, List<Fighter> enemies, Fighter fighter, int numEnemies)
+        {
+            if (numEnemies > 0)
+            {
+
+                foreach (Fighter enemy in enemies)
+                {
+                    int verticalDistance = fighter.row - enemy.row;
+                    int horizontalDistance = fighter.col - enemy.col;
+
+                    if ((Math.Abs(horizontalDistance) == 1 && verticalDistance == 0) || (Math.Abs(verticalDistance) == 1 && horizontalDistance == 0))
+                    {
+                        Battle(enemy, fighter, board, enemies);
+                    }
+
+                    else if (Math.Abs(horizontalDistance) > Math.Abs(verticalDistance))
+                    {
+                        // player is to the right
+                        if (horizontalDistance > 0)
+                        {
+                            board[enemy.row, enemy.col] = empty;
+                            enemy.col += 1;
+                            board[enemy.row, enemy.col] = 'O';
+                        }
+                        // player is to the left
+                        else
+                        {
+                            board[enemy.row, enemy.col] = empty;
+                            enemy.col -= 1;
+                            board[enemy.row, enemy.col] = 'O';
+                        }
+                    }
+                    else
+                    {
+                        // player is below
+                        if (verticalDistance > 0)
+                        {
+                            board[enemy.row, enemy.col] = empty;
+                            enemy.row += 1;
+                            board[enemy.row, enemy.col] = 'O';
+                        }
+                        //player is above
+                        else
+                        {
+                            board[enemy.row, enemy.col] = empty;
+                            enemy.row -= 1;
+                            board[enemy.row, enemy.col] = 'O';
+                        }
+                    }
+                }
+                PlayerMove(board, player, empty, roomNum, enemies, fighter);
+            }
+            else
+            {
+                PlayerMove(board, player, empty, roomNum, enemies, fighter);
+            }
+            
+        }
+
+        private static void Battle(Fighter fighter, Fighter enemy, char[,] board, List<Fighter> enemies)
+        {
+            fighter.Attack(enemy);
+            //if(enemy.TotalHealth <= 0)
+            //{
+            //    enemies.Remove(enemy);
+            //    board[fighter.row, fighter.col] = '_';
+            //    fighter.col = enemy.col;
+            //    fighter.row = enemy.row;
+            //    board[fighter.row, fighter.col] = 'X';
+            //}
+            
+        }
+
+        private static bool EnemyPresent(int newFighterRow, int newFighterCol, List<Fighter> enemies)
+        {
+            foreach(Fighter enemy in enemies)
+            {
+                if (enemy.col == newFighterCol && enemy.row == newFighterRow)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        
     }
 }

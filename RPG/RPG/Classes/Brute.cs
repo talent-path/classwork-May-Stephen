@@ -1,8 +1,5 @@
-﻿using System;
-using RPG.Abstracts;
+﻿using RPG.Abstracts;
 using RPG.Interface;
-using RPG.Weapons;
-using RPG.ArmorType;
 
 namespace RPG.Classes
 {

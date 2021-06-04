@@ -119,21 +119,6 @@ namespace GenericHeap
             return toReturn;
         }
 
-        //private void SiftUp()
-        //{
-        //    int index = _allElements.Count - 1;
-        //    int parent = index / 2;
-
-        //    while (index > 0 && _allElements[index].CompareTo(_allElements[parent]) == -1)
-        //    {
-        //        T swap = _allElements[index];
-        //        _allElements[index] = _allElements[parent];
-        //        _allElements[parent] = swap;
-        //        index /= 2;
-        //        SiftUp();
-        //    }
-
-        //}
 
 
         private void SiftUp(int index)

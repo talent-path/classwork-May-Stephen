@@ -11,6 +11,8 @@ namespace RPG.Abstracts
         public abstract Clothing armor { get; set; }
         public int Damage { get; set; }
         public int Durability { get; set; }
+        public int row { get; set; }
+        public int col { get; set; }
 
         public Fighter() { }
 

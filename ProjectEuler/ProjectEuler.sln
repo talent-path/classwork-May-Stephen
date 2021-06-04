@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BellCurveWarmUp", "BellCurv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem18", "Problem18\Problem18.csproj", "{DB6F3400-8DDC-4C75-B401-C9136EA22CEF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem11", "Problem11\Problem11.csproj", "{ED39D0D2-15FD-40A2-A878-41A90C04E73F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{DB6F3400-8DDC-4C75-B401-C9136EA22CEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB6F3400-8DDC-4C75-B401-C9136EA22CEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB6F3400-8DDC-4C75-B401-C9136EA22CEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED39D0D2-15FD-40A2-A878-41A90C04E73F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED39D0D2-15FD-40A2-A878-41A90C04E73F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED39D0D2-15FD-40A2-A878-41A90C04E73F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED39D0D2-15FD-40A2-A878-41A90C04E73F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

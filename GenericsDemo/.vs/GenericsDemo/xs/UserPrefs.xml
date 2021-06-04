@@ -2,8 +2,8 @@
   <MonoDevelop.Ide.ItemProperties.GenericsDemo PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="GenericHeap/MinHeap.cs">
     <Files>
-      <File FileName="GenericHeap/MinHeap.cs" Line="114" Column="38" />
-      <File FileName="GenericsDemo/Program.cs" />
+      <File FileName="GenericHeap/MinHeap.cs" Line="121" Column="1" />
+      <File FileName="GenericsDemo/Program.cs" Line="51" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -24,7 +24,9 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/stephenmay/Desktop/classwork-May-Stephen/GenericsDemo/GenericsDemo/Program.cs" relfile="GenericsDemo/Program.cs" line="51" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

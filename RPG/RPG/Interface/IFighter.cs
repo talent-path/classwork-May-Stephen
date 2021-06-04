@@ -9,5 +9,8 @@ namespace RPG.Interface
         // can take in IFighter to do any disarm
         public int Defend(int incomingDamage);
 
+        public int row { get; set; }
+        public int col { get; set; }
+
     }
 }

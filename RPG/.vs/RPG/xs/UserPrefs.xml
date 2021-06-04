@@ -2,8 +2,8 @@
   <MonoDevelop.Ide.ItemProperties.RPG PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="RPG/Program.cs">
     <Files>
-      <File FileName="RPG/Program.cs" Line="118" Column="50" />
-      <File FileName="RPG/Abstracts/Room.cs" Line="9" Column="1" />
+      <File FileName="RPG/Program.cs" Line="470" Column="75" />
+      <File FileName="RPG/Interface/IFighter.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,9 +19,6 @@
             </Node>
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
