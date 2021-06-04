@@ -1,0 +1,12 @@
+/Users/stephenmay/Desktop/classwork-May-Stephen/StockTracker/StockTracker/bin/Debug/netcoreapp3.1/StockTracker.deps.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/StockTracker/StockTracker/bin/Debug/netcoreapp3.1/StockTracker.runtimeconfig.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/StockTracker/StockTracker/bin/Debug/netcoreapp3.1/StockTracker.runtimeconfig.dev.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/StockTracker/StockTracker/bin/Debug/netcoreapp3.1/StockTracker.dll
+/Users/stephenmay/Desktop/classwork-May-Stephen/StockTracker/StockTracker/bin/Debug/netcoreapp3.1/StockTracker.pdb
+/Users/stephenmay/Desktop/classwork-May-Stephen/StockTracker/StockTracker/obj/Debug/netcoreapp3.1/StockTracker.csprojAssemblyReference.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/StockTracker/StockTracker/obj/Debug/netcoreapp3.1/StockTracker.AssemblyInfoInputs.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/StockTracker/StockTracker/obj/Debug/netcoreapp3.1/StockTracker.AssemblyInfo.cs
+/Users/stephenmay/Desktop/classwork-May-Stephen/StockTracker/StockTracker/obj/Debug/netcoreapp3.1/StockTracker.csproj.CoreCompileInputs.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/StockTracker/StockTracker/obj/Debug/netcoreapp3.1/StockTracker.dll
+/Users/stephenmay/Desktop/classwork-May-Stephen/StockTracker/StockTracker/obj/Debug/netcoreapp3.1/StockTracker.pdb
+/Users/stephenmay/Desktop/classwork-May-Stephen/StockTracker/StockTracker/obj/Debug/netcoreapp3.1/StockTracker.genruntimeconfig.cache

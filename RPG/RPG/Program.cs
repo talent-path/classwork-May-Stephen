@@ -533,15 +533,15 @@ namespace RPG
         private static void Battle(Fighter fighter, Fighter enemy, char[,] board, List<Fighter> enemies)
         {
             fighter.Attack(enemy);
-            //if(enemy.TotalHealth <= 0)
-            //{
-            //    enemies.Remove(enemy);
-            //    board[fighter.row, fighter.col] = '_';
-            //    fighter.col = enemy.col;
-            //    fighter.row = enemy.row;
-            //    board[fighter.row, fighter.col] = 'X';
-            //}
-            
+            if (enemy.TotalHealth <= 0)
+            {
+                enemies.Remove(enemy);
+                board[fighter.row, fighter.col] = '_';
+                fighter.col = enemy.col;
+                fighter.row = enemy.row;
+                board[fighter.row, fighter.col] = 'X';
+            }
+
         }
 
         private static bool EnemyPresent(int newFighterRow, int newFighterCol, List<Fighter> enemies)
