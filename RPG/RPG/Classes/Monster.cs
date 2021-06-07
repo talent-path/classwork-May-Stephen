@@ -12,7 +12,7 @@ namespace RPG.Classes
         {
             this.weapon = new Sword();
             this.armor = new Helmet();
-            this.TotalHealth = 50;
+            this.TotalHealth = 10;
         }
 
         public override int TotalHealth { get ; set; }
