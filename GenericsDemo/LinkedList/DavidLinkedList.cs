@@ -58,6 +58,8 @@ namespace LinkedList
 
         public void Add(T newValue)
         {
+            if (newValue == null) throw new ArgumentNullException();
+
             if (headNode != null)
             {
                 LinkedListNode current = headNode;
@@ -65,6 +67,7 @@ namespace LinkedList
                 {
                     current = current.Next;
                 }
+                
                 current.Next = new LinkedListNode() { Value = newValue };
             }
             else
@@ -85,40 +88,49 @@ namespace LinkedList
 
             //node could be in the middle
             //      loop until node just before, current.Next = current.Next.Next
+            bool removed = false;
 
-            if (headNode == null) return;
-            if( headNode.Value.Equals(toRemove))
+            if (headNode != null)
             {
-                headNode = headNode.Next;
-                _enumerator.HeadNode = headNode;
-            }
-            else
-            {
-                LinkedListNode current = headNode;
 
-                while( current.Next != null && !current.Next.Value.Equals(toRemove) )
+                if (headNode.Value.Equals(toRemove))
                 {
-                    current = current.Next;
+                    removed = true;
+                    headNode = headNode.Next;
+                    _enumerator.HeadNode = headNode;
                 }
+                else
+                {
+                    LinkedListNode current = headNode;
 
-                //what do we know is true at this point?
-                if (current.Next == null) return;
+                    while (current.Next != null && !current.Next.Value.Equals(toRemove))
+                    {
+                        current = current.Next;
+                    }
 
-                //now we know current.Next is not null, therefore 
-                //next.Value is .Equals()
+                    //what do we know is true at this point?
+                    if (current.Next != null)
+                    {
+                        current.Next = current.Next.Next;
+                        removed = true;
+                    }
 
-                current.Next = current.Next.Next;
-
+                    //now we know current.Next is not null, therefore 
+                    //next.Value is .Equals()
+                }
             }
+            if (!removed) throw new ItemNotFoundException($"Could not find {toRemove.ToString()}");
         }
 
         public IEnumerator<T> GetEnumerator()
         {
+            _enumerator.Reset();
             return _enumerator;
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
+            _enumerator.Reset();
             return _enumerator;
         }
     }

@@ -64,7 +64,7 @@ namespace RPG
             List<Fighter> enemies = new List<Fighter>();
 
             char player = 'X';
-            static int numOfPotions = 3;
+            int numOfPotions = 3;
             int roomNum = 0;
             int numEnemies = roomNum + 1;
 
@@ -330,7 +330,7 @@ namespace RPG
             {
                 Console.WriteLine( "Your health dropped below 50, you use a potion to heal yourself.");
                 fighter.TotalHealth += 50;
-                numOfPotions -= 1;
+                numOfPotions--;
             }
             bool validMove = false;
             int desiredRow = fighter.row;

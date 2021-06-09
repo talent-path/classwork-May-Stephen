@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{C6D9DD56-F394-4CDD-B207-4438ABC376F3}|Default">
   <MonoDevelop.Ide.ItemProperties.RPG PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="RPG/Classes/Monster.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RPG/Program.cs">
     <Files>
-      <File FileName="RPG/Program.cs" Line="406" Column="43" />
+      <File FileName="RPG/Program.cs" Line="333" Column="32" />
       <File FileName="RPG/Interface/IFighter.cs" />
       <File FileName="RPG/Classes/Monster.cs" Line="15" Column="35" />
     </Files>
@@ -13,11 +13,10 @@
             <Node name="RPG" expanded="True">
               <Node name="Abstracts" expanded="True" />
               <Node name="ArmorType" expanded="True" />
-              <Node name="Classes" expanded="True">
-                <Node name="Monster.cs" selected="True" />
-              </Node>
+              <Node name="Classes" expanded="True" />
               <Node name="Interface" expanded="True" />
               <Node name="Weapons" expanded="True" />
+              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -27,7 +26,9 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/stephenmay/Desktop/classwork-May-Stephen/RPG/RPG/Program.cs" relfile="RPG/Program.cs" line="328" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
