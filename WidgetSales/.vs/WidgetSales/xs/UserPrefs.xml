@@ -1,22 +1,21 @@
 ﻿<Properties StartupConfiguration="{331876DD-926E-4418-B878-9A95DFABADB6}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="WidgetSales/IInventoryDao.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WidgetSalesTests/InMemInventoryDaoTests.cs">
     <Files>
-      <File FileName="WidgetSalesTests/InMemInventoryDaoTests.cs" Line="85" Column="21" />
+      <File FileName="WidgetSalesTests/InMemInventoryDaoTests.cs" Line="113" Column="1" />
       <File FileName="WidgetSales/WidgetController.cs" Line="1" Column="1" />
       <File FileName="WidgetSales/WidgetInventory.cs" Line="21" Column="49" />
-      <File FileName="WidgetSales/InMemInventoryDao.cs" Line="49" Column="36" />
-      <File FileName="WidgetSales/WidgetService.cs" Line="24" Column="48" />
-      <File FileName="WidgetSales/IInventoryDao.cs" Line="9" Column="1" />
+      <File FileName="WidgetSales/InMemInventoryDao.cs" Line="60" Column="32" />
+      <File FileName="WidgetSales/WidgetService.cs" Line="30" Column="10" />
+      <File FileName="WidgetSales/IInventoryDao.cs" Line="12" Column="49" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="WidgetSales" expanded="True">
-            <Node name="WidgetSales" expanded="True">
-              <Node name="IInventoryDao.cs" selected="True" />
-            </Node>
+            <Node name="WidgetSales" expanded="True" />
             <Node name="WidgetSalesTests" expanded="True">
               <Node name="Dependencies" expanded="True" />
+              <Node name="InMemInventoryDaoTests.cs" selected="True" />
             </Node>
           </Node>
         </State>
