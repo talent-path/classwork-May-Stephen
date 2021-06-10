@@ -1,0 +1,12 @@
+/Users/stephenmay/Desktop/classwork-May-Stephen/AutoTrader/AutoTrader/bin/Debug/netcoreapp3.1/AutoTrader.deps.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/AutoTrader/AutoTrader/bin/Debug/netcoreapp3.1/AutoTrader.runtimeconfig.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/AutoTrader/AutoTrader/bin/Debug/netcoreapp3.1/AutoTrader.runtimeconfig.dev.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/AutoTrader/AutoTrader/bin/Debug/netcoreapp3.1/AutoTrader.dll
+/Users/stephenmay/Desktop/classwork-May-Stephen/AutoTrader/AutoTrader/bin/Debug/netcoreapp3.1/AutoTrader.pdb
+/Users/stephenmay/Desktop/classwork-May-Stephen/AutoTrader/AutoTrader/obj/Debug/netcoreapp3.1/AutoTrader.csprojAssemblyReference.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/AutoTrader/AutoTrader/obj/Debug/netcoreapp3.1/AutoTrader.AssemblyInfoInputs.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/AutoTrader/AutoTrader/obj/Debug/netcoreapp3.1/AutoTrader.AssemblyInfo.cs
+/Users/stephenmay/Desktop/classwork-May-Stephen/AutoTrader/AutoTrader/obj/Debug/netcoreapp3.1/AutoTrader.csproj.CoreCompileInputs.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/AutoTrader/AutoTrader/obj/Debug/netcoreapp3.1/AutoTrader.dll
+/Users/stephenmay/Desktop/classwork-May-Stephen/AutoTrader/AutoTrader/obj/Debug/netcoreapp3.1/AutoTrader.pdb
+/Users/stephenmay/Desktop/classwork-May-Stephen/AutoTrader/AutoTrader/obj/Debug/netcoreapp3.1/AutoTrader.genruntimeconfig.cache
