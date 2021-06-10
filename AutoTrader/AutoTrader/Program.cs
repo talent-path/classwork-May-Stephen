@@ -34,8 +34,8 @@ namespace AutoTrader
 
             Task.WaitAll(tasks.ToArray());
 
-        }
 
+        }
 
         static async Task GetCurrentPrice(string stock)
         {
@@ -91,6 +91,10 @@ namespace AutoTrader
                     else if (price > median)
                     {
                         Console.WriteLine($"{stock} is above its median price by +{price - median}. You should sell.");
+                    }
+                    else if (price == median)
+                    {
+                        Console.WriteLine($"{stock} is currently at its median price of {median}. You should hold.");
                     }
                 }
 
