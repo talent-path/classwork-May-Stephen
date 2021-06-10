@@ -1,28 +1,17 @@
-﻿<Properties StartupConfiguration="{A7BF3A9B-37BA-4A94-B444-C59532500202}|Default">
+﻿<Properties StartupConfiguration="{537B2F6F-791F-4C78-A68B-53E9C967B0E3}|Default">
   <MonoDevelop.Ide.ItemProperties.Problem10 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.Problem18 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.BellCurveWarmUp PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.Problem12 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.Problem5 PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Problem12/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Problem27/Program.cs">
     <Files>
-      <File FileName="Problem11/Program.cs" Line="15" Column="1" />
-      <File FileName="Problem19/Program.cs" Line="28" Column="1" />
-      <File FileName="Problem12/Program.cs" Line="21" Column="10" />
-      <File FileName="Utils/Util.cs" Line="1" Column="1" />
+      <File FileName="Problem27/Program.cs" Line="30" Column="39" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ProjectEuler" expanded="True">
-            <Node name="BellCurveWarmUp" expanded="True" />
-            <Node name="Problem11" expanded="True" />
-            <Node name="Problem12" expanded="True">
-              <Node name="Program.cs" selected="True" />
-            </Node>
-            <Node name="Problem18" expanded="True" />
-            <Node name="Problem19" expanded="True" />
-            <Node name="Problem3" expanded="True" />
             <Node name="Utils" expanded="True" />
           </Node>
         </State>
@@ -34,6 +23,7 @@
   <MonoDevelop.Ide.ItemProperties.Problem19 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Problem27 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.Problem4 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
