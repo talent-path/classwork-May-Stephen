@@ -94,7 +94,7 @@ namespace AutoTrader
                     }
                     else if (price == median)
                     {
-                        Console.WriteLine($"{stock} is currently at its median price of {median}. You should hold.");
+                        Console.WriteLine($"{stock} is currently at its median price of {price}. You should hold.");
                     }
                 }
 
@@ -104,7 +104,7 @@ namespace AutoTrader
             }
             else
             {
-                // add stock to dictionary
+                // add stock to dictionary if not there already
                 _pricesPerStock.Add(stock, new List<decimal> { price });
             }
         }

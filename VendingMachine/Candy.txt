@@ -1,0 +1,5 @@
+Snickers, 0.75, 20
+KitKat, 1.00, 13
+Skittles, 0.75. 8
+Starburst, 1.25, 17
+BubbleGum, 0.50, 7

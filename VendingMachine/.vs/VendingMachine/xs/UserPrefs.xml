@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{7D0DBA0F-B1D4-49A3-867F-C8CFF8F76A77}|Default">
+  <MonoDevelop.Ide.ItemProperties.VirtualVendingMachine FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="VendingMachine/Daos/VendingMachineDao.cs">
+    <Files>
+      <File FileName="VendingMachine/Daos/VendingMachineDao.cs" Line="16" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="VendingMachine" expanded="True">
+            <Node name="VirtualVendingMachine" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Daos" expanded="True">
+                <Node name="VendingMachineDao.cs" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Services" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

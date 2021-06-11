@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{45F4E0C2-02A9-45CD-9577-C923881B96E8}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="AutoTrader/Program.cs">
     <Files>
-      <File FileName="AutoTrader/Program.cs" Line="173" Column="2" />
+      <File FileName="AutoTrader/Program.cs" Line="107" Column="64" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,7 +15,7 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.AutoTrader FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.AutoTrader PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
