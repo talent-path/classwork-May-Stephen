@@ -3,6 +3,11 @@ namespace VirtualVendingMachine.Models
 {
     public class Snack : ISnack
     {
+
+        public string Name { get; }
+        public decimal Price { get; }
+        public int Quantity { get; set; }
+
         public Snack(string name, decimal price, int qty)
         {
             Name = name;
@@ -10,8 +15,17 @@ namespace VirtualVendingMachine.Models
             Quantity = qty;
         }
 
-        public string Name { get;  }
-        public decimal Price { get; }
-        public int Quantity { get; }
+        public Snack(Snack snack)
+        {
+            Name = snack.Name;
+            Price = snack.Price;
+            Quantity = snack.Quantity;
+        }
+
+        public Snack()
+        {
+
+        }
+
     }
 }

@@ -7,6 +7,7 @@ namespace VirtualVendingMachine.Models
     {
         
         public List<Snack> Snacks { get; set; }
+        public decimal TotalMoney { get; set; }
 
         public VendingMachine(List<Snack> snacks)
         {

@@ -1,0 +1,12 @@
+/Users/stephenmay/Desktop/classwork-May-Stephen/VendingMachine/VendingMachine/obj/Debug/netcoreapp3.1/VirtualVendingMachine.csprojAssemblyReference.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/VendingMachine/VendingMachine/obj/Debug/netcoreapp3.1/VirtualVendingMachine.AssemblyInfoInputs.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/VendingMachine/VendingMachine/obj/Debug/netcoreapp3.1/VirtualVendingMachine.AssemblyInfo.cs
+/Users/stephenmay/Desktop/classwork-May-Stephen/VendingMachine/VendingMachine/obj/Debug/netcoreapp3.1/VirtualVendingMachine.csproj.CoreCompileInputs.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/VendingMachine/VendingMachine/bin/Debug/netcoreapp3.1/VirtualVendingMachine.deps.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/VendingMachine/VendingMachine/bin/Debug/netcoreapp3.1/VirtualVendingMachine.runtimeconfig.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/VendingMachine/VendingMachine/bin/Debug/netcoreapp3.1/VirtualVendingMachine.runtimeconfig.dev.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/VendingMachine/VendingMachine/bin/Debug/netcoreapp3.1/VirtualVendingMachine.dll
+/Users/stephenmay/Desktop/classwork-May-Stephen/VendingMachine/VendingMachine/bin/Debug/netcoreapp3.1/VirtualVendingMachine.pdb
+/Users/stephenmay/Desktop/classwork-May-Stephen/VendingMachine/VendingMachine/obj/Debug/netcoreapp3.1/VirtualVendingMachine.dll
+/Users/stephenmay/Desktop/classwork-May-Stephen/VendingMachine/VendingMachine/obj/Debug/netcoreapp3.1/VirtualVendingMachine.pdb
+/Users/stephenmay/Desktop/classwork-May-Stephen/VendingMachine/VendingMachine/obj/Debug/netcoreapp3.1/VirtualVendingMachine.genruntimeconfig.cache

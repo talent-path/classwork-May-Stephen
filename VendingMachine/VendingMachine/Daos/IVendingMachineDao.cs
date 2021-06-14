@@ -1,16 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using VirtualVendingMachine.Models;
 
 namespace VirtualVendingMachine.Daos
 {
     public interface IVendingMachineDao
     {
-        public VendingMachine VendingMachine { get; }
 
-        public string ReadFile { get; set; }
+        List<Snack> GetInventory();
 
-        public void WriteToFile();
-
-        public void RemoveSnack(Snack snack);
+        public void EditSnack(Snack snack);
     }
 }
