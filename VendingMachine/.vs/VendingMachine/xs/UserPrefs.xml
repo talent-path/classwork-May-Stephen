@@ -6,7 +6,7 @@
       <File FileName="VendingMachine/Views/VendingMachineView.cs" Line="30" Column="12" />
       <File FileName="VendingMachine/Program.cs" Line="42" Column="39" />
       <File FileName="VendingMachine/Services/VendingMachineService.cs" Line="30" Column="57" />
-      <File FileName="VendingMachine/Models/Change.cs" Line="1" Column="1" />
+      <File FileName="VendingMachine/Models/Change.cs" Line="16" Column="45" />
       <File FileName="VendingMachine/Models/IChange.cs" Line="1" Column="1" />
     </Files>
     <Pads>

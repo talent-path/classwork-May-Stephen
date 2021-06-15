@@ -24,7 +24,7 @@ namespace VirtualVendingMachine
 
             _view.DisplayChoices(_service.GetInventory());
 
-            int choice = _service.ChooseSnack(_service.GetInventory(), userMoney);
+            _service.ChooseSnack(_service.GetInventory(), userMoney);
 
             
 

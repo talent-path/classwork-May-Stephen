@@ -54,7 +54,7 @@ namespace Utils
             {
                 if (GetSquareRoot(num) > prime)
                     break;
-                if( null% prime == 0)
+                if (null % prime == 0)
                 {
                     return false;
                 }
@@ -152,6 +152,17 @@ namespace Utils
                 }
             }
             return factors;
+        }
+
+        public static int ToThePowerOf(int x, int y)
+        {
+            int prod = x;
+            for (int i = 1; i < y; i++)
+            {
+                prod *= x;
+            }
+            
+            return prod;
         }
     }
 }

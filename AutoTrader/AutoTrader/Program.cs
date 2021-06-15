@@ -69,7 +69,7 @@ namespace AutoTrader
                 }
 
                 // delay for 1 minute
-                await Task.Delay(60000);
+                await Task.Delay(6000);
             }
         }
 
