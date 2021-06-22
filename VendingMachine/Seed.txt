@@ -1,0 +1,5 @@
+Doritos,0.75,15
+Snickers,1.00,12
+Bubble Gum,0.50,4
+Reese's,0.75,11
+Rice Krispy Treat,1.25,7

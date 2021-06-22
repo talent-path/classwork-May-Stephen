@@ -1,0 +1,40 @@
+﻿<Properties StartupConfiguration="{BD9D20CD-7938-463B-B9B6-03C7B45FBD87}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RazorDemo/Controllers/DemoController.cs">
+    <Files>
+      <File FileName="RazorDemo/Models/FakeModel.cs" Line="1" Column="1" />
+      <File FileName="RazorDemo/Models/FirstViewViewModel.cs" Line="6" Column="20" />
+      <File FileName="RazorDemo/Models/ErrorViewModel.cs" Line="1" Column="1" />
+      <File FileName="RazorDemo/Views/Demo/Index.cshtml" Line="1" Column="1" />
+      <File FileName="RazorDemo/Views/Demo/FirstView.cshtml" Line="35" Column="1" />
+      <File FileName="RazorDemo/Controllers/DemoController.cs" Line="24" Column="43" />
+      <File FileName="RazorDemo/Startup.cs" Line="1" Column="1" />
+      <File FileName="RazorDemo/Controllers/HomeController.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="RazorDemo" expanded="True">
+            <Node name="RazorDemo" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="DemoController.cs" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Demo" expanded="True" />
+                <Node name="Home" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.RazorDemo PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

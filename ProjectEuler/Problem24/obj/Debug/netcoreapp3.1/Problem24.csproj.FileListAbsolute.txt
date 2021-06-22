@@ -1,0 +1,15 @@
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Problem24/bin/Debug/netcoreapp3.1/Problem24.deps.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Problem24/bin/Debug/netcoreapp3.1/Problem24.runtimeconfig.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Problem24/bin/Debug/netcoreapp3.1/Problem24.runtimeconfig.dev.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Problem24/bin/Debug/netcoreapp3.1/Problem24.dll
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Problem24/bin/Debug/netcoreapp3.1/Problem24.pdb
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Problem24/bin/Debug/netcoreapp3.1/Utils.dll
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Problem24/bin/Debug/netcoreapp3.1/Utils.pdb
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Problem24/obj/Debug/netcoreapp3.1/Problem24.csprojAssemblyReference.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Problem24/obj/Debug/netcoreapp3.1/Problem24.AssemblyInfoInputs.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Problem24/obj/Debug/netcoreapp3.1/Problem24.AssemblyInfo.cs
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Problem24/obj/Debug/netcoreapp3.1/Problem24.csproj.CoreCompileInputs.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Problem24/obj/Debug/netcoreapp3.1/Problem24.csproj.CopyComplete
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Problem24/obj/Debug/netcoreapp3.1/Problem24.dll
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Problem24/obj/Debug/netcoreapp3.1/Problem24.pdb
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Problem24/obj/Debug/netcoreapp3.1/Problem24.genruntimeconfig.cache

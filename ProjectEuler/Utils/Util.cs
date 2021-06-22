@@ -164,5 +164,31 @@ namespace Utils
             
             return prod;
         }
+
+        public static void GeneratePermutations(List<string> perms, string currNum, List<string> available)
+        {
+            if (currNum.Length == 10)
+            {
+                perms.Add(currNum);
+            }
+            else
+            {
+                for(int i = 0; i < available.Count; i++)
+                {
+                    string numToAdd = available[i];
+                    available.RemoveAt(i);
+
+                    GeneratePermutations(perms, currNum + numToAdd, available);
+
+                    available.Insert(i, numToAdd);
+                }
+                
+
+               
+            }
+
+            
+
+        }
     }
 }

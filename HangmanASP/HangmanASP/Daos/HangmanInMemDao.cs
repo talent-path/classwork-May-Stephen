@@ -61,5 +61,10 @@ namespace HangmanASP.Daos
             toUpdate = game;
         }
 
+        public bool GameOver(HangmanGame game)
+        {
+
+        }
+
     }
 }

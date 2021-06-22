@@ -22,7 +22,7 @@ namespace VirtualVendingMachine.Models
             Quantity = snack.Quantity;
         }
 
-        public Snack()
+        public Snack(string v, double v1)
         {
 
         }

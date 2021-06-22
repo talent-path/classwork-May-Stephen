@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <None Remove="Models\" />
+    <None Remove="Services\" />
+    <None Remove="Daos\" />
+    <None Remove="Views\" />
+    <None Remove="Controllers\" />
+    <None Remove="Repos\" />
+    <None Remove="Exceptions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Services\" />
+    <Folder Include="Daos\" />
+    <Folder Include="Views\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Repos\" />
+    <Folder Include="Exceptions\" />
+  </ItemGroup>
+</Project>

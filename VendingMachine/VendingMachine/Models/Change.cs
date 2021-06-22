@@ -59,6 +59,15 @@ namespace VirtualVendingMachine.Models
             {Coins.Penny, 0 }
         };
 
+        public Change(int dollars, int quarters, int dimes, int nickels, int pennies)
+        {
+            Money[Coins.Dollar] = dollars;
+            Money[Coins.Quarter] = quarters;
+            Money[Coins.Dime] = dimes;
+            Money[Coins.Nickel] = nickels;
+            Money[Coins.Penny] = pennies;
+        }
+
         
     }
 }

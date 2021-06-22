@@ -1,29 +1,32 @@
 ﻿<Properties StartupConfiguration="{7D0DBA0F-B1D4-49A3-867F-C8CFF8F76A77}|Default">
   <MonoDevelop.Ide.ItemProperties.VirtualVendingMachine PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="VendingMachine/Models/Change.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="VendingMachine/Controllers/VendingMachineController.cs" Line="31" Column="10" />
-      <File FileName="VendingMachine/Views/VendingMachineView.cs" Line="30" Column="12" />
-      <File FileName="VendingMachine/Program.cs" Line="42" Column="39" />
-      <File FileName="VendingMachine/Services/VendingMachineService.cs" Line="30" Column="57" />
-      <File FileName="VendingMachine/Models/Change.cs" Line="16" Column="45" />
-      <File FileName="VendingMachine/Models/IChange.cs" Line="1" Column="1" />
+      <File FileName="VendingMachineTests/VendingMachineDaoTests.cs" />
+      <File FileName="VendingMachine/Daos/IVendingMachineDao.cs" />
+      <File FileName="VendingMachine/Models/Snack.cs" />
+      <File FileName="VendingMachine/Daos/VendingMachineFileDao.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="VendingMachine" expanded="True">
+            <Node name="VendingMachineTests" expanded="True">
+              <Node name="VendingMachineDaoTests.cs" selected="True" />
+            </Node>
             <Node name="VirtualVendingMachine" expanded="True">
-              <Node name="Controllers" expanded="True" />
               <Node name="Daos" expanded="True" />
-              <Node name="Enums" expanded="True" />
-              <Node name="Models" expanded="True">
-                <Node name="Change.cs" selected="True" />
-              </Node>
-              <Node name="Services" expanded="True" />
-              <Node name="Views" expanded="True" />
+              <Node name="Models" expanded="True" />
             </Node>
           </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="VendingMachine" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
@@ -31,7 +34,10 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/stephenmay/Desktop/classwork-May-Stephen/VendingMachine/VendingMachineTests/VendingMachineDaoTests.cs" relfile="VendingMachineTests/VendingMachineDaoTests.cs" line="46" column="1" />
+      <Breakpoint file="/Users/stephenmay/Desktop/classwork-May-Stephen/VendingMachine/VendingMachine/Daos/VendingMachineFileDao.cs" relfile="VendingMachine/Daos/VendingMachineFileDao.cs" line="38" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

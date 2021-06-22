@@ -1,0 +1,14 @@
+﻿@model Teacher
+@{
+}
+
+@Html.HiddenFor(m => m.Id)
+<h1>@Model.Name</h1><br/>
+<table>
+    @foreach(Course c in Model.Courses)
+            {
+                @Html.HiddenFor(c => c.Id)
+                <tr>@c.Name</tr>
+            }
+</table>
+

@@ -1,33 +1,45 @@
-﻿<Properties StartupConfiguration="{6B384599-BC21-452B-8318-BB1E8640768F}|Default">
+﻿<Properties StartupConfiguration="{F5F852B1-9439-425E-A2C3-8184B369B0E1}|Default">
   <MonoDevelop.Ide.ItemProperties.Problem10 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.Problem18 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.Problem30 FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.BellCurveWarmUp PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.Problem12 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.Problem5 PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Utils/Util.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Problem30/Program.cs">
     <Files>
-      <File FileName="Problem16/Program.cs" Line="19" Column="1" />
-      <File FileName="Utils/Util.cs" Line="161" Column="14" />
+      <File FileName="Problem30/Program.cs" Line="9" Column="13" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ProjectEuler" expanded="True" selected="True">
-            <Node name="Problem16" expanded="True" />
-            <Node name="Problem27" expanded="True" />
-            <Node name="Problem9" expanded="True" />
+          <Node name="ProjectEuler" expanded="True">
+            <Node name="Problem15" expanded="True" />
+            <Node name="Problem24" expanded="True" />
+            <Node name="Problem30" expanded="True" selected="True" />
+            <Node name="Problem43" expanded="True" />
             <Node name="Utils" expanded="True" />
           </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>primes[j-1]</Value>
+          <Value>sub</Value>
+          <Value>allNums[i]</Value>
+          <Value>j</Value>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.Problem3 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.Problem9 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.Problem24 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.Problem19 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Problem15 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Problem16 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.Problem43 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.Problem27 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.Problem4 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

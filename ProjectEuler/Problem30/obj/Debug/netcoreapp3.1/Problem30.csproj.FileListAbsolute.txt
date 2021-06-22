@@ -1,0 +1,12 @@
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Problem30/bin/Debug/netcoreapp3.1/Problem30.deps.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Problem30/bin/Debug/netcoreapp3.1/Problem30.runtimeconfig.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Problem30/bin/Debug/netcoreapp3.1/Problem30.runtimeconfig.dev.json
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Problem30/bin/Debug/netcoreapp3.1/Problem30.dll
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Problem30/bin/Debug/netcoreapp3.1/Problem30.pdb
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Problem30/obj/Debug/netcoreapp3.1/Problem30.csprojAssemblyReference.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Problem30/obj/Debug/netcoreapp3.1/Problem30.AssemblyInfoInputs.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Problem30/obj/Debug/netcoreapp3.1/Problem30.AssemblyInfo.cs
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Problem30/obj/Debug/netcoreapp3.1/Problem30.csproj.CoreCompileInputs.cache
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Problem30/obj/Debug/netcoreapp3.1/Problem30.dll
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Problem30/obj/Debug/netcoreapp3.1/Problem30.pdb
+/Users/stephenmay/Desktop/classwork-May-Stephen/ProjectEuler/Problem30/obj/Debug/netcoreapp3.1/Problem30.genruntimeconfig.cache

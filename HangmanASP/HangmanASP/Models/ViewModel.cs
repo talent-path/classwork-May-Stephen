@@ -9,11 +9,13 @@ namespace HangmanASP.Models
         public string PartialWord { get; set; }
         public bool Completed { get; set; }
 
+
         public ViewModel(bool completed, string partialWord, List<char> guessedCharacters)
         {
             Completed = completed;
             PartialWord = partialWord;
             GuessedCharacters = guessedCharacters;
+            
         }
     }
 }
