@@ -54,7 +54,7 @@ namespace Utils
             {
                 if (GetSquareRoot(num) > prime)
                     break;
-                if (null % prime == 0)
+                if (num % prime == 0)
                 {
                     return false;
                 }
@@ -165,30 +165,16 @@ namespace Utils
             return prod;
         }
 
-        public static void GeneratePermutations(List<string> perms, string currNum, List<string> available)
+        public static int GreatestCommonDenom(int numerator, int denominator)
         {
-            if (currNum.Length == 10)
+            if (denominator == 0)
             {
-                perms.Add(currNum);
+                return numerator;
             }
             else
             {
-                for(int i = 0; i < available.Count; i++)
-                {
-                    string numToAdd = available[i];
-                    available.RemoveAt(i);
-
-                    GeneratePermutations(perms, currNum + numToAdd, available);
-
-                    available.Insert(i, numToAdd);
-                }
-                
-
-               
-            }
-
-            
-
+                return GreatestCommonDenom(denominator, numerator % denominator);
+            }                  
         }
     }
 }
