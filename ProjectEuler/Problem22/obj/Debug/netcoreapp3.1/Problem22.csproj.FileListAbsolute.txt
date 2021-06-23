@@ -1,0 +1,13 @@
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\ProjectEuler\Problem22\bin\Debug\netcoreapp3.1\Problem22.exe
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\ProjectEuler\Problem22\bin\Debug\netcoreapp3.1\Problem22.deps.json
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\ProjectEuler\Problem22\bin\Debug\netcoreapp3.1\Problem22.runtimeconfig.json
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\ProjectEuler\Problem22\bin\Debug\netcoreapp3.1\Problem22.runtimeconfig.dev.json
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\ProjectEuler\Problem22\bin\Debug\netcoreapp3.1\Problem22.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\ProjectEuler\Problem22\bin\Debug\netcoreapp3.1\Problem22.pdb
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\ProjectEuler\Problem22\obj\Debug\netcoreapp3.1\Problem22.csproj.AssemblyReference.cache
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\ProjectEuler\Problem22\obj\Debug\netcoreapp3.1\Problem22.AssemblyInfoInputs.cache
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\ProjectEuler\Problem22\obj\Debug\netcoreapp3.1\Problem22.AssemblyInfo.cs
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\ProjectEuler\Problem22\obj\Debug\netcoreapp3.1\Problem22.csproj.CoreCompileInputs.cache
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\ProjectEuler\Problem22\obj\Debug\netcoreapp3.1\Problem22.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\ProjectEuler\Problem22\obj\Debug\netcoreapp3.1\Problem22.pdb
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\ProjectEuler\Problem22\obj\Debug\netcoreapp3.1\Problem22.genruntimeconfig.cache

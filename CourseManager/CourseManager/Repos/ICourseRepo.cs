@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace CourseManager.Repos
 {
-    interface ICourseRepo
+    interface ICourseRepo 
     {
     }
 }

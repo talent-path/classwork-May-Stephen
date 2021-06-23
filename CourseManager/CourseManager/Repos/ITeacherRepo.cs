@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace CourseManager.Repos
 {
-    interface ITeacherRepo
+    interface ITeacherRepo : InMemTeacherRepo
     {
     }
 }
