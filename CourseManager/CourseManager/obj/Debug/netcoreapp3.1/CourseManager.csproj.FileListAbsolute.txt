@@ -1,46 +1,256 @@
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/bin/Debug/netcoreapp3.1/appsettings.Development.json
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/bin/Debug/netcoreapp3.1/appsettings.json
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/bin/Debug/netcoreapp3.1/CourseManager.deps.json
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/bin/Debug/netcoreapp3.1/CourseManager.runtimeconfig.json
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/bin/Debug/netcoreapp3.1/CourseManager.runtimeconfig.dev.json
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/bin/Debug/netcoreapp3.1/CourseManager.dll
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/bin/Debug/netcoreapp3.1/CourseManager.pdb
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/bin/Debug/netcoreapp3.1/CourseManager.Views.dll
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/bin/Debug/netcoreapp3.1/CourseManager.Views.pdb
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.csprojAssemblyReference.cache
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.AssemblyInfoInputs.cache
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.AssemblyInfo.cs
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.csproj.CoreCompileInputs.cache
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.MvcApplicationPartsAssemblyInfo.cache
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.RazorAssemblyInfo.cache
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.RazorAssemblyInfo.cs
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/staticwebassets/CourseManager.StaticWebAssets.Manifest.cache
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/staticwebassets/CourseManager.StaticWebAssets.xml
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/scopedcss/bundle/CourseManager.styles.css
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.TagHelpers.input.cache
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.TagHelpers.output.cache
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.RazorCoreGenerate.cache
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/Course/Details.cshtml.g.cs
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/Course/Edit.cshtml.g.cs
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/Course/Index.cshtml.g.cs
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/Shared/Error.cshtml.g.cs
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/_ViewImports.cshtml.g.cs
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/_ViewStart.cshtml.g.cs
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.RazorTargetAssemblyInfo.cache
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.RazorTargetAssemblyInfo.cs
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.Views.pdb
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.dll
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.pdb
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.genruntimeconfig.cache
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.csproj.CopyComplete
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/Course/Delete.cshtml.g.cs
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/Student/Index.cshtml.g.cs
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/Teacher/Index.cshtml.g.cs
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/Teacher/Details.cshtml.g.cs
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/Student/Details.cshtml.g.cs
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/Student/Delete.cshtml.g.cs
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/Student/Edit.cshtml.g.cs
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/Teacher/Delete.cshtml.g.cs
-/Users/stephenmay/Desktop/classwork-May-Stephen/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/Teacher/Edit.cshtml.g.cs
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/bin/Debug/netcoreapp3.1/appsettings.Development.json
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/bin/Debug/netcoreapp3.1/appsettings.json
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/bin/Debug/netcoreapp3.1/CourseManager.deps.json
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/bin/Debug/netcoreapp3.1/CourseManager.runtimeconfig.json
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/bin/Debug/netcoreapp3.1/CourseManager.runtimeconfig.dev.json
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/bin/Debug/netcoreapp3.1/CourseManager.dll
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/bin/Debug/netcoreapp3.1/CourseManager.pdb
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/bin/Debug/netcoreapp3.1/CourseManager.Views.dll
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/bin/Debug/netcoreapp3.1/CourseManager.Views.pdb
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.csprojAssemblyReference.cache
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.AssemblyInfoInputs.cache
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.AssemblyInfo.cs
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.csproj.CoreCompileInputs.cache
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.MvcApplicationPartsAssemblyInfo.cache
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.RazorAssemblyInfo.cache
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.RazorAssemblyInfo.cs
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/staticwebassets/CourseManager.StaticWebAssets.Manifest.cache
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/staticwebassets/CourseManager.StaticWebAssets.xml
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/scopedcss/bundle/CourseManager.styles.css
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.TagHelpers.input.cache
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.TagHelpers.output.cache
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.RazorCoreGenerate.cache
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/Course/Details.cshtml.g.cs
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/Course/Edit.cshtml.g.cs
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/Course/Index.cshtml.g.cs
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/Shared/Error.cshtml.g.cs
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/_ViewImports.cshtml.g.cs
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/_ViewStart.cshtml.g.cs
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.RazorTargetAssemblyInfo.cache
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.RazorTargetAssemblyInfo.cs
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.Views.pdb
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.dll
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.pdb
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.genruntimeconfig.cache
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/CourseManager.csproj.CopyComplete
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/Teacher/Index.cshtml.g.cs
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/Student/Index.cshtml.g.cs
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/Student/Details.cshtml.g.cs
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/Teacher/Details.cshtml.g.cs
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/Student/Edit.cshtml.g.cs
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/Teacher/Edit.cshtml.g.cs
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/Course/Delete.cshtml.g.cs
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/Student/Delete.cshtml.g.cs
+/Users/charleshall/classwork-hall-charles/CourseManager/CourseManager/obj/Debug/netcoreapp3.1/Razor/Views/Teacher/Delete.cshtml.g.cs
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\CourseManager.exe
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\CourseManager.deps.json
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\CourseManager.runtimeconfig.json
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\CourseManager.runtimeconfig.dev.json
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\CourseManager.dll
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\CourseManager.pdb
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\CourseManager.Views.dll
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\CourseManager.Views.pdb
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.csproj.AssemblyReference.cache
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.AssemblyInfoInputs.cache
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.AssemblyInfo.cs
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.csproj.CoreCompileInputs.cache
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.RazorAssemblyInfo.cache
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.RazorAssemblyInfo.cs
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\staticwebassets\CourseManager.StaticWebAssets.Manifest.cache
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\staticwebassets\CourseManager.StaticWebAssets.xml
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\scopedcss\bundle\CourseManager.styles.css
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.TagHelpers.input.cache
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.TagHelpers.output.cache
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.RazorCoreGenerate.cache
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Course\Delete.cshtml.g.cs
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Course\Details.cshtml.g.cs
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Course\Edit.cshtml.g.cs
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Course\Index.cshtml.g.cs
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Student\Delete.cshtml.g.cs
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Student\Details.cshtml.g.cs
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Student\Edit.cshtml.g.cs
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Student\Index.cshtml.g.cs
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Teacher\Delete.cshtml.g.cs
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Teacher\Details.cshtml.g.cs
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Teacher\Edit.cshtml.g.cs
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Teacher\Index.cshtml.g.cs
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.RazorTargetAssemblyInfo.cache
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.RazorTargetAssemblyInfo.cs
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.Views.pdb
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.csproj.CopyComplete
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.dll
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.pdb
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.genruntimeconfig.cache
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Teacher\Add.cshtml.g.cs
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Student\Add.cshtml.g.cs
+C:\Users\CHall\Desktop\classwork-hall-charles\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Course\Add.cshtml.g.cs
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\CourseManager.exe
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\CourseManager.deps.json
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\CourseManager.runtimeconfig.json
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\CourseManager.runtimeconfig.dev.json
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\CourseManager.dll
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\CourseManager.pdb
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\CourseManager.Views.dll
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\CourseManager.Views.pdb
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.csproj.AssemblyReference.cache
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.AssemblyInfoInputs.cache
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.AssemblyInfo.cs
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.csproj.CoreCompileInputs.cache
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.RazorAssemblyInfo.cache
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.RazorAssemblyInfo.cs
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\staticwebassets\CourseManager.StaticWebAssets.Manifest.cache
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\staticwebassets\CourseManager.StaticWebAssets.xml
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\scopedcss\bundle\CourseManager.styles.css
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.TagHelpers.input.cache
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.TagHelpers.output.cache
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.RazorCoreGenerate.cache
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Course\Add.cshtml.g.cs
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Course\Delete.cshtml.g.cs
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Course\Details.cshtml.g.cs
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Course\Edit.cshtml.g.cs
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Course\Index.cshtml.g.cs
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Student\Add.cshtml.g.cs
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Student\Delete.cshtml.g.cs
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Student\Details.cshtml.g.cs
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Student\Edit.cshtml.g.cs
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Student\Index.cshtml.g.cs
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Teacher\Add.cshtml.g.cs
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Teacher\Delete.cshtml.g.cs
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Teacher\Details.cshtml.g.cs
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Teacher\Edit.cshtml.g.cs
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Teacher\Index.cshtml.g.cs
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.RazorTargetAssemblyInfo.cache
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.RazorTargetAssemblyInfo.cs
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.Views.pdb
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.csproj.CopyComplete
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.dll
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.pdb
+C:\Users\JLavendt\Desktop\classwork-lavendt-jesse\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.genruntimeconfig.cache
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\CourseManager.exe
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\CourseManager.deps.json
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\CourseManager.runtimeconfig.json
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\CourseManager.runtimeconfig.dev.json
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\CourseManager.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\CourseManager.pdb
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\CourseManager.Views.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\CourseManager.Views.pdb
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\Humanizer.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.csproj.AssemblyReference.cache
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.AssemblyInfoInputs.cache
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.AssemblyInfo.cs
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.csproj.CoreCompileInputs.cache
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.RazorAssemblyInfo.cache
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.RazorAssemblyInfo.cs
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\staticwebassets\CourseManager.StaticWebAssets.Manifest.cache
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\staticwebassets\CourseManager.StaticWebAssets.xml
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\scopedcss\bundle\CourseManager.styles.css
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.TagHelpers.input.cache
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.TagHelpers.output.cache
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.RazorCoreGenerate.cache
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Course\Add.cshtml.g.cs
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Course\Delete.cshtml.g.cs
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Course\Details.cshtml.g.cs
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Course\Edit.cshtml.g.cs
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Course\Index.cshtml.g.cs
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Student\Add.cshtml.g.cs
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Student\Delete.cshtml.g.cs
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Student\Details.cshtml.g.cs
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Student\Edit.cshtml.g.cs
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Student\Index.cshtml.g.cs
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Teacher\Add.cshtml.g.cs
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Teacher\Delete.cshtml.g.cs
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Teacher\Details.cshtml.g.cs
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Teacher\Edit.cshtml.g.cs
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\Teacher\Index.cshtml.g.cs
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.RazorTargetAssemblyInfo.cache
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.RazorTargetAssemblyInfo.cs
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.Views.pdb
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.csproj.CopyComplete
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.pdb
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CourseManager\CourseManager\obj\Debug\netcoreapp3.1\CourseManager.genruntimeconfig.cache

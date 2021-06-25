@@ -1,0 +1,11 @@
+﻿@page
+@{
+
+}
+<h1>Add a teacher</h1>
+
+@using (Html.BeginForm("Add", "Teacher", FormMethod.Post))
+{
+    <input type="text" name="Name">
+    <button type="submit">Add</button>
+}

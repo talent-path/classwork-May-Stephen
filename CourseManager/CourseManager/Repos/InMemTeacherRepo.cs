@@ -5,7 +5,7 @@ using CourseManager.Models;
 
 namespace CourseManager.Repos
 {
-    public class InMemTeacherRepo
+    public class InMemTeacherRepo : ITeacherRepo
     {
         static List<Teacher> _allTeachers = new List<Teacher>
         {
@@ -48,12 +48,21 @@ namespace CourseManager.Repos
             return _allTeachers.SingleOrDefault(t => t.Id == id);
         }
 
-        internal void DeleteTeacher(Teacher t)
+        public void Edit(Teacher toEdit)
         {
-            _allTeachers = _allTeachers.Where(tc => tc.Id != t.Id).ToList();
+            _allTeachers = _allTeachers.Select(
+                t => t.Id == toEdit.Id ?
+                    new Teacher(toEdit) :
+                    t
+                    ).ToList();
         }
 
-        internal void Edit(Teacher toEdit)
+        public void Delete(int id)
+        {
+            _allTeachers = _allTeachers.Where(t => t.Id != id).ToList();
+        }
+
+        public int Add(string name)
         {
             throw new NotImplementedException();
         }

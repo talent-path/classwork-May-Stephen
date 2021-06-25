@@ -31,6 +31,14 @@ namespace CourseManager.Controllers
                 try
                 {
                     Course toDisplay = _service.GetById(id.Value);
+                    List<StudentCourse> studentCourses = _service.GetStudentCoursesByCourseId(id.Value);
+                    List<Student> students = new List<Student>();
+                    for (int i = 0;i<studentCourses.Count;++i)
+                    {
+                        Student student = _service.GetStudentById(studentCourses[i].StudentId);
+                        students.Add(student);
+                    }
+                    toDisplay.ClassStudents = students;
                     return View(toDisplay);
 
                 }
@@ -40,6 +48,44 @@ namespace CourseManager.Controllers
                 }
             }
             return BadRequest();
+        }
+
+        [HttpGet]
+        public IActionResult Add()
+        {
+            List<Teacher> allTeachers = _service.GetAllTeachers();
+            List<Student> allStudents = _service.GetAllStudents();
+            AddCourseViewModel vm = new AddCourseViewModel
+            {
+                ToAdd = new Course(),
+                AllTeachers = allTeachers,
+                AllStudents = allStudents
+                
+            };
+
+            return View(vm);
+
+        }
+
+        [HttpPost]
+        public IActionResult Add(AddCourseViewModel vm)
+        {
+            vm.AllStudents = _service.GetAllStudents();
+            if (vm.ToAdd.ClassTeacher.Id != null)
+            {
+                Teacher fullyHydratedTeacher
+                    = _service.GetTeacherById(vm.ToAdd.ClassTeacher.Id.Value);
+
+                vm.ToAdd.ClassTeacher = fullyHydratedTeacher;
+
+               int id = _service.AddCourse(vm.ToAdd);
+                vm.ToAdd.Id = id;
+                _service.AddStudentCourses(vm);
+                return RedirectToAction("Index");
+            }
+
+            return BadRequest();
+
         }
 
         [HttpGet]
@@ -82,17 +128,15 @@ namespace CourseManager.Controllers
             if (vm.ToEdit.ClassTeacher.Id != null)
             {
 
-                Teacher fullyHydratedTeacher
-                    = _service.GetTeacherById(vm.ToEdit.ClassTeacher.Id.Value);
+               
 
+                
 
-                List<Student> fullyHydratedStudents
-                    = vm.SelectedStudentIds.Select(id => _service.GetStudentById(id)).ToList();
-
-                vm.ToEdit.ClassTeacher = fullyHydratedTeacher;
-                vm.ToEdit.ClassStudents = fullyHydratedStudents;
+                //vm.ToEdit.ClassTeacher = fullyHydratedTeacher;
+                //vm.ToEdit.ClassStudents = fullyHydratedStudents;
 
                 _service.EditCourse(vm.ToEdit);
+                _service.AddStudentCourses(vm);
 
                 return RedirectToAction("Index");
             }
@@ -101,29 +145,34 @@ namespace CourseManager.Controllers
         }
 
         [HttpGet]
-        public IActionResult Delete(int? id)
+        public IActionResult Delete(Course course)
         {
-            if (id != null)
+            if (course.Id != null)
             {
                 try
                 {
-                    Course toDelete = _service.GetById(id.Value);
+                    Course toDelete = _service.GetById(course.Id.Value);
                     return View(toDelete);
-
                 }
-                catch (CourseNotFoundException ex)
+                catch(CourseNotFoundException ex)
                 {
                     return NotFound(ex.Message);
                 }
             }
+
             return BadRequest();
         }
 
         [HttpPost]
-        public IActionResult Delete(Course c)
+        public IActionResult Delete(int? id)
         {
-                _service.DeleteCourse(c);
+            if(id != null)
+            {
+                _service.DeleteCourse(id.Value);
                 return RedirectToAction("Index");
+            }
+
+            return BadRequest();
         }
 
     }

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace CourseManager.Repos
 {
-    public class InMemCourseRepo
+    public class InMemCourseRepo : ICourseRepo
     {
         static List<Course> _allCourses = new List<Course>
         {
@@ -70,10 +70,29 @@ namespace CourseManager.Repos
             return _allCourses.Select(c => new Course(c)).ToList();
         }
 
-        internal void DeleteCourse(Course c)
+        public void Delete(int id)
         {
-            _allCourses = _allCourses.Where(toDelete => toDelete.Id != c.Id).ToList();
+            _allCourses = _allCourses.Where(c => c.Id != id).ToList();
+        }
 
+        public List<Course> GetCoursesByTeacherId(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<int> GetCoursesByStudentId(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int Add(Course toAdd)
+        {
+            throw new NotImplementedException();
+        }
+
+        void ICourseRepo.Edit(Course toEdit)
+        {
+            throw new NotImplementedException();
         }
     }
 }

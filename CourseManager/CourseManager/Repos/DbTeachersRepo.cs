@@ -1,39 +1,82 @@
-﻿using System;
+﻿using CourseManager.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
-using CourseManager.Models;
 
 namespace CourseManager.Repos
 {
-
-    
     public class DbTeachersRepo : ITeacherRepo
     {
-        string _connectionString = "Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;";
+        SqlCommand cmd;
+        string _connectionString = "Server=localhost;Database=CourseManager;Trusted_Connection=True;";
 
         private DataSet ExecuteQuery(string sql)
         {
-            // data set is a container for the data
             DataSet set = new DataSet();
-            using (SqlConnection con = new SqlConnection(_connectionString))
+
+            using (SqlConnection conn = new SqlConnection(_connectionString))
             {
-                //adapter fills data set
-                SqlDataAdapter adapter = new SqlDataAdapter(sql, con);
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
                 adapter.Fill(set);
             }
+
             return set;
+        }
+
+        public int Add(string name)
+        {
+            int id = 0;
+            DataSet set = ExecuteQuery("insert into Teachers (Name) output inserted.Id values ('" + name + "')");
+
+            id = set.Tables[0].Rows[0].Field<int>("Id");
+
+            return id;
+        }
+
+        public void Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Edit(Teacher toEdit)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Teacher> GetAll()
+        {
+            List<Teacher> toReturn = new List<Teacher>();
+
+            DataSet set = ExecuteQuery("select Id, Name from Teachers");
+
+            var table = set.Tables[0];
+
+            for (int i = 0; i < table.Rows.Count; i++)
+            {
+                Teacher toAdd = new Teacher();
+                var setId = int.Parse(table.Rows[i]["Id"].ToString());
+                var name = table.Rows[i].Field<string>("Name");
+
+                toAdd.Id = setId;
+                toAdd.Name = name;
+
+                toReturn.Add(toAdd);
+            }
+
+            return toReturn;
         }
 
         public Teacher GetById(int id)
         {
-            DataSet set = ExecuteQuery("SELECT Id, Name FROM Teachers WHERE Id =" + id);
-            var table = set.Tables[0];
             Teacher toReturn = null;
+            DataSet set = ExecuteQuery("select Id, Name from Teachers where Id =" + id);
 
-            if (table.Rows.Count == 1)
+            var table = set.Tables[0];
+
+            if(table.Rows.Count == 1)
             {
                 toReturn = new Teacher();
                 var setId = int.Parse(table.Rows[0]["Id"].ToString());
@@ -41,11 +84,11 @@ namespace CourseManager.Repos
 
                 toReturn.Id = setId;
                 toReturn.Name = name;
-
-                //TODO Add list of courses
+                //TODO need list of courses
             }
 
             return toReturn;
         }
+
     }
 }

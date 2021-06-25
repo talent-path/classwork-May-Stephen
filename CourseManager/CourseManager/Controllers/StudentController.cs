@@ -8,15 +8,18 @@ namespace CourseManager.Controllers
 {
     public class StudentController : Controller
     {
+
         CourseService _service = new CourseService();
 
-
+        //List of all students
         public IActionResult Index()
         {
             var students = _service.GetAllStudents();
+
             return View(students);
         }
 
+        //Detail page of student
         public IActionResult Details(int? id)
         {
             if (id != null)
@@ -26,25 +29,40 @@ namespace CourseManager.Controllers
                     Student toDisplay = _service.GetStudentById(id.Value);
                     return View(toDisplay);
                 }
-                catch (StudentNotFoundException e)
+                catch (StudentNotFoundException ex)
                 {
-                    return NotFound(e.Message);
+                    return NotFound(ex.Message);
                 }
             }
             return BadRequest();
         }
 
         [HttpGet]
-        public IActionResult Delete(int? id)
+        public IActionResult Add()
         {
-            if (id != null)
+            Student student = new Student();
+            student.Courses = _service.GetAll();
+            return View(student);
+        }
+
+        [HttpPost]
+        public IActionResult Add(String name)
+        {
+            _service.AddStudent(name);
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public IActionResult Delete(Student student)
+        {
+            if (student.Id != null)
             {
                 try
                 {
-                    Student toDelete = _service.GetStudentById(id.Value);
+                    Student toDelete = _service.GetStudentById(student.Id.Value);
                     return View(toDelete);
                 }
-                catch (StudentNotFoundException ex)
+                catch (CourseNotFoundException ex)
                 {
                     return NotFound(ex.Message);
                 }
@@ -54,10 +72,16 @@ namespace CourseManager.Controllers
         }
 
         [HttpPost]
-        public IActionResult Delete(Student s)
+        public IActionResult Delete(int? id)
         {
-            _service.DeleteStudent(s);
-            return RedirectToAction("Index");
+            if (id != null)
+            {
+                _service.DeleteStudent(id.Value);
+                return RedirectToAction("Index");
+            }
+
+            return BadRequest();
         }
+
     }
 }

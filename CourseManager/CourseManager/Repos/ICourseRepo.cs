@@ -1,11 +1,17 @@
-﻿using System;
+﻿using CourseManager.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace CourseManager.Repos
 {
-    interface ICourseRepo 
+    public interface ICourseRepo
     {
+        void Delete(int id);
+        List<Course> GetAll();
+        Course GetById(int id);
+        List<Course> GetCoursesByTeacherId(int id);
+        List<int> GetCoursesByStudentId(int id);
+
+        int Add(Course toAdd);
+        void Edit(Course toEdit);
     }
 }

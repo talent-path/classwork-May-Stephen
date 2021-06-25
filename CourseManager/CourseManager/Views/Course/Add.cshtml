@@ -1,0 +1,38 @@
+﻿@model AddCourseViewModel
+
+@using (Html.BeginForm("Add", "Course", FormMethod.Post))
+{
+
+<input type="text" name="toAdd.Name">
+
+
+<br />
+
+Teacher:
+    <select name="toAdd.ClassTeacher.Id">
+        @foreach (var t in Model.AllTeachers)
+        {
+            <option value="@t.Id">@t.Name</option>
+        }
+    </select>
+
+    <br />
+    @foreach (var s in Model.AllStudents)
+    {
+        @s.Name
+
+        if (Model.ToAdd.ClassStudents.Any(inClass => inClass.Id == s.Id))
+        {
+            <input type="checkbox" checked name="SelectedStudentIds" value="@s.Id" />
+
+        }
+        else
+        {
+            <input type="checkbox" name="SelectedStudentIds" value="@s.Id" />
+        }
+        <br />
+    }
+
+    <button>Add</button>
+
+}

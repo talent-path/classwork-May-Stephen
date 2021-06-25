@@ -2,12 +2,16 @@
 @{
 }
 
-<h3>Are you sure you would like to delete the course for @Model.Name ?</h3>
+<h1> @Model.Name <h1/>
+
+<p>Are you sure you want to delete this course?</p>
 
 @using (Html.BeginForm("Delete", "Course", FormMethod.Post))
-            {
-                @Html.HiddenFor(m => m.Id)
-                <button>Yes</button>
-                
-            }
+{
+    @Html.HiddenFor(c => c.Id);
+
+    <button type="submit">Yes</button>
+}
+
+<br/>
 <button>No</button>

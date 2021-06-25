@@ -1,0 +1,9 @@
+﻿@model Student
+
+<h1>Add a student</h1>
+
+@using (Html.BeginForm("Add", "Student", FormMethod.Post))
+{
+    <input type="text" name="Name">
+    <button type="submit">Add</button>
+}

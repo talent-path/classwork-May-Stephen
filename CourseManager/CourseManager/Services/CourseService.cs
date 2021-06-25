@@ -9,13 +9,22 @@ namespace CourseManager.Services
 {
     public class CourseService
     {
-        InMemCourseRepo _courseRepo = new InMemCourseRepo();
+        ICourseRepo _courseRepo = new DbCoursesRepo();
         ITeacherRepo _teacherRepo = new DbTeachersRepo();
-        InMemStudentRepo _studentRepo = new InMemStudentRepo();
+        IStudentRepo _studentRepo = new DBStudentsRepo();
+        IStudentCourseRepo _studentCourseRepo = new DbStudentCoursesRepo();
 
         public List<Course> GetAll()
         {
-            return _courseRepo.GetAll();
+            List<Course> toReturn = _courseRepo.GetAll();
+
+            foreach(Course course in toReturn)
+            {
+                course.ClassTeacher = _teacherRepo.GetById(course.ClassTeacher.Id.Value);
+            }
+
+            return toReturn;
+
         }
 
         public List<Teacher> GetAllTeachers()
@@ -28,22 +37,36 @@ namespace CourseManager.Services
             return _studentRepo.GetAll();
         }
 
+        internal List<StudentCourse> GetStudentCoursesByCourseId(int value)
+        {
+            return _studentCourseRepo.GetStudentCoursesByCourseId(value);
+        }
+
         public Course GetById(int id)
         {
             Course toReturn = _courseRepo.GetById(id);
+            
 
             if( toReturn == null)
             {
                 throw new CourseNotFoundException($"No course has an id of {id}.");
             }
 
+            toReturn.ClassTeacher = _teacherRepo.GetById(toReturn.ClassTeacher.Id.Value);
+            
+
             return toReturn;
         }
 
+        public int AddStudent(string name)
+        {
+            return _studentRepo.Add(name);
+        }
 
         public Teacher GetTeacherById(int id)
         {
             Teacher toReturn = _teacherRepo.GetById(id);
+            toReturn.Courses = _courseRepo.GetCoursesByTeacherId(id);
 
             if (toReturn == null)
             {
@@ -53,47 +76,67 @@ namespace CourseManager.Services
             return toReturn;
         }
 
-       
-
-        internal void DeleteTeacher(Teacher t)
+        public int AddTeacher(string name)
         {
-            _teacherRepo.DeleteTeacher(t);
+            return _teacherRepo.Add(name);
         }
 
-        public void DeleteStudent(Student s)
+        public int AddCourse(Course toAdd)
         {
-            _studentRepo.DeleteStudent(s);
+            int id = _courseRepo.Add(toAdd);
+            return id;
         }
 
-        public Student GetStudentById(int id)
+        internal void AddStudentCourses(AddCourseViewModel vm)
         {
-            return _studentRepo.GetById(id);
-        }
-
-        public void DeleteCourse(Course c)
-        {
-            _courseRepo.DeleteCourse(c);
-
-            List<Course> allCourses = _courseRepo.GetAll();
-            List<Student> allStudents = _studentRepo.GetAll();
-            List<Teacher> allTeachers = _teacherRepo.GetAll();
-
-            foreach (Student s in allStudents)
+            int courseId = vm.ToAdd.Id.Value;
+            int[] students = vm.SelectedStudentIds;
+            for (int i = 0;i<students.Length;++i)
             {
-                s.Courses.RemoveAll(course => course.Id == c.Id);
-            }
-            foreach (Teacher t in allTeachers)
-            {
-                t.Courses.RemoveAll(course => course.Id == c.Id);
+                int student = students[i];
+                StudentCourse studentCourse = new StudentCourse();
+                studentCourse.CourseId = courseId;
+                studentCourse.StudentId = student;
+                _studentCourseRepo.Add(studentCourse);
             }
         }
+
+        
 
         public void EditCourse(Course toEdit)
         {
             _courseRepo.Edit(toEdit);
 
-            //may need to fix all students and teachers
-            //because of stupid in-mem relationships
+
+        }
+
+        public void EditTeacher(Teacher toEdit)
+        {
+            _teacherRepo.Edit(toEdit);
+
+
+        }
+
+        public Student GetStudentById(int id)
+        {
+            Student toReturn = _studentRepo.GetById(id);
+
+            List<Course> toAdd = new List<Course>();
+            List<int> courseIds = _courseRepo.GetCoursesByStudentId(id);
+
+            foreach(int courseId in courseIds)
+            {
+                toAdd.Add(_courseRepo.GetById(courseId));
+            }
+
+            toReturn.Courses = toAdd;
+
+            return toReturn;
+        }
+
+        public void DeleteCourse(int id)
+        {
+            _courseRepo.Delete(id);
 
             List<Course> allCourses = _courseRepo.GetAll();
             List<Student> allStudents = _studentRepo.GetAll();
@@ -101,24 +144,41 @@ namespace CourseManager.Services
 
             foreach (Student anyStudent in allStudents)
             {
-                anyStudent.Courses =
-                    allCourses.Where(
-                        course => course.ClassStudents.Any(
-                            classStudent => classStudent.Id == anyStudent.Id)).ToList();
-
-
+                anyStudent.Courses.RemoveAll(c => c.Id == id);
             }
             foreach (var anyTeacher in allTeachers)
             {
-                anyTeacher.Courses = allCourses
-                    .Where(course => course.ClassTeacher.Id == anyTeacher.Id)
-                    .ToList();
+                anyTeacher.Courses.RemoveAll(c => c.Id == id);
             }
         }
 
-        public void EditTeacher(Teacher toEdit)
+        public void DeleteStudent(int id)
         {
-            _teacherRepo.Edit(toEdit);
+            StudentCourse studentCourse = new StudentCourse();
+            studentCourse.StudentId = id;
+            _studentCourseRepo.DeleteByStudentId(studentCourse);
+            _studentRepo.Delete(id);
         }
-    }
+
+        public void DeleteTeacher(int id)
+        {
+            _teacherRepo.Delete(id);
+        }
+
+        public void AddStudentCourses(EditCourseViewModel vm)
+        {
+            StudentCourse studentCourse = new StudentCourse();
+            studentCourse.CourseId = vm.ToEdit.Id.Value;
+            _studentCourseRepo.DeleteByCourseId(studentCourse); //Deleting all previous bridges
+            for (int i = 0;i<vm.SelectedStudentIds.Length;++i)
+            {
+                StudentCourse toAdd = new StudentCourse();
+                int studentId = vm.SelectedStudentIds[i];
+                toAdd.StudentId = studentId;
+                toAdd.CourseId = vm.ToEdit.Id.Value;
+                _studentCourseRepo.Add(toAdd);
+            }
+        }
+        
+      }
 }

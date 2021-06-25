@@ -5,8 +5,13 @@
 <h1>@Model.Name</h1><br />
 <hr />
 <h2>@Model.ClassTeacher.Name</h2>
+<br />
+<h2>Students</h2>
+<br />
 @foreach( var s in Model.ClassStudents)
             {
-                <h3>@s.Name</h3><br />
+                <h4>@s.Name</h4><br />
             }
+
+
 
