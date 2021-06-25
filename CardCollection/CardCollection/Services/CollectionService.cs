@@ -11,9 +11,19 @@ namespace CardCollection.Services
     {
         ICollectionRepo _collectionRepo = new DbCollectionRepo();
 
-        public int AddCard(Card toAdd)
+        public string AddCard(Card toAdd)
         {
             return _collectionRepo.Add(toAdd);
+        }
+
+        public List<Card> GetAll()
+        {
+            return _collectionRepo.GetAll();
+        }
+
+        public void Remove(string id)
+        {
+            _collectionRepo.Remove(id);
         }
     }
 }

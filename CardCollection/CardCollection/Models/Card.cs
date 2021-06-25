@@ -41,5 +41,21 @@ namespace CardCollection.Models
 
         [Required]
         public int ReleaseYear { get; set; }
+
+        public Card() { }
+
+        public Card(Card card)
+        {
+            Id = card.Id;
+            Name = card.Name;
+            Type = card.Type;
+            SetId = card.SetId;
+            Rarity = card.Rarity;
+            NumberInSet = card.NumberInSet;
+            Illustrator = card.Illustrator;
+            Image = card.Image;
+            Price = card.Price;
+            ReleaseYear = card.ReleaseYear;
+        } 
     }
 }

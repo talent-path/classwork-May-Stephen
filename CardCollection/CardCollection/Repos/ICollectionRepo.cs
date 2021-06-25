@@ -8,6 +8,8 @@ namespace CardCollection.Repos
 {
     interface ICollectionRepo
     {
-        int Add(Card toAdd);
+        string Add(Card toAdd);
+        List<Card> GetAll();
+        string Remove(string id);
     }
 }
