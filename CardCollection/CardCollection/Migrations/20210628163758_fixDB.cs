@@ -2,7 +2,7 @@
 
 namespace CardCollection.Migrations
 {
-    public partial class AddCardToCollection : Migration
+    public partial class fixDB : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

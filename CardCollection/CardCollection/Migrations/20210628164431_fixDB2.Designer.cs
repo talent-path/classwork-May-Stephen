@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CardCollection.Migrations
 {
     [DbContext(typeof(CardDbContext))]
-    [Migration("20210625160420_Init")]
-    partial class Init
+    [Migration("20210628164431_fixDB2")]
+    partial class fixDB2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -42,7 +42,7 @@ namespace CardCollection.Migrations
                         .HasColumnType("int");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(8,2)");
 
                     b.Property<string>("Rarity")
                         .IsRequired()
@@ -51,8 +51,9 @@ namespace CardCollection.Migrations
                     b.Property<int>("ReleaseYear")
                         .HasColumnType("int");
 
-                    b.Property<int>("SetId")
-                        .HasColumnType("int");
+                    b.Property<string>("SetId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Type")
                         .IsRequired()
@@ -60,7 +61,52 @@ namespace CardCollection.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Card");
+                    b.ToTable("Collection");
+                });
+
+            modelBuilder.Entity("CardCollection.Models.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("CardUser", b =>
+                {
+                    b.Property<int>("OwnersId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("PersonalCollectionId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("OwnersId", "PersonalCollectionId");
+
+                    b.HasIndex("PersonalCollectionId");
+
+                    b.ToTable("CardUser");
+                });
+
+            modelBuilder.Entity("CardUser", b =>
+                {
+                    b.HasOne("CardCollection.Models.User", null)
+                        .WithMany()
+                        .HasForeignKey("OwnersId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CardCollection.Models.Card", null)
+                        .WithMany()
+                        .HasForeignKey("PersonalCollectionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

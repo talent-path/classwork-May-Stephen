@@ -16,33 +16,38 @@ namespace CardCollection.Models
         [Required]
         public string Name { get; set; }
 
-        [Required]
+       
         public string Type { get; set; }
 
-        [Required]
-        
+
         public string SetId { get; set; }
 
-        [Required]
+
         public string Rarity { get; set; }
 
-        [Required]
-        public int NumberInSet { get; set; }
 
-        [Required]
+        public string NumberInSet { get; set; }
+
+
         public string Illustrator { get; set; }
 
-        [Required]
+
         public string Image { get; set; }
 
-        // Variations of price: High, low, mid, market
-        [Column(TypeName = "decimal(8,2)")]
-        public Decimal Price { get; set; }
 
-        [Required]
         public int ReleaseYear { get; set; }
 
+        public List<User> Owners { get; set; }
+
+
+
+
+
         public Card() { }
+
+
+
+
 
         public Card(Card card)
         {
@@ -54,7 +59,6 @@ namespace CardCollection.Models
             NumberInSet = card.NumberInSet;
             Illustrator = card.Illustrator;
             Image = card.Image;
-            Price = card.Price;
             ReleaseYear = card.ReleaseYear;
         } 
     }

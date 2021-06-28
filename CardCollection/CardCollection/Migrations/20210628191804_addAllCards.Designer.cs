@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CardCollection.Migrations
 {
     [DbContext(typeof(CardDbContext))]
-    [Migration("20210625192957_AddCardToCollection")]
-    partial class AddCardToCollection
+    [Migration("20210628191804_addAllCards")]
+    partial class addAllCards
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -61,7 +61,52 @@ namespace CardCollection.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Card");
+                    b.ToTable("Cards");
+                });
+
+            modelBuilder.Entity("CardCollection.Models.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("CardUser", b =>
+                {
+                    b.Property<int>("OwnersId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("PersonalCollectionId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("OwnersId", "PersonalCollectionId");
+
+                    b.HasIndex("PersonalCollectionId");
+
+                    b.ToTable("CardUser");
+                });
+
+            modelBuilder.Entity("CardUser", b =>
+                {
+                    b.HasOne("CardCollection.Models.User", null)
+                        .WithMany()
+                        .HasForeignKey("OwnersId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CardCollection.Models.Card", null)
+                        .WithMany()
+                        .HasForeignKey("PersonalCollectionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

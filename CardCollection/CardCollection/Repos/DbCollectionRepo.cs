@@ -28,9 +28,9 @@ namespace CardCollection.Repos
         public string Add(Card toAdd)
         {
             DataSet set = ExecuteQuery("INSERT INTO Card " +
-                "(Id, Name, Type, SetId, Rarity, NumberInSet, Illustrator, Image, Price, ReleaseYear) " +
-                $"VALUES('{toAdd.Id}', '{toAdd.Name}', '{toAdd.Type}', '{toAdd.SetId}', '{toAdd.Rarity}', {toAdd.NumberInSet}, '{toAdd.Illustrator}', '{toAdd.Image}', {toAdd.Price}, {toAdd.ReleaseYear} )");
-            return set.Tables[0].Rows[0].Field<string>("Id");
+                "(Id, Name, Type, SetId, Rarity, NumberInSet, Illustrator, Image, ReleaseYear) " +
+                $"VALUES('{toAdd.Id}', '{toAdd.Name}', '{toAdd.Type}', '{toAdd.SetId}', '{toAdd.Rarity}', {toAdd.NumberInSet}, '{toAdd.Illustrator}', '{toAdd.Image}', {toAdd.ReleaseYear} )");
+            return toAdd.Id;
         }
 
         public List<Card> GetAll()
@@ -50,10 +50,9 @@ namespace CardCollection.Repos
                 var cardType = table.Rows[i].Field<string>("Type");
                 var cardSetId = table.Rows[i].Field<string>("SetId");
                 var cardRarity = table.Rows[i].Field<string>("Rarity");
-                var cardNumberInSet = int.Parse(table.Rows[i]["NumberInSet"].ToString());
+                var cardNumberInSet = table.Rows[i]["NumberInSet"].ToString();
                 var cardIllustartor = table.Rows[i].Field<string>("Illustrator");
                 var cardImage = table.Rows[i].Field<string>("Image");
-                var cardPrice = Decimal.Parse(table.Rows[i]["Price"].ToString());
                 var cardYear = int.Parse(table.Rows[i]["ReleaseYear"].ToString());
 
                 toAdd.Id = cardId;
@@ -64,7 +63,6 @@ namespace CardCollection.Repos
                 toAdd.NumberInSet = cardNumberInSet;
                 toAdd.Illustrator = cardIllustartor;
                 toAdd.Image = cardImage;
-                toAdd.Price = cardPrice;
                 toAdd.ReleaseYear = cardYear;
 
                 toReturn.Add(toAdd);

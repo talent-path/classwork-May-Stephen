@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 namespace CardCollection.Models
 {
     [Table("Collection")]
-    public class Collection
+    public class Collection 
     {
+       
 
-
+        
     }
 }

@@ -2,13 +2,13 @@
 
 namespace CardCollection.Migrations
 {
-    public partial class ChangeType : Migration
+    public partial class AdjustNumToString : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AlterColumn<string>(
-                name: "SetId",
-                table: "Card",
+                name: "NumberInSet",
+                table: "Cards",
                 type: "nvarchar(max)",
                 nullable: false,
                 oldClrType: typeof(int),
@@ -18,8 +18,8 @@ namespace CardCollection.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AlterColumn<int>(
-                name: "SetId",
-                table: "Card",
+                name: "NumberInSet",
+                table: "Cards",
                 type: "int",
                 nullable: false,
                 oldClrType: typeof(string),
