@@ -70,7 +70,7 @@ namespace CardCollection.Repos
                             toAdd.Illustrator = (card["artist"] != null) ? card["artist"].ToString() : null;
 
                             //TODO: GET ALL TYPES
-                            toAdd.Type = (card["type"] != null) ? card["types"][0].ToString() : null;
+                            toAdd.Type = (card["types"] != null) ? card["types"][0].ToString() : null;
 
                             toAdd.Image = card["images"]["small"].ToString();
 
