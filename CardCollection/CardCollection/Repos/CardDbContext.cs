@@ -10,10 +10,6 @@ namespace CardCollection.Repos
 
         public DbSet<User> Users { get; set; }
 
-        //public DbSet<TradeBoard> TradeBoard { get; set; }
-
-        //public DbSet<UserTrades> UserTrades { get; set; }
-
         public CardDbContext(DbContextOptions<CardDbContext> options) : base(options) { }
 
 

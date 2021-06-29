@@ -15,7 +15,7 @@ namespace CardCollection.Controllers
     public class CardController : Controller
     {
         CardService _cardService = new CardService();
-        CardDbContext _context;
+        
 
 
         [HttpPost("AddAll")]

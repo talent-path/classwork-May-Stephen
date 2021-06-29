@@ -37,7 +37,7 @@ namespace CardCollection.Models
 
         public int ReleaseYear { get; set; }
 
-        public List<User> Owners { get; set; }
+        public List<User> Owners { get; set; } = new List<User>();
 
 
 

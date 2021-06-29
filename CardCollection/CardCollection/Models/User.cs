@@ -12,8 +12,11 @@ namespace CardCollection.Models
 
         public string UserName { get; set; }
 
-        public List<Card> PersonalCollection { get; set; }
+        public List<Card> PersonalCollection { get; set; } = new List<Card>();
 
+        public User()
+        {
 
+        }
     }
 }

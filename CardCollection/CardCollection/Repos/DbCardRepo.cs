@@ -80,10 +80,10 @@ namespace CardCollection.Repos
                             }
 
                             DataSet set = ExecuteQuery("INSERT INTO Cards " +
-                    "(Id, Name, Type, SetId, Rarity, NumberInSet, Illustrator, Image, ReleaseYear) " +
-                    $"VALUES('{toAdd.Id}', '{toAdd.Name}', '{toAdd.Type}', " +
-                    $"'{toAdd.SetId}', '{toAdd.Rarity}', '{toAdd.NumberInSet}', '{toAdd.Illustrator}', " +
-                    $"'{toAdd.Image}', {toAdd.ReleaseYear} )");
+                                "(Id, Name, Type, SetId, Rarity, NumberInSet, Illustrator, Image, ReleaseYear) " +
+                                $"VALUES('{toAdd.Id}', '{toAdd.Name}', '{toAdd.Type}', " +
+                                $"'{toAdd.SetId}', '{toAdd.Rarity}', '{toAdd.NumberInSet}', '{toAdd.Illustrator}', " +
+                                $"'{toAdd.Image}', {toAdd.ReleaseYear} )");
                         }
                     }
 
