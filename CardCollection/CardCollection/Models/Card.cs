@@ -39,6 +39,12 @@ namespace CardCollection.Models
 
         public List<User> Owners { get; set; } = new List<User>();
 
+        public List<Trade> TradeOffers { get; set; } = new List<Trade>();
+
+        public List<Offer> Offers { get; set; } = new List<Offer>();
+
+        public List<Request> Requests { get; set; } = new List<Request>();
+
 
 
 

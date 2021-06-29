@@ -71,19 +71,12 @@ namespace CardCollection.Repos
             Card toRemove = _context.Cards.Find(cardId);
             User user = _context.Users.Include(user => user.PersonalCollection).SingleOrDefault(u => u.Id == id);
 
+
             user.PersonalCollection.Remove(user.PersonalCollection.Single(c => c.Id == cardId));
             _context.SaveChanges();
-            //user.PersonalCollection = _context.Cards.Where(c => c.Owners.Contains(user)).ToList();
-            //_context.Attach(toRemove);
-            //user.PersonalCollection.Remove(toRemove);
 
-            //toRemove.Owners = _context.Users.Where(o => o.PersonalCollection.Contains(toRemove)).ToList();
-            //_context.Attach(user);
-            //toRemove.Owners.Remove(user);
-            
 
             return $"Card {cardId} removed.";
-
         }
     }
 }
