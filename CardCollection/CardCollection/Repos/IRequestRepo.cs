@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace CardCollection.Repos
 {
-    interface ITradeRepo
+    interface IRequestRepo
     {
-        int AddTrade(Trade toAdd);
-        List<Trade> GetAll();
-        Trade GetById(int id);
-        string RemoveTrade(int id);
+        Request AddRequest(Request toAdd);
     }
 }

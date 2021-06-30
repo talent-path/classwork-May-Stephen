@@ -67,10 +67,12 @@ Models:
 	- Trades
 		- Id
 		- UserId
-		- RequestId
+		
 	- Requests
 		- Id
+		- TradeId
 	- Offers
+		- Id
 		- TradeId
 		- UserId (user offering trade)
 	- CardRequests

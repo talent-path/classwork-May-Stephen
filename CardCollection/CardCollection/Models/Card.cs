@@ -66,6 +66,10 @@ namespace CardCollection.Models
             Illustrator = card.Illustrator;
             Image = card.Image;
             ReleaseYear = card.ReleaseYear;
+            Owners = card.Owners;
+            TradeOffers = card.TradeOffers;
+            Requests = card.Requests;
+            Offers = card.Offers;
         } 
     }
 }
