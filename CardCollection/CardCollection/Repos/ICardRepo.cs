@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CardCollection.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,6 +8,10 @@ namespace CardCollection.Repos
 {
     interface ICardRepo
     {
-        string AddAll();
+        Card GetCardById(string id);
+        List<Card> GetCardsByType(string type);
+        List<Card> GetCardsByRarity(string rarity);
+        List<Card> GetCardsByIllustrator(string name);
+        List<Card> GetCardsBySet(string set);
     }
 }
