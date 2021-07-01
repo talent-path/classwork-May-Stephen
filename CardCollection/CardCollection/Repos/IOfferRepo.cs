@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace CardCollection.Repos
 {
-    interface IRequestRepo
+    interface IOfferRepo
     {
-        Request AddRequest(Request toAdd, int id);
+        Offer AddOffer(int id,  int userId, Offer toAdd);
+        List<Offer> GetOffers(int id);
     }
 }

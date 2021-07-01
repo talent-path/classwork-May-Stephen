@@ -16,11 +16,12 @@ namespace CardCollection.Repos
             _context = context;
         }
 
-        public Request AddRequest(Request req)
+        public Request AddRequest(Request req, int id)
         {
             Request toAdd = new Request();
-            toAdd.TradeId = req.TradeId;
+            toAdd.trade = _context.AvailableTrades.Find(id);
             _context.Requests.Add(toAdd);
+            
            
             foreach(Card c in req.RequestedCards)
             {

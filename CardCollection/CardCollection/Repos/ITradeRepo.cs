@@ -8,7 +8,7 @@ namespace CardCollection.Repos
 {
     interface ITradeRepo
     {
-        int AddTrade(Trade toAdd);
+        Trade AddTrade(int id, Trade toAdd);
         List<Trade> GetAll();
         Trade GetById(int id);
         string RemoveTrade(int id);

@@ -21,11 +21,11 @@ namespace CardCollection.Controllers
             _tradeService = new TradeService(context);
         }
 
-        [HttpPost("Add")]
-        public IActionResult AddTrade(Trade toAdd)
+        [HttpPost("Add/{id}")]
+        public IActionResult AddTrade(int id, Trade toAdd)
         {
-            _tradeService.AddTrade(toAdd);
-            return Accepted(toAdd);
+            Trade toReturn = _tradeService.AddTrade(id, toAdd);
+            return Accepted(toReturn);
         }
 
         [HttpGet]
@@ -49,6 +49,8 @@ namespace CardCollection.Controllers
             string response = _tradeService.RemoveTrade(id);
             return Accepted(response);
         }
+
+        //TODO: GET TRADE BY USER ID
     }
 
 

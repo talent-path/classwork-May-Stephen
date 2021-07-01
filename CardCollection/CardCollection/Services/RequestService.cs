@@ -22,9 +22,9 @@ namespace CardCollection.Services
             _requestRepo = new DbRequestRepo(context);
         }
 
-        internal Request AddRequest(Request toAdd)
+        internal Request AddRequest(Request toAdd, int id)
         {
-            return _requestRepo.AddRequest(toAdd);
+            return _requestRepo.AddRequest(toAdd, id);
         }
     }
 }

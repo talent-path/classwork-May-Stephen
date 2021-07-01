@@ -20,11 +20,13 @@ namespace CardCollection.Controllers
             _requestService = new RequestService(context);
         }
 
-        [HttpPost("Add")]
-        public IActionResult AddRequest(Request toAdd)
+        [HttpPost("Add/{id}")]
+        public IActionResult AddRequest(Request toAdd, int id)
         {
-            Request req = _requestService.AddRequest(toAdd);
+            Request req = _requestService.AddRequest(toAdd, id);
             return Accepted(req);
         }
+
+        
     }
 }

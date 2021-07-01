@@ -21,9 +21,9 @@ namespace CardCollection.Services
             _tradeRepo = new DbTradeRepo(context);
         }
 
-        internal void AddTrade(Trade toAdd)
+        internal Trade AddTrade(int id, Trade toAdd)
         {
-            _tradeRepo.AddTrade(toAdd);
+            return _tradeRepo.AddTrade(id, toAdd);
         }
 
         internal List<Trade> GetAll()

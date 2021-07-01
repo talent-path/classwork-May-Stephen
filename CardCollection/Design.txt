@@ -42,9 +42,6 @@ As a user I should be able to post a card to the trade board
 
 Database models:
 
-Come from card API
-	- Card Details
-	- Sets
 
 Models:
 	- Users

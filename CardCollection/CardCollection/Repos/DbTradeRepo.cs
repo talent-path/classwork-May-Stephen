@@ -18,10 +18,10 @@ namespace CardCollection.Repos
             _context = context;
         }
 
-        public int AddTrade(Trade trade)
+        public Trade AddTrade(int id, Trade trade)
         {
-            Trade toAdd = new Trade();
-            toAdd.UserId = trade.UserId;
+            Trade toAdd = new Trade() { user = _context.Users.Single(u => u.Id == id) };
+
             _context.AvailableTrades.Add(toAdd);
             
             foreach (Card c in trade.CardsOffered)
@@ -30,14 +30,16 @@ namespace CardCollection.Repos
             }
 
             _context.SaveChanges();
-            return toAdd.Id;
+            return toAdd;
         }
 
         public List<Trade> GetAll()
         {
+            // Get all Trades
             List<Trade> all = _context.AvailableTrades.OrderBy(c => c.Id).ToList();
             foreach(Trade t in all)
             {
+                
                 IEnumerable<Card> toAdd = _context.Cards.Where(c => c.TradeOffers.Contains(t));
                 foreach(Card c in toAdd)
                 {
@@ -54,6 +56,7 @@ namespace CardCollection.Repos
         {
             Trade toReturn = _context.AvailableTrades.Find(id);
             toReturn.CardsOffered = _context.Cards.Where(c => c.TradeOffers.Contains(toReturn)).ToList();
+            
 
             return toReturn;
         }
@@ -61,19 +64,20 @@ namespace CardCollection.Repos
         public string RemoveTrade(int id)
         {
             Trade toDelete = _context.AvailableTrades.Find(id);
-            Request req = _context.Requests.Single(r => r.TradeId == toDelete.Id);
+            Request req = _context.Requests.Single(r => r.trade.Id == toDelete.Id);
             List<Card> reqCards = _context.Cards.Where(c => c.Requests.Contains(req)).ToList();
 
-            foreach(Card c in reqCards)
+            foreach (Card c in reqCards)
             {
                 c.Requests.Remove(req);
             }
 
+            _context.Attach(req);
+            _context.Remove(req);
             _context.Attach(toDelete);
             _context.Remove(toDelete);
 
-            _context.Attach(req);
-            _context.Remove(req);
+
             _context.SaveChanges();
 
             return $"Trade {id} removed.";
