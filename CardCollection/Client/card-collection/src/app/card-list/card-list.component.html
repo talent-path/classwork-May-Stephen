@@ -1,0 +1,33 @@
+<p>card-list works!</p>
+
+
+
+<!-- <div class="card" style="width: 18rem;" *ngFor="let card of cards">
+    <img class="card-img-top" src={{card.image}} alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{card.name}}</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div> -->
+
+
+<div class="col-md-12">
+    <div class="card-group" >
+        <div class="col-sm-2" *ngFor="let card of cards">
+            <div class="card">
+            <img class="card-img-top" src={{card.image}} alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{card.name}}</h5>
+                <p class="card-text">Type: {{card.type}}</p>
+                <p class="card-text">Rarity: {{card.rarity}}</p>
+                <p class="card-text">Illustrator: {{card.illustrator}}</p>
+                <p class="card-text">Release Year: {{card.releaseYear}}</p>
+                <p class="card-text">{{card.setId}}</p>
+
+                
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
