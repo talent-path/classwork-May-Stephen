@@ -29,7 +29,7 @@ export class CardService {
     }
 
     getCardsBySet() : Observable<card[]> {
-        return this.http.get<card[]>(this.url + "Cards/Set/base1")
+        return this.http.get<card[]>(this.url + "Cards/Set/swsh2")
         .pipe(
             tap(x => console.log(x)),
             catchError(err => {

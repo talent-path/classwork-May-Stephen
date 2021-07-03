@@ -7,12 +7,16 @@ import { AppComponent } from './app.component';
 import { CardDetailComponent } from './card-detail/card-detail.component';
 import { CardService } from 'src/services/card-service';
 import { CardListComponent } from './card-list/card-list.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardDetailComponent,
-    CardListComponent
+    CardListComponent,
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
