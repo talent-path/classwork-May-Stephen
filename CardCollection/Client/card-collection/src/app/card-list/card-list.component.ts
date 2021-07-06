@@ -1,6 +1,7 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { card } from 'src/models/card';
+import { set } from 'src/models/set';
 import { CardService } from 'src/services/card-service';
 
 @Component({
@@ -10,13 +11,16 @@ import { CardService } from 'src/services/card-service';
 })
 export class CardListComponent implements OnInit {
 
+  @Input() id!: string;
+
 
   cards!: card[];
 
-  constructor(private service : CardService, private router : Router) { }
+  constructor(private service : CardService, private router : ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.service.getCardsBySet().subscribe(result => {
+    this.id = this.router.snapshot.params['id'];
+    this.service.getCardsBySet(this.id).subscribe(result => {
       this.cards = result;
 
     })

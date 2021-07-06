@@ -1,0 +1,11 @@
+<div class="container">
+<div class="row">
+    <div class="col-md-4" *ngFor="let set of sets" >
+        <p>{{set.name}}</p>
+        <a href="http://localhost:4200/set/{{set.id}}" >
+            <img class="setLogo" src="{{set.image}}">
+        </a>
+    </div>
+</div>
+</div>
+

@@ -9,6 +9,8 @@ import { CardService } from 'src/services/card-service';
 import { CardListComponent } from './card-list/card-list.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import {  SeriesListComponent } from './series-list/series-list.component';
+import { SetTrackerComponent } from './set-tracker/set-tracker.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { FooterComponent } from './footer/footer.component';
     CardDetailComponent,
     CardListComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    SetTrackerComponent,
+    SeriesListComponent
   ],
   imports: [
     BrowserModule,

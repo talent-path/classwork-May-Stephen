@@ -55,5 +55,10 @@ namespace CardCollection.Services
         {
             return _cardRepo.GetCardsBySet(set);
         }
+
+        internal List<string> GetAllSets()
+        {
+            return _cardRepo.GetAllSets();
+        }
     }
 }

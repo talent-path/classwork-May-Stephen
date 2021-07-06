@@ -19,6 +19,8 @@ namespace CardCollection.Repos
 
         string _cardConnection = "https://api.pokemontcg.io/v2/cards";
 
+        string _setsConnection = "https://api.pokemontcg.io/v2/sets";
+
         private DataSet ExecuteQuery(string query)
         {
             DataSet set = new DataSet();
@@ -94,5 +96,38 @@ namespace CardCollection.Repos
             return "Cards added successfully.";
         }
 
+        public void AddAllSets()
+        {
+            ExecuteQuery("DELETE FROM Sets");
+            using (WebClient wc = new WebClient())
+            {
+                string json = wc.DownloadString(_setsConnection);
+                JObject data = JObject.Parse(json);
+
+                foreach (var x in data.First)
+                {
+                    foreach (var set in x)
+                    {
+                        Sets toAdd = new Sets();
+                        toAdd.Id = set["id"].ToString();
+                        toAdd.Series = set["series"].ToString();
+                        toAdd.Name = set["name"].ToString();
+                        toAdd.Image = set["images"]["logo"].ToString();
+
+                        if (toAdd.Name.Contains("'"))
+                        {
+                            toAdd.Name = toAdd.Name.Insert(toAdd.Name.IndexOf("'"), "'");
+                        }
+
+                        DataSet ds = ExecuteQuery("INSERT INTO Sets" +
+                            "(Id, Series, Name, Image) " +
+                            $"VALUES ('{toAdd.Id}','{toAdd.Series}','{toAdd.Name}','{toAdd.Image}')");
+                    }
+                        
+                }
+            }
+                
+
+        }
     }
 }

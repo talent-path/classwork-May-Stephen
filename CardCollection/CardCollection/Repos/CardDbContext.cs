@@ -16,7 +16,7 @@ namespace CardCollection.Repos
 
         public DbSet<Request> Requests { get; set; }
 
-
+        public DbSet<Sets> Sets { get; set; }
 
         public CardDbContext(DbContextOptions<CardDbContext> options) : base(options) { }
 

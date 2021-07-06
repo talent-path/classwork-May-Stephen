@@ -66,6 +66,13 @@ namespace CardCollection.Controllers
             return Accepted(cards);
         }
 
+        [HttpGet("allSets")]
+        public IActionResult GetAllSets()
+        {
+            List<string> sets = _cardService.GetAllSets();
+            return Accepted(sets);
+        }
+
 
     }
 }

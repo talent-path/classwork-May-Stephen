@@ -3,11 +3,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { card } from "src/models/card";
 import {tap, catchError, map} from 'rxjs/operators';
 import { Observable, of, pipe } from 'rxjs';
+import { set } from "src/models/set";
 
 @Injectable({
     providedIn: 'root'
 })
 export class CardService {
+    
     url: string = "https://localhost:44345/"
 
     httpOptions = {headers: new HttpHeaders({"Content-Type" : "application/json"})}
@@ -28,8 +30,8 @@ export class CardService {
         )
     }
 
-    getCardsBySet() : Observable<card[]> {
-        return this.http.get<card[]>(this.url + "Cards/Set/swsh2")
+    getCardsBySet(set : string) : Observable<card[]> {
+        return this.http.get<card[]>(this.url + "Cards/Set/" + set)
         .pipe(
             tap(x => console.log(x)),
             catchError(err => {
@@ -39,4 +41,29 @@ export class CardService {
             })
         )
     }
+
+    getAllSeries() : Observable<string[]> {
+        return this.http.get<string[]>(this.url + "Sets/Series")
+        .pipe(
+            tap(x => console.log(x)),
+            catchError(err => {
+                console.log(err);
+                let empty : string[] = [];
+                return of(empty)
+            })
+        )
+    }
+
+    getSetsBySeries(series : string) : Observable<set[]> {
+        return this.http.get<set[]>(this.url + "Sets/" + series)
+        .pipe(
+            tap(x => console.log(x)),
+            catchError(err => {
+                console.log(err);
+                let empty : set[] = [];
+                return of(empty)
+            })
+        )
+    }
+    
 }

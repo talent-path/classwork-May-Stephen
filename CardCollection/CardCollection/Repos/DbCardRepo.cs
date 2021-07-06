@@ -21,6 +21,12 @@ namespace CardCollection.Repos
 
         }
 
+        public List<string> GetAllSets()
+        {
+            List<string> toReturn = _context.Cards.Select(c => c.SetId).Distinct().ToList();
+            return toReturn;
+        }
+
         public Card GetCardById(string id)
         {
             Card toReturn = _context.Cards.Find(id);

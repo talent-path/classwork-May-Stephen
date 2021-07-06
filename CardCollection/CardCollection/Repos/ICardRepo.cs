@@ -13,5 +13,6 @@ namespace CardCollection.Repos
         List<Card> GetCardsByRarity(string rarity);
         List<Card> GetCardsByIllustrator(string name);
         List<Card> GetCardsBySet(string set);
+        List<string> GetAllSets();
     }
 }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CardCollection.Repos
 {
-    interface ITCGCardRepo
+    interface ISetRepo
     {
-        string AddAll();
-        void AddAllSets();
+        List<string> GetAllSeries();
+        List<Sets> GetSetsBySeries(string name);
     }
 }
