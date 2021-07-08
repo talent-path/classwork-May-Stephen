@@ -37,7 +37,13 @@ namespace CardCollection.Models
 
         public int ReleaseYear { get; set; }
 
-        public List<User> Owners { get; set; } = new List<User>();
+        public string supertype { get; set; }
+
+        public int hp { get; set; }
+
+        
+
+        public List<UserModel> Owners { get; set; } = new List<UserModel>();
 
         public List<Trade> TradeOffers { get; set; } = new List<Trade>();
 

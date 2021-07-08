@@ -19,8 +19,8 @@ export class CardService {
     constructor(private http : HttpClient) { }
 
 
-    getCardById() : Observable<card> {
-        return this.http.get<card>(this.url + "Cards/base1-2")
+    getCardById(id : string) : Observable<card> {
+        return this.http.get<card>(this.url + "Cards/" + id)
         .pipe(
             tap( x => console.log(x)),
             catchError(err => {

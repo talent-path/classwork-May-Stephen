@@ -7,13 +7,15 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using CardCollection.Entities;
+using CardCollection.Helpers;
 
 namespace CardCollection.Repos
 {
     public class DbUserRepo : IUserRepo
     {
 
-        
+
         CardDbContext _context;
 
         public DbUserRepo(CardDbContext context)
@@ -21,62 +23,177 @@ namespace CardCollection.Repos
             _context = context;
         }
 
-       
-
-        public int AddUser(User toAdd)
+        public User Authenticate(string username, string password)
         {
-            _context.Users.Add(toAdd);
-            _context.SaveChanges();
-            return toAdd.Id;
-        }
+            User user = _context.Users.SingleOrDefault(x => x.Username == username);
+            // check if username exists
+            if (user == null)
+                return null;
 
-        public User GetUserById(int id)
-        {
-            User user = _context.Users.Find(id);
+            // check if password is correct
+            if (!VerifyPasswordHash(password, user.PasswordHash, user.PasswordSalt))
+                return null;
+
+            // authentication successful
             return user;
         }
 
-        public string DeleteUserById(int id)
+        private static void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
         {
-            User toDelete = _context.Users.Find(id);
+            if (password == null) throw new ArgumentNullException("password");
+            if (string.IsNullOrWhiteSpace(password)) throw new ArgumentException("Value cannot be empty or whitespace only string.", "password");
 
-            _context.Attach(toDelete);
-            _context.Remove(toDelete);
+            using (var hmac = new System.Security.Cryptography.HMACSHA512())
+            {
+                passwordSalt = hmac.Key;
+                passwordHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
+            }
+        }
+
+        private static bool VerifyPasswordHash(string password, byte[] storedHash, byte[] storedSalt)
+        {
+            if (password == null) throw new ArgumentNullException("password");
+            if (string.IsNullOrWhiteSpace(password)) throw new ArgumentException("Value cannot be empty or whitespace only string.", "password");
+            if (storedHash.Length != 64) throw new ArgumentException("Invalid length of password hash (64 bytes expected).", "passwordHash");
+            if (storedSalt.Length != 128) throw new ArgumentException("Invalid length of password salt (128 bytes expected).", "passwordHash");
+
+            using (var hmac = new System.Security.Cryptography.HMACSHA512(storedSalt))
+            {
+                var computedHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
+                for (int i = 0; i < computedHash.Length; i++)
+                {
+                    if (computedHash[i] != storedHash[i]) return false;
+                }
+            }
+
+            return true;
+        }
+
+        public IEnumerable<User> GetAll()
+        {
+            return _context.Users;
+        }
+
+        public User GetById(int id)
+        {
+            return _context.Users.Find(id);
+        }
+
+        public User Create(User user, string password)
+        {
+            byte[] passwordHash, passwordSalt;
+            CreatePasswordHash(password, out passwordHash, out passwordSalt);
+
+            user.PasswordHash = passwordHash;
+            user.PasswordSalt = passwordSalt;
+
+            _context.Users.Add(user);
             _context.SaveChanges();
-            return $"User {id} deleted.";
-            
+            return user;
         }
 
-        public int AddToCollection(int id, string cardId)
+        public void Update(User userParam, string password)
         {
-            User user = _context.Users.Find(id);
-            Card card = _context.Cards.Find(cardId);
+            var user = _context.Users.Find(userParam.Id);
 
-            user.PersonalCollection.Add(card);
-            card.Owners.Add(user);
+            if (user == null)
+                throw new AppException("User not found");
 
+            // update username if it has changed
+            if (!string.IsNullOrWhiteSpace(userParam.Username) && userParam.Username != user.Username)
+            {
+                // throw error if the new username is already taken
+                if (_context.Users.Any(x => x.Username == userParam.Username))
+                    throw new AppException("Username " + userParam.Username + " is already taken");
+
+                user.Username = userParam.Username;
+            }
+
+            // update user properties if provided
+            if (!string.IsNullOrWhiteSpace(userParam.FirstName))
+                user.FirstName = userParam.FirstName;
+
+            if (!string.IsNullOrWhiteSpace(userParam.LastName))
+                user.LastName = userParam.LastName;
+
+            // update password if provided
+            if (!string.IsNullOrWhiteSpace(password))
+            {
+                byte[] passwordHash, passwordSalt;
+                CreatePasswordHash(password, out passwordHash, out passwordSalt);
+
+                user.PasswordHash = passwordHash;
+                user.PasswordSalt = passwordSalt;
+            }
+
+            _context.Users.Update(user);
             _context.SaveChanges();
-            return user.Id;
         }
 
-        public List<Card> GetUserCollection(int id)
+        public void Delete(int id)
         {
-            User user = _context.Users.Find(id);
-            user.PersonalCollection = _context.Cards.Where(c => c.Owners.Contains(user)).ToList();
-            return user.PersonalCollection;
+            var user = _context.Users.Find(id);
+            if (user != null)
+            {
+                _context.Users.Remove(user);
+                _context.SaveChanges();
+            }
         }
 
-        public string RemoveFromCollection(int id, string cardId)
-        {
-            Card toRemove = _context.Cards.Find(cardId);
-            User user = _context.Users.Include(user => user.PersonalCollection).SingleOrDefault(u => u.Id == id);
+        //public int AddUser(User toAdd)
+        //{
+        //    _context.Users.Add(toAdd);
+        //    _context.SaveChanges();
+        //    return toAdd.Id;
+        //}
+
+        //public User GetUserById(int id)
+        //{
+        //    User user = _context.Users.Find(id);
+        //    return user;
+        //}
+
+        //public string DeleteUserById(int id)
+        //{
+        //    User toDelete = _context.Users.Find(id);
+
+        //    _context.Attach(toDelete);
+        //    _context.Remove(toDelete);
+        //    _context.SaveChanges();
+        //    return $"User {id} deleted.";
+
+        //}
+
+        //public int AddToCollection(int id, string cardId)
+        //{
+        //    User user = _context.Users.Find(id);
+        //    Card card = _context.Cards.Find(cardId);
+
+        //    user.PersonalCollection.Add(card);
+        //    card.Owners.Add(user);
+
+        //    _context.SaveChanges();
+        //    return user.Id;
+        //}
+
+        //public List<Card> GetUserCollection(int id)
+        //{
+        //    User user = _context.Users.Find(id);
+        //    user.PersonalCollection = _context.Cards.Where(c => c.Owners.Contains(user)).ToList();
+        //    return user.PersonalCollection;
+        //}
+
+        //public string RemoveFromCollection(int id, string cardId)
+        //{
+        //    Card toRemove = _context.Cards.Find(cardId);
+        //    UserModel user = _context.Users.Include(user => user.PersonalCollection).SingleOrDefault(u => u.Id == id);
 
 
-            user.PersonalCollection.Remove(user.PersonalCollection.Single(c => c.Id == cardId));
-            _context.SaveChanges();
+        //    user.PersonalCollection.Remove(user.PersonalCollection.Single(c => c.Id == cardId));
+        //    _context.SaveChanges();
 
 
-            return $"Card {cardId} removed.";
-        }
+        //    return $"Card {cardId} removed.";
+        //}
     }
 }

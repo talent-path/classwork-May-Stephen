@@ -1,13 +1,21 @@
-
-<div id="singleCard">
-   <h3>{{card.name}}</h3>
-   <h3>{{card.id}}</h3>
-   <h3>{{card.rarity}}</h3>
-   <h3>{{card.releaseYear}}</h3>
-   <h3>{{card.setId}}</h3>
-   <h3>{{card.illustrator}}</h3>
-   <img src={{card.image}}>
-    
-
+<div class="container">
+   <div class="row">
+      <div class="col-lg-4">
+         <img class="singleCard" src={{card.image}}>
+         <br/>
+         <br/>
+         <button type="button" class="btn btn-primary" style="margin-left: 80px;">Add to Collection</button>
+      </div>
+      <div class="col-lg-6">
+         <div class="row">
+            <h1>{{card.name}}</h1>
+            <span>____________________________________________________________________________</span>
+            
+         </div> 
+         <div class="row">
+            <h4>{{card.type}}</h4>
+         </div>
+      </div>
 </div>
-<br/>
+</div>
+

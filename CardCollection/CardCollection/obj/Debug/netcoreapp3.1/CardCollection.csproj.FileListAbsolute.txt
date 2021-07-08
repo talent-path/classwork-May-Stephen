@@ -162,3 +162,6 @@ C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CardCollection\Serve
 C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CardCollection\Server\CardCollection\obj\Debug\netcoreapp3.1\CardCollection.dll
 C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CardCollection\Server\CardCollection\obj\Debug\netcoreapp3.1\CardCollection.pdb
 C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CardCollection\Server\CardCollection\obj\Debug\netcoreapp3.1\CardCollection.genruntimeconfig.cache
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CardCollection\CardCollection\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CardCollection\CardCollection\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\SMay\Documents\Dell Training\classwork-May-Stephen\CardCollection\CardCollection\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -1,20 +1,21 @@
-<div class="col-md-9">
-    <div class="card-group" >
-        <div class="col-sm-3" *ngFor="let card of cards">
-            
-            <div class ="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front" >
-                        <img src="{{card.image}}">
-                    </div>
-                    <div class="flip-card-back">
-                        <h3>{{card.name}}</h3>
-                        <p>{{card.type}}</p>
-                        <p>{{card.setId}}</p>
-                      
+<div class="col-md-12">
+    <div class="row" >
+        <div class="col-md-3" *ngFor="let card of cards">
+            <a href="http://localhost:4200/cardDetails/{{card.id}}">
+                <div class ="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" >
+                            <img src="{{card.image}}">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>{{card.name}}</h3>
+                            <p>{{card.type}}</p>
+                            <p>{{card.setId}}</p>
+                        
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>    
             <br/>
             <br/>
             <br/>

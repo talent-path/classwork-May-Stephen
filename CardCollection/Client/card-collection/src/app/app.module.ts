@@ -11,6 +11,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import {  SeriesListComponent } from './series-list/series-list.component';
 import { SetTrackerComponent } from './set-tracker/set-tracker.component';
+import { AlertComponent } from './alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SetTrackerComponent } from './set-tracker/set-tracker.component';
     NavbarComponent,
     FooterComponent,
     SetTrackerComponent,
-    SeriesListComponent
+    SeriesListComponent,
+    AlertComponent,
   ],
   imports: [
     BrowserModule,

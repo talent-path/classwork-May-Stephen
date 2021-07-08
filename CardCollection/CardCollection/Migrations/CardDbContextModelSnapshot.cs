@@ -19,6 +19,38 @@ namespace CardCollection.Migrations
                 .HasAnnotation("ProductVersion", "5.0.7")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("CardCollection.Entities.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<byte[]>("PasswordHash")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<byte[]>("PasswordSalt")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<int?>("UserDetailsId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Username")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserDetailsId");
+
+                    b.ToTable("Users");
+                });
+
             modelBuilder.Entity("CardCollection.Models.Card", b =>
                 {
                     b.Property<string>("Id")
@@ -48,6 +80,12 @@ namespace CardCollection.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Type")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("hp")
+                        .HasColumnType("int");
+
+                    b.Property<string>("supertype")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -131,19 +169,25 @@ namespace CardCollection.Migrations
                     b.ToTable("AvailableTrades");
                 });
 
-            modelBuilder.Entity("CardCollection.Models.User", b =>
+            modelBuilder.Entity("CardCollection.Models.UserModel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("UserName")
+                    b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Username")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("UserModel");
                 });
 
             modelBuilder.Entity("CardOffer", b =>
@@ -191,7 +235,7 @@ namespace CardCollection.Migrations
                     b.ToTable("CardTrade");
                 });
 
-            modelBuilder.Entity("CardUser", b =>
+            modelBuilder.Entity("CardUserModel", b =>
                 {
                     b.Property<int>("OwnersId")
                         .HasColumnType("int");
@@ -203,7 +247,16 @@ namespace CardCollection.Migrations
 
                     b.HasIndex("PersonalCollectionId");
 
-                    b.ToTable("CardUser");
+                    b.ToTable("CardUserModel");
+                });
+
+            modelBuilder.Entity("CardCollection.Entities.User", b =>
+                {
+                    b.HasOne("CardCollection.Models.UserModel", "UserDetails")
+                        .WithMany()
+                        .HasForeignKey("UserDetailsId");
+
+                    b.Navigation("UserDetails");
                 });
 
             modelBuilder.Entity("CardCollection.Models.Offer", b =>
@@ -212,7 +265,7 @@ namespace CardCollection.Migrations
                         .WithMany()
                         .HasForeignKey("tradeId");
 
-                    b.HasOne("CardCollection.Models.User", "user")
+                    b.HasOne("CardCollection.Entities.User", "user")
                         .WithMany()
                         .HasForeignKey("userId");
 
@@ -232,7 +285,7 @@ namespace CardCollection.Migrations
 
             modelBuilder.Entity("CardCollection.Models.Trade", b =>
                 {
-                    b.HasOne("CardCollection.Models.User", "user")
+                    b.HasOne("CardCollection.Entities.User", "user")
                         .WithMany()
                         .HasForeignKey("userId");
 
@@ -284,9 +337,9 @@ namespace CardCollection.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("CardUser", b =>
+            modelBuilder.Entity("CardUserModel", b =>
                 {
-                    b.HasOne("CardCollection.Models.User", null)
+                    b.HasOne("CardCollection.Models.UserModel", null)
                         .WithMany()
                         .HasForeignKey("OwnersId")
                         .OnDelete(DeleteBehavior.Cascade)

@@ -23,10 +23,10 @@ namespace CardCollection.Repos
             Trade toAdd = new Trade() { user = _context.Users.Single(u => u.Id == id) };
 
             _context.AvailableTrades.Add(toAdd);
-            
+
             foreach (Card c in trade.CardsOffered)
             {
-                _context.Cards.Find(c.Id).TradeOffers.Add(toAdd); 
+                _context.Cards.Find(c.Id).TradeOffers.Add(toAdd);
             }
 
             _context.SaveChanges();
