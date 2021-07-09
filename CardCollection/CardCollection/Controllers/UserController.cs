@@ -75,7 +75,7 @@ namespace CardCollection.Controllers
         public IActionResult Register([FromBody] RegisterModel model)
         {
             // map model to entity
-            var user = _mapper.Map<User>(model);
+            var user = _mapper.Map<Entities.User>(model);
 
             try
             {
@@ -95,7 +95,7 @@ namespace CardCollection.Controllers
         public IActionResult GetAll()
         {
             var users = _userService.GetAll();
-            var model = _mapper.Map<IList<UserModel>>(users);
+            var model = _mapper.Map<IList<User>>(users);
             return Ok(users);
         }
 
@@ -103,7 +103,7 @@ namespace CardCollection.Controllers
         public IActionResult GetById(int id)
         {
             var user = _userService.GetById(id);
-            var model = _mapper.Map<UserModel>(user);
+            var model = _mapper.Map<User>((object)user);
             return Ok(model);
         }
 
@@ -111,7 +111,7 @@ namespace CardCollection.Controllers
         public IActionResult Update(int id, [FromBody] UpdateModel model)
         {
             // map model to entity and set id
-            var user = _mapper.Map<User>(model);
+            var user = _mapper.Map<Entities.User>(model);
             user.Id = id;
 
             try
@@ -134,26 +134,28 @@ namespace CardCollection.Controllers
             return Ok();
         }
 
-        //[HttpGet("{id}/Collection")]
-        //public IActionResult GetUserCollection(int id)
-        //{
-        //    List<Card> collection = _userService.GetUserCollection(id);
-        //    return Accepted(collection);
-        //}
+        [AllowAnonymous]
+        [HttpGet("{id}/Collection")]
+        public IActionResult GetUserCollection(int id)
+        {
+            List<Card> collection = _userService.GetUserCollection(id);
+            return Accepted(collection);
+        }
 
-        //[HttpPost("{id}/Collection/Add/{cardId}")]
-        //public IActionResult AddToCollection(int id, string cardId)
-        //{
-        //    _userService.AddToCollection(id, cardId);
-        //    return Accepted();
-        //}
+        [AllowAnonymous]
+        [HttpPost("{id}/Collection/Add/{cardId}")]
+        public IActionResult AddToCollection(int id, string cardId)
+        {
+            _userService.AddToCollection(id, cardId);
+            return Accepted();
+        }
 
-        //[HttpDelete("{id}/Collection/Remove/{cardId}")]
-        //public IActionResult RemoveFromCollection(int id, string cardId)
-        //{
-        //    _userService.RemoveFromCollection(id, cardId);
-        //    return Accepted();
-        //}
+        [HttpDelete("{id}/Collection/Remove/{cardId}")]
+        public IActionResult RemoveFromCollection(int id, string cardId)
+        {
+            _userService.RemoveFromCollection(id, cardId);
+            return Accepted();
+        }
 
     }
 }

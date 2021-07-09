@@ -17,6 +17,9 @@ namespace CardCollection.Services
         User Create(User user, string password);
         void Update(User user, string password = null);
         void Delete(int id);
+        List<Card> GetUserCollection(int id);
+        void AddToCollection(int id, string cardId);
+        string RemoveFromCollection(int id, string cardId);
     }
 
 
@@ -78,24 +81,23 @@ namespace CardCollection.Services
             _userRepo.Delete(id);
         }
 
-        // private helper methods
 
-        
+        public List<Card> GetUserCollection(int id)
+        {
+            return _userRepo.GetUserCollection(id);
+        }
 
-        //internal List<Card> GetUserCollection(int id)
-        //{
-        //    return _userRepo.GetUserCollection(id);
-        //}
+        public void AddToCollection(int id, string cardId)
+        {
+            _userRepo.AddToCollection(id, cardId);
+        }
 
-        //internal void AddToCollection(int id, string cardId)
-        //{
-        //    _userRepo.AddToCollection(id, cardId);
-        //}
+        public string RemoveFromCollection(int id, string cardId)
+        {
+            return _userRepo.RemoveFromCollection(id, cardId);
+        }
 
-        //internal string RemoveFromCollection(int id, string cardId)
-        //{
-        //    return _userRepo.RemoveFromCollection(id, cardId);
-        //}
+       
 
 
 

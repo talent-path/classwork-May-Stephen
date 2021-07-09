@@ -22,7 +22,7 @@ export class CardService {
     getCardById(id : string) : Observable<card> {
         return this.http.get<card>(this.url + "Cards/" + id)
         .pipe(
-            tap( x => console.log(x)),
+            tap(),
             catchError(err => {
                 console.log(err);
                 return of(this.result);
@@ -33,7 +33,7 @@ export class CardService {
     getCardsBySet(set : string) : Observable<card[]> {
         return this.http.get<card[]>(this.url + "Cards/Set/" + set)
         .pipe(
-            tap(x => console.log(x)),
+            tap(),
             catchError(err => {
                 console.log(err);
                 let empty : card[] = [];
@@ -45,7 +45,7 @@ export class CardService {
     getAllSeries() : Observable<string[]> {
         return this.http.get<string[]>(this.url + "Sets/Series")
         .pipe(
-            tap(x => console.log(x)),
+            tap(),
             catchError(err => {
                 console.log(err);
                 let empty : string[] = [];
@@ -57,7 +57,7 @@ export class CardService {
     getSetsBySeries(series : string) : Observable<set[]> {
         return this.http.get<set[]>(this.url + "Sets/" + series)
         .pipe(
-            tap(x => console.log(x)),
+            tap(),
             catchError(err => {
                 console.log(err);
                 let empty : set[] = [];

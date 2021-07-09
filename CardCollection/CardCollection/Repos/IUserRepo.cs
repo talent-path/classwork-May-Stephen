@@ -24,5 +24,8 @@ namespace CardCollection.Repos
         User Create(User user, string password);
         void Update(User userParam, string password);
         void Delete(int id);
+        List<Card> GetUserCollection(int id);
+        int AddToCollection(int id, string cardId);
+        string RemoveFromCollection(int id, string cardId);
     }
 }

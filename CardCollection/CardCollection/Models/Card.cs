@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CardCollection.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -43,7 +44,7 @@ namespace CardCollection.Models
 
         
 
-        public List<UserModel> Owners { get; set; } = new List<UserModel>();
+        public List<User> Owners { get; set; } = new List<User>();
 
         public List<Trade> TradeOffers { get; set; } = new List<Trade>();
 

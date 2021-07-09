@@ -12,6 +12,10 @@ import { FooterComponent } from './footer/footer.component';
 import {  SeriesListComponent } from './series-list/series-list.component';
 import { SetTrackerComponent } from './set-tracker/set-tracker.component';
 import { AlertComponent } from './alert/alert.component';
+import { LoginLogoutComponent } from './login-logout/login-logout.component';
+import { CollectionViewComponent } from './collection-view/collection-view.component';
+import { CollectionListComponent } from './collection-list/collection-list.component';
+import { AddToCollectionComponent } from './add-to-collection/add-to-collection.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +27,10 @@ import { AlertComponent } from './alert/alert.component';
     SetTrackerComponent,
     SeriesListComponent,
     AlertComponent,
+    LoginLogoutComponent,
+    CollectionViewComponent,
+    CollectionListComponent,
+    AddToCollectionComponent,
   ],
   imports: [
     BrowserModule,

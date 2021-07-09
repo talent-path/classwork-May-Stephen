@@ -13,9 +13,9 @@ namespace CardCollection.Helpers
     {
         public AutoMapperProfile()
         {
-            CreateMap<User, UserModel>();
-            CreateMap<RegisterModel, User>();
-            CreateMap<UpdateModel, User>();
+            CreateMap<User, User>();
+            CreateMap<RegisterModel, Entities.User>();
+            CreateMap<UpdateModel, Entities.User>();
         }
 
        
