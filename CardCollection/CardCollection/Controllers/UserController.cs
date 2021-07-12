@@ -157,5 +157,13 @@ namespace CardCollection.Controllers
             return Accepted();
         }
 
+        [AllowAnonymous]
+        [HttpGet("{id}/Collection/{setId}/Count")]
+        public IActionResult GetSetCount(int id, string setId)
+        {
+            int count = _userService.GetSetCount(id, setId );
+            return Accepted(count);
+        }
+
     }
 }

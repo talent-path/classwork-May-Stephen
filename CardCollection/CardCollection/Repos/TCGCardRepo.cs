@@ -75,6 +75,18 @@ namespace CardCollection.Repos
                             toAdd.Type = (card["types"] != null) ? card["types"][0].ToString() : null;
 
                             toAdd.Image = card["images"]["small"].ToString();
+                            toAdd.supertype = card["supertype"].ToString();
+                            
+                            if (card["hp"] == null)
+                            {
+                                toAdd.hp = 0;
+                            }
+                            else
+                            {
+                                toAdd.hp = int.Parse(card["hp"].ToString());
+                            }
+                            
+                           
 
                             if (toAdd.Name.Contains("'"))
                             {
@@ -82,10 +94,10 @@ namespace CardCollection.Repos
                             }
 
                             DataSet set = ExecuteQuery("INSERT INTO Cards " +
-                                "(Id, Name, Type, SetId, Rarity, NumberInSet, Illustrator, Image, ReleaseYear) " +
+                                "(Id, Name, Type, SetId, Rarity, NumberInSet, Illustrator, Image, ReleaseYear, hp, supertype) " +
                                 $"VALUES('{toAdd.Id}', '{toAdd.Name}', '{toAdd.Type}', " +
                                 $"'{toAdd.SetId}', '{toAdd.Rarity}', '{toAdd.NumberInSet}', '{toAdd.Illustrator}', " +
-                                $"'{toAdd.Image}', {toAdd.ReleaseYear} )");
+                                $"'{toAdd.Image}', {toAdd.ReleaseYear}, {toAdd.hp}, '{toAdd.supertype}' )");
                         }
                     }
 

@@ -20,6 +20,7 @@ namespace CardCollection.Services
         List<Card> GetUserCollection(int id);
         void AddToCollection(int id, string cardId);
         string RemoveFromCollection(int id, string cardId);
+        int GetSetCount(int id, string setId);
     }
 
 
@@ -98,6 +99,13 @@ namespace CardCollection.Services
         }
 
        
+
+        public int GetSetCount(int id, string setId)
+        {
+            return _userRepo.GetSetCount(id, setId);
+        }
+
+
 
 
 

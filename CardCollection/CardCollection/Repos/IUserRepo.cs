@@ -27,5 +27,6 @@ namespace CardCollection.Repos
         List<Card> GetUserCollection(int id);
         int AddToCollection(int id, string cardId);
         string RemoveFromCollection(int id, string cardId);
+        int GetSetCount(int id, string setId);
     }
 }

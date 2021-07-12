@@ -173,5 +173,14 @@ namespace CardCollection.Repos
 
             return $"Card {cardId} removed.";
         }
+
+        public int GetSetCount(int id, string setId)
+        {
+            Sets set = _context.Sets.Find(setId);
+            User user = _context.Users.Find(id);
+            List<Card> card = _context.Cards.Where(c => c.Owners.Contains(user) && c.SetId == setId).ToList();
+            int num = card.Count;
+            return card.Count;
+        }
     }
 }
