@@ -22,6 +22,10 @@ import { CollectionTypesComponent } from './collection-types/collection-types.co
 import { CollectionByTypeComponent } from './collection-by-type/collection-by-type.component';
 import { CollectionSupersComponent } from './collection-supers/collection-supers.component';
 import { CollectionBySuperComponent } from './collection-by-super/collection-by-super.component';
+import { CollectionRaritiesComponent } from './collection-rarities/collection-rarities.component';
+import { CollectionByRarityComponent } from './collection-by-rarity/collection-by-rarity.component';
+import { CollectionSeriesComponent } from './collection-series/collection-series.component';
+import { CollectionBySeriesComponent } from './collection-by-series/collection-by-series.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +47,10 @@ import { CollectionBySuperComponent } from './collection-by-super/collection-by-
     CollectionByTypeComponent,
     CollectionSupersComponent,
     CollectionBySuperComponent,
+    CollectionRaritiesComponent,
+    CollectionByRarityComponent,
+    CollectionSeriesComponent,
+    CollectionBySeriesComponent,
   ],
   imports: [
     BrowserModule,

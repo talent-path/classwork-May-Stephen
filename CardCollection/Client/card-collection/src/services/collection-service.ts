@@ -68,5 +68,17 @@ export class CollectionService{
     getCollectionBySuper(userId: number, s: string) {
       return this.http.get<card[]>(this.url + "Collection/" + userId + "/superType/" + s)
     }
+
+    GetCollectionRarities(userId: number) : Observable<string[]> {
+      return this.http.get<string[]>(this.url +"Collection/" + this.userId + "/allRarities" );
+    }
+
+    getCollectionByRarity(userId: number, rarity: string) {
+      return this.http.get<card[]>(this.url + "Collection/" + userId + "/rarity/" + rarity)
+    }
+
+    GetCollectionSeries(userId: number) {
+      return this.http.get<string[]>(this.url +"Collection/" + this.userId + "/allSeries" );
+    }
     
   }

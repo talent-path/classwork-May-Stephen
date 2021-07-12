@@ -1,0 +1,14 @@
+<div>
+    <div class="card" style="width: 18rem;"  >
+        <div class="card-header">
+          Cards By Series
+        </div>
+        <ul class="list-group list-group-flush" *ngFor="let s of allSeries">
+            <a href="/collection/{{s}}">
+          <li class="list-group-item">
+            <p>{{s}} </p>
+          </li>
+            </a>
+        </ul>
+      </div>
+    </div>

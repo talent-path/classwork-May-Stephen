@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './account/login.component';
 import { CardDetailComponent } from './card-detail/card-detail.component';
 import { CardListComponent } from './card-list/card-list.component';
+import { CollectionByRarityComponent } from './collection-by-rarity/collection-by-rarity.component';
 import { CollectionBySuperComponent } from './collection-by-super/collection-by-super.component';
 import { CollectionByTypeComponent } from './collection-by-type/collection-by-type.component';
 import { CollectionListComponent } from './collection-list/collection-list.component';
@@ -21,7 +22,8 @@ const routes: Routes = [{path: "cardDetails/:id", component: CardDetailComponent
 {path: "collection/myCards", component: CollectionListComponent},
 {path: "trades", component: TradeBoardComponent},
 {path: "collection/:type", component: CollectionByTypeComponent},
-{path: "collection/super/:super", component: CollectionBySuperComponent}]
+{path: "collection/super/:super", component: CollectionBySuperComponent},
+{path: "collection/rarity/:rarity", component: CollectionByRarityComponent}]
 
 @NgModule({
     imports: [RouterModule.forRoot(routes)],

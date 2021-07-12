@@ -1,0 +1,14 @@
+<div>
+    <div class="card" style="width: 18rem;"  >
+        <div class="card-header">
+          Cards By Rarity
+        </div>
+        <ul class="list-group list-group-flush" *ngFor="let rarity of rarities">
+            <a href="/collection/rarity/{{rarity}}">
+          <li class="list-group-item">
+            <p>{{rarity}} </p>
+          </li>
+            </a>
+        </ul>
+      </div>
+    </div>
