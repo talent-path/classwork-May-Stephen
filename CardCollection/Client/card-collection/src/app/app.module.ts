@@ -16,6 +16,12 @@ import { LoginLogoutComponent } from './login-logout/login-logout.component';
 import { CollectionViewComponent } from './collection-view/collection-view.component';
 import { CollectionListComponent } from './collection-list/collection-list.component';
 import { AddToCollectionComponent } from './add-to-collection/add-to-collection.component';
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import { TradeBoardComponent } from './trade-board/trade-board.component';
+import { CollectionTypesComponent } from './collection-types/collection-types.component';
+import { CollectionByTypeComponent } from './collection-by-type/collection-by-type.component';
+import { CollectionSupersComponent } from './collection-supers/collection-supers.component';
+import { CollectionBySuperComponent } from './collection-by-super/collection-by-super.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +37,12 @@ import { AddToCollectionComponent } from './add-to-collection/add-to-collection.
     CollectionViewComponent,
     CollectionListComponent,
     AddToCollectionComponent,
+    ProgressBarComponent,
+    TradeBoardComponent,
+    CollectionTypesComponent,
+    CollectionByTypeComponent,
+    CollectionSupersComponent,
+    CollectionBySuperComponent,
   ],
   imports: [
     BrowserModule,

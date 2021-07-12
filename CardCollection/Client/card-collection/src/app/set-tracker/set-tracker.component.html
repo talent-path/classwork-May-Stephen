@@ -1,14 +1,27 @@
 <div class="container">
 <div class="row">
-    <div class="col-md-4" *ngFor="let set of sets" >
-        <a href="http://localhost:4200/set/{{set.id}}" >
-            <img class="setLogo" src="{{set.image}}">
-        </a>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
     
+    <div class="col-md-4" *ngFor="let set of sets" >
+        
+        <div class="card text-center text-white bg-light" style="width: 100%; height: 90%; box-shadow: black;">
+            <br/>
+            <br/>
+            <a href="http://localhost:4200/set/{{set.id}}" >
+                <div class="card-header">
+                    <img class="card-img-top" src="{{set.image}}" alt="Set logo" 
+                    style="
+                    margin-left: 10%;
+                    margin-right: 10%;
+                    height: 60%;
+                    width: 60%;">
+                </div>
+
+                <div class="card-body">
+                <h5 class="card-title">{{set.name}}</h5>
+                    <app-progress-bar [id]="set.id"></app-progress-bar>
+                </div>
+            </a>
+          </div>
     </div>
 </div>
 </div>

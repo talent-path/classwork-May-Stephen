@@ -1,2 +1,90 @@
-<h1>Collection Tracker</h1>
-<a href="/collection/myCards"> View all cards in collection </a>
+<div class="container">
+
+    <h2><u>Your Collection Dashboard</u></h2>
+
+    <div class="row">
+        <div class="col-md-3">
+        <a href="collection/myCards">
+            <div  class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;">{{count}}</h5>
+                    <p class="card-text" style="text-align: center;">Cards In Collection</p>
+                </div>
+            </div>
+        </a>
+        </div>
+        <div class="col-md-3">
+        <a>
+            <div  class="card text-white bg-secondary mb-8" style="max-width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;">8</h5>
+                    <p class="card-text" style="text-align: center;">Sets Comlpeted</p>
+                </div>
+            </div>
+        </a>
+        </div>
+        <div class="col-md-3">
+        <a>
+            <div  class="card text-white bg-warning mb-8" style="max-width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;">8</h5>
+                    <p class="card-text" style="text-align: center;">Sets Comlpeted</p>
+                </div>
+            </div>
+        </a>
+        </div>
+        <div class="col-md-3">
+            <a>
+                <div  class="card text-white bg-success mb-8" style="max-width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align: center;">8</h5>
+                        <p class="card-text" style="text-align: center;">Sets Comlpeted</p>
+                    </div>
+                </div>
+            </a>
+            </div>
+    </div>
+    <div class="row">
+    <div class="col-md-5">
+        <app-collection-types></app-collection-types>
+          <app-collection-supers></app-collection-supers>
+        <div class="card" style="width: 18rem;">
+            <div class="card-header">
+              Cards By Illustrator
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Cras justo odio</li>
+              <li class="list-group-item">Dapibus ac facilisis in</li>
+              <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
+          </div>
+    </div>
+    <div class="col-md-5">
+        <div class="card" style="width: 18rem;">
+            <div class="card-header">
+              Cards By Rarity
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Cras justo odio</li>
+              <li class="list-group-item">Dapibus ac facilisis in</li>
+              <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <div class="card-header">
+              Cards By Series
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Cras justo odio</li>
+              <li class="list-group-item">Dapibus ac facilisis in</li>
+              <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
+          </div>
+    </div>
+</div>
+
+    
+
+   
+</div>

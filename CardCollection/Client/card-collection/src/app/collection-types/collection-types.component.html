@@ -1,0 +1,14 @@
+<div>
+<div class="card" style="width: 18rem;"  >
+    <div class="card-header">
+      Cards By Type
+    </div>
+    <ul class="list-group list-group-flush" *ngFor="let type of types">
+        <a href="/collection/{{type}}">
+      <li class="list-group-item">
+        <p>{{type}} </p>
+      </li>
+        </a>
+    </ul>
+  </div>
+</div>

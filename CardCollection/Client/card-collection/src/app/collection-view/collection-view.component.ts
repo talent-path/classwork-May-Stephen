@@ -13,6 +13,7 @@ export class CollectionViewComponent implements OnInit {
   userId: number = 0;
   @Input() cardId!: string;
   cards!: card[];
+  count!: number;
   
 
   constructor(private service : CollectionService, private router: Router) 
@@ -25,7 +26,10 @@ export class CollectionViewComponent implements OnInit {
     this.userId = u.id;
     this.service.getCollection(this.userId).subscribe(res => {
       this.cards = res;
+      this.count = this.cards.length;
     })
   }
+
+  
 
 }

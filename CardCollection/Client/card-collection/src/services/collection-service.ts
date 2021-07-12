@@ -11,7 +11,6 @@ import { card } from "src/models/card";
 })
 export class CollectionService{
     
-  
     url: string = "https://localhost:44345/"
 
     httpOptions = {headers: new HttpHeaders({"Content-Type" : "application/json"})}
@@ -19,6 +18,7 @@ export class CollectionService{
     userId : number;
     card!: card;
     result!: card;
+
 
     constructor(private http : HttpClient, private router :Router ) {
         let u = JSON.parse(localStorage.getItem('user')  || '{}');
@@ -37,14 +37,36 @@ export class CollectionService{
         )
     }
 
-    addToCollection(card : string) {
-        console.log(this.url + "User/" + this.userId + "/Collection/Add/" + card)
-        return this.http.post(this.url + "User/" + this.userId + "/Collection/Add/" + card, card, this.httpOptions).pipe(
-            tap(),
-            catchError(err => {
-              alert(err.error);
-              return of(null);
-            })
-          );
-        }
-}
+    addToCollection(card : string) 
+    {
+      return this.http.post(this.url + "User/" + this.userId + "/Collection/Add/" + card, card, this.httpOptions).pipe(
+          tap(),
+          catchError(err => {
+            alert(err.error);
+            return of(null);
+          })
+      );
+    }
+     
+    getSetTotal(setId : string) {
+      return this.http.get<number>(this.url)
+    }
+    
+    getSetCount(setId : string) : Observable<object> {
+      return this.http.get(this.url + "User/" + this.userId + "/Collection/" + setId + "/Count")
+    }
+
+
+    GetCollectionTypes(userId: number) : Observable<string[]> {
+      return this.http.get<string[]>(this.url + "Collection/" + this.userId + "/allTypes" );
+    }
+
+    getCollectionByType(userId: number, type: string) {
+      return this.http.get<card[]>(this.url + "Collection/" + userId + "/" + type);
+    }
+
+    getCollectionBySuper(userId: number, s: string) {
+      return this.http.get<card[]>(this.url + "Collection/" + userId + "/superType/" + s)
+    }
+    
+  }
