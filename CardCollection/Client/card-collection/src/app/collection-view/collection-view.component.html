@@ -1,8 +1,8 @@
 <div class="container">
 
-    <h2><u>Your Collection Dashboard</u></h2>
+    <h2 style="text-align: center;">Personal Collection Dashboard</h2>
 
-    <div class="row">
+    <div class="row"  style="justify-content: center;">
         <div class="col-md-3">
         <a href="collection/myCards">
             <div  class="card text-white bg-info mb-3" style="max-width: 18rem;">
@@ -15,7 +15,7 @@
         </div>
         <div class="col-md-3">
         <a>
-            <div  class="card text-white bg-secondary mb-8" style="max-width: 18rem;">
+            <div  class="card text-white bg-danger mb-8" style="max-width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title" style="text-align: center;">1</h5>
                     <p class="card-text" style="text-align: center;">Series Completed</p>
@@ -45,30 +45,17 @@
             </div>
     </div>
     <div class="row">
-    <div class="col-md-3">
-        <app-collection-types></app-collection-types>
-          
-          
+        <div class="col-md-3">
+            <app-collection-types></app-collection-types>
         </div>
         <div class="col-md-3">
             <app-collection-supers></app-collection-supers>
-              
-              
-            </div>
-        
-    <div class="col-md-3">
-        <app-collection-rarities></app-collection-rarities>
-
-          
-    </div>
-    <div class="col-md-3">
-        <app-collection-series></app-collection-series>
-          
-          
         </div>
-</div>
-
-    
-
-   
+        <div class="col-md-3">
+            <app-collection-rarities></app-collection-rarities>
+        </div>
+        <div class="col-md-3">
+            <app-collection-series></app-collection-series>
+        </div>
+    </div>
 </div>
