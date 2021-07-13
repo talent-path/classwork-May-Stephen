@@ -62,21 +62,21 @@ namespace CardCollection.Models
 
 
 
-        public Card(Card card)
-        {
-            Id = card.Id;
-            Name = card.Name;
-            Type = card.Type;
-            SetId = card.SetId;
-            Rarity = card.Rarity;
-            NumberInSet = card.NumberInSet;
-            Illustrator = card.Illustrator;
-            Image = card.Image;
-            ReleaseYear = card.ReleaseYear;
-            Owners = card.Owners;
-            TradeOffers = card.TradeOffers;
-            Requests = card.Requests;
-            Offers = card.Offers;
-        } 
+        //public Card(Card card)
+        //{
+        //    Id = card.Id;
+        //    Name = card.Name;
+        //    Type = card.Type;
+        //    SetId = card.SetId;
+        //    Rarity = card.Rarity;
+        //    NumberInSet = card.NumberInSet;
+        //    Illustrator = card.Illustrator;
+        //    Image = card.Image;
+        //    ReleaseYear = card.ReleaseYear;
+        //    Owners = card.Owners;
+        //    TradeOffers = card.TradeOffers;
+        //    Requests = card.Requests;
+        //    Offers = card.Offers;
+        //} 
     }
 }

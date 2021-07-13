@@ -28,5 +28,6 @@ namespace CardCollection.Repos
         int AddToCollection(int id, string cardId);
         string RemoveFromCollection(int id, string cardId);
         int GetSetCount(int id, string setId);
+        int GetSetTotal(int id, string setId);
     }
 }

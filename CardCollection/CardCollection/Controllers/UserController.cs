@@ -158,12 +158,22 @@ namespace CardCollection.Controllers
         }
 
         [AllowAnonymous]
+        [HttpGet("{id}/Collection/{setId}/Max")]
+        public IActionResult GetSetTotal(int id, string setId)
+        {
+            int max = _userService.GetSetTotal(id, setId);
+            return Accepted(max);
+        }
+
+        [AllowAnonymous]
         [HttpGet("{id}/Collection/{setId}/Count")]
         public IActionResult GetSetCount(int id, string setId)
         {
             int count = _userService.GetSetCount(id, setId );
             return Accepted(count);
         }
+
+        
 
     }
 }

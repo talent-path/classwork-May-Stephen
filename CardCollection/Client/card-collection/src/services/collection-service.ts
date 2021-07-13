@@ -49,11 +49,11 @@ export class CollectionService{
     }
      
     getSetTotal(setId : string) {
-      return this.http.get<number>(this.url)
+      return this.http.get<number>(this.url + "User/" + this.userId + "/Collection/" + setId + "/Max")
     }
     
-    getSetCount(setId : string) : Observable<object> {
-      return this.http.get(this.url + "User/" + this.userId + "/Collection/" + setId + "/Count")
+    getSetCount(setId : string)  {
+      return this.http.get<number>(this.url + "User/" + this.userId + "/Collection/" + setId + "/Count")
     }
 
 
@@ -70,7 +70,7 @@ export class CollectionService{
     }
 
     GetCollectionRarities(userId: number) : Observable<string[]> {
-      return this.http.get<string[]>(this.url +"Collection/" + this.userId + "/allRarities" );
+      return this.http.get<string[]>(this.url +"Collection/" + userId + "/allRarities" );
     }
 
     getCollectionByRarity(userId: number, rarity: string) {

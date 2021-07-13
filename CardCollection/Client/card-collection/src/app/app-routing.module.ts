@@ -12,6 +12,7 @@ import { CollectionViewComponent } from './collection-view/collection-view.compo
 import { SeriesListComponent } from './series-list/series-list.component';
 import { SetTrackerComponent } from './set-tracker/set-tracker.component';
 import { TradeBoardComponent } from './trade-board/trade-board.component';
+import { TradeDetailComponent } from './trade-detail/trade-detail.component';
 
 const accountModule = () => import('./account/account.module').then(x => x.AccountModule);
 
@@ -26,7 +27,9 @@ const routes: Routes = [{path: "cardDetails/:id", component: CardDetailComponent
 {path: "collection/:type", component: CollectionByTypeComponent},
 {path: "collection/super/:super", component: CollectionBySuperComponent},
 {path: "collection/rarity/:rarity", component: CollectionByRarityComponent},
-{path: "collection/series/:series", component: CollectionBySeriesComponent}]
+{path: "collection/series/:series", component: CollectionBySeriesComponent},
+{path: "trade/:tradeId", component: TradeDetailComponent}]
+
 
 @NgModule({
     imports: [RouterModule.forRoot(routes)],

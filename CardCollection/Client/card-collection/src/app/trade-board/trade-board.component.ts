@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { trade } from 'src/models/trade';
+import { TradeService } from 'src/services/trade-service';
 
 @Component({
   selector: 'app-trade-board',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TradeBoardComponent implements OnInit {
 
-  constructor() { }
+  allTrades!: trade[];
+  
+
+  constructor(private service : TradeService, private router : Router) 
+  {
+
+   }
 
   ngOnInit(): void {
+    this.service.getAllTrades().subscribe(res => {
+      this.allTrades = res;
+    })
+    
   }
 
 }

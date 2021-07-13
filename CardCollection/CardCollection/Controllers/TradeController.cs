@@ -1,4 +1,5 @@
-﻿using CardCollection.Models;
+﻿using CardCollection.Entities;
+using CardCollection.Models;
 using CardCollection.Repos;
 using CardCollection.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -48,6 +49,20 @@ namespace CardCollection.Controllers
         {
             string response = _tradeService.RemoveTrade(id);
             return Accepted(response);
+        }
+
+        [HttpGet("Cards/{id}")]
+        public IActionResult GetCardsByTradeId(int id)
+        {
+            List < Card > cards = _tradeService.getCardsByTradeId(id);
+            return Accepted(cards);
+        }
+
+        [HttpGet("{tradeId}/user")]
+        public IActionResult GetTradeUser(int tradeId)
+        {
+            User user = _tradeService.GetTradeUser(tradeId);
+            return Accepted(user);
         }
 
         //TODO: GET TRADE BY USER ID

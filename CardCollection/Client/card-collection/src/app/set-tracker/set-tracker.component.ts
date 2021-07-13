@@ -21,7 +21,10 @@ export class SetTrackerComponent implements OnInit {
   ngOnInit(): void {
     this.service.getSetsBySeries(this.series).subscribe(result => {
       this.sets = result;
-  })
+  });
 
+  }
+  print(s : string) : void {
+    console.log(s)
   }
 }

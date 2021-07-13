@@ -1,4 +1,5 @@
-﻿using CardCollection.Models;
+﻿using CardCollection.Entities;
+using CardCollection.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,5 +13,7 @@ namespace CardCollection.Repos
         List<Trade> GetAll();
         Trade GetById(int id);
         string RemoveTrade(int id);
+        List<Card> GetCardsByTradeId(int id);
+        User GetTradeUser(int tradeId);
     }
 }

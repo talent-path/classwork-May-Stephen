@@ -182,5 +182,12 @@ namespace CardCollection.Repos
             int num = card.Count;
             return card.Count;
         }
+
+        public int GetSetTotal(int id, string setId)
+        {
+            Sets set = _context.Sets.Find(setId);
+            List<Card> cards = _context.Cards.Where(c => c.SetId == set.Id).ToList();
+            return cards.Count;
+        }
     }
 }

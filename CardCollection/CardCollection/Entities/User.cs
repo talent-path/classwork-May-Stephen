@@ -16,5 +16,7 @@ namespace CardCollection.Entities
         public byte[] PasswordSalt { get; set; }
 
         public List<Card> OwnedCards { get; set; } = new List<Card>();
+
+        public List<Trade> Trades { get; set; } = new List<Trade>();
     }
 }

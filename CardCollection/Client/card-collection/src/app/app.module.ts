@@ -26,6 +26,8 @@ import { CollectionRaritiesComponent } from './collection-rarities/collection-ra
 import { CollectionByRarityComponent } from './collection-by-rarity/collection-by-rarity.component';
 import { CollectionSeriesComponent } from './collection-series/collection-series.component';
 import { CollectionBySeriesComponent } from './collection-by-series/collection-by-series.component';
+import { SingleTradeComponent } from './single-trade/single-trade.component';
+import { TradeDetailComponent } from './trade-detail/trade-detail.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,8 @@ import { CollectionBySeriesComponent } from './collection-by-series/collection-b
     CollectionByRarityComponent,
     CollectionSeriesComponent,
     CollectionBySeriesComponent,
+    SingleTradeComponent,
+    TradeDetailComponent,
   ],
   imports: [
     BrowserModule,

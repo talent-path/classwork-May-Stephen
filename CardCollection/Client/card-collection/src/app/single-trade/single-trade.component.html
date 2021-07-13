@@ -1,0 +1,15 @@
+<!-- <div *ngFor="let card of cards">
+    <p>{{card.name}}</p>
+</div> -->
+<div class="list-group-item d-flex w-100 justify-content-between">
+    <div class="col-md-2" *ngFor="let card of cards | slice:0:4">
+            <img src="{{card.image}}">
+    </div>
+    <div>
+        <p>{{user.username}}</p>
+        <a href="trade/{{tradeId}}">
+            <button> View Trade</button>
+        </a>
+    </div>
+    
+  </div>

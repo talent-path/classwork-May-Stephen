@@ -1,1 +1,24 @@
-<p>trade-board works!</p>
+<!-- <div *ngFor="let trade of allTrades">
+
+    <app-single-trade [tradeId]="trade.id"></app-single-trade>
+    
+    
+</div> -->
+<div class="container">
+    <ul class="list-group" *ngFor="let trade of allTrades">
+        <app-single-trade [tradeId]="trade.id"></app-single-trade>
+    </ul>
+
+
+<!-- <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Username</th>
+        <th scope="col">Cards Offered</th>
+      </tr>
+    </thead>
+    <tbody  *ngFor="let trade of allTrades">
+        <app-single-trade [tradeId]="trade.id"></app-single-trade>
+    </tbody>
+    </table> -->
+</div>

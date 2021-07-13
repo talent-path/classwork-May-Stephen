@@ -1,7 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { count } from 'rxjs/operators';
+import { set } from 'src/models/set';
 import { CollectionService } from 'src/services/collection-service';
 
 @Component({
@@ -12,40 +13,33 @@ import { CollectionService } from 'src/services/collection-service';
 export class ProgressBarComponent implements OnInit {
 
   
-
+  
   @Input() id!: string;
-  count !: any;
-  max : any;
-
-
-
+  count!: number;
+  max!: number;
+  progress!: number;
+  
   constructor(private service : CollectionService, private router : Router) {
+    this.progress = this.setPercentage(this.count, this.max);
     
    }
 
   ngOnInit(): void {
-    
-  }
-
-  getSetCount()  {
     this.service.getSetCount(this.id).subscribe(res => {
-      this.count = res;
-    })
-    
-    
+        this.count = res;
+      });
+      this.service.getSetTotal(this.id).subscribe(res => {
+        this.max = res;
+      });
+      
+      
   }
 
-  getSetTotalCount() {
-    this.service.getSetTotal(this.id).subscribe(res => {
-      this.max = res;
-    });
-
+  setPercentage(count: number, max: number) {
+    // console.log(this.count)
+    return count / max;
   }
+  
 
-  setProgress() : string {
-    let num = this.count / this.max;
-    return num + "%";
-    
-  }
-
+ 
 }

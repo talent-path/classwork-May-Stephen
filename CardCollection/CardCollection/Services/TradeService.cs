@@ -1,4 +1,5 @@
-﻿using CardCollection.Models;
+﻿using CardCollection.Entities;
+using CardCollection.Models;
 using CardCollection.Repos;
 using System;
 using System.Collections.Generic;
@@ -39,6 +40,16 @@ namespace CardCollection.Services
         internal string RemoveTrade(int id)
         {
             return _tradeRepo.RemoveTrade(id);
+        }
+
+        internal List<Card> getCardsByTradeId(int id)
+        {
+            return _tradeRepo.GetCardsByTradeId(id);
+        }
+
+        internal User GetTradeUser(int tradeId)
+        {
+            return _tradeRepo.GetTradeUser(tradeId);
         }
     }
 }
