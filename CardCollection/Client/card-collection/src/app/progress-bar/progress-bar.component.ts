@@ -15,18 +15,18 @@ export class ProgressBarComponent implements OnInit {
   
   
   @Input() id!: string;
-  count!: number;
-  max!: number;
+  cardCount!: number;
+  max: number = 0;
   progress!: number;
+  proString: string = "";
   
   constructor(private service : CollectionService, private router : Router) {
-    this.progress = this.setPercentage(this.count, this.max);
     
    }
 
   ngOnInit(): void {
     this.service.getSetCount(this.id).subscribe(res => {
-        this.count = res;
+        this.cardCount = res;
       });
       this.service.getSetTotal(this.id).subscribe(res => {
         this.max = res;
@@ -35,10 +35,7 @@ export class ProgressBarComponent implements OnInit {
       
   }
 
-  setPercentage(count: number, max: number) {
-    // console.log(this.count)
-    return count / max;
-  }
+ 
   
 
  

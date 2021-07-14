@@ -3,7 +3,8 @@
     <div class="card-header">
       Cards By Type
     </div>
-    <ul class="list-group list-group-flush" *ngFor="let type of types">
+<div class="scroll" style="max-height: 194px;">
+    <ul class="list-group list-group-flush"  *ngFor="let type of types">
         <a href="/collection/{{type}}">
       <li class="list-group-item">
         <p>{{type}} </p>
@@ -11,4 +12,5 @@
         </a>
     </ul>
   </div>
+</div>
 </div>
