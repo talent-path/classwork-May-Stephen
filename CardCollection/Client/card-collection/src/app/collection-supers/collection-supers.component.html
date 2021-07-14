@@ -1,26 +1,17 @@
 <div>
-    <div class="card" style="width: 18rem;"  >
+    <div class="card" style="width: 17.3rem;"  >
         <div class="card-header">
           Cards By SuperType
         </div>
-        <ul class="list-group list-group-flush">
+        <ul class="list-group list-group-flush" *ngFor="let super of supers">
             
               <li class="list-group-item">
-                <a href="/collection/super/Pokémon">
-                  <p>Pokémon</p>
+                <a href="/collection/super/{{super}}">
+                  <p>{{super}}</p>
                 </a>
               </li>
 
-            <a href="/collection/super/Trainer">
-              <li class="list-group-item">
-                <p>Trainers</p>
-              </li>
-            </a>
-            <a href="/collection/super/Energy">
-              <li class="list-group-item">
-                Energy
-              </li>
-            </a>
+           
         </ul>
       </div>
     </div>

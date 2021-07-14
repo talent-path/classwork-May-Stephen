@@ -1,8 +1,9 @@
 <div class="container">
 
     <h2 style="text-align: center;">Personal Collection Dashboard</h2>
+    <hr/>
 
-    <div class="row"  style="justify-content: center;">
+    <div class="d-flex justify-content-center"  style="justify-content: center;">
         <div class="col-md-3">
         <a href="collection/myCards">
             <div  class="card text-white bg-info mb-3" style="max-width: 18rem;">
@@ -44,17 +45,18 @@
             </a>
             </div>
     </div>
+    <hr/>
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-offset-1 mr-2">
             <app-collection-types></app-collection-types>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-offset-1 mr-2">
             <app-collection-supers></app-collection-supers>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-offset-1 mr-2">
             <app-collection-rarities></app-collection-rarities>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-offset-1">
             <app-collection-series></app-collection-series>
         </div>
     </div>

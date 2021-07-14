@@ -12,8 +12,7 @@ export class CollectionListComponent implements OnInit {
 
 
   userId: number = 0;
-  @Input() cardId!: string;
-  cards!: card[];
+  @Input()cards!: card[];
   
   constructor(private service : CollectionService, private router: Router) 
   {
@@ -21,11 +20,7 @@ export class CollectionListComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    let u = JSON.parse(localStorage.getItem('user') || '{}');
-    this.userId = u.id;
-    this.service.getCollection(this.userId).subscribe(res => {
-      this.cards = res;
-    })
+    
   }
 
 }

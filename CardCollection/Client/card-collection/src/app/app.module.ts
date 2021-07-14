@@ -28,6 +28,8 @@ import { CollectionSeriesComponent } from './collection-series/collection-series
 import { CollectionBySeriesComponent } from './collection-by-series/collection-by-series.component';
 import { SingleTradeComponent } from './single-trade/single-trade.component';
 import { TradeDetailComponent } from './trade-detail/trade-detail.component';
+import { HomeComponent } from './home/home.component';
+import { CollectionAllComponent } from './collection-all/collection-all.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +57,8 @@ import { TradeDetailComponent } from './trade-detail/trade-detail.component';
     CollectionBySeriesComponent,
     SingleTradeComponent,
     TradeDetailComponent,
+    HomeComponent,
+    CollectionAllComponent,
   ],
   imports: [
     BrowserModule,

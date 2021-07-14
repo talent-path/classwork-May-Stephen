@@ -13,7 +13,7 @@ export class CardListComponent implements OnInit {
 
   @Input() id!: string;
 
-
+  
   cards!: card[];
 
   constructor(private service : CardService, private router : ActivatedRoute) { }

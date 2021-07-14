@@ -1,20 +1,10 @@
-<div class="col-md-12">
+<div class="container">
     <div class="row" >
         <div class="col-md-3" *ngFor="let card of cards">
             <a href="http://localhost:4200/cardDetails/{{card.id}}">
-                <div class ="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front" >
-                            <img src="{{card.image}}">
-                        </div>
-                        <div class="flip-card-back">
-                            <h3>{{card.name}}</h3>
-                            <p>{{card.type}}</p>
-                            <p>{{card.setId}}</p>
-                        
-                        </div>
-                    </div>
-                </div>
+                <div class="card-image">
+                        <img src="{{card.image}}">
+                  </div>
             </a>    
             <br/>
             <br/>

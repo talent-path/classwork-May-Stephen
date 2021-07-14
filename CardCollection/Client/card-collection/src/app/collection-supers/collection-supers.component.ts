@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CollectionSupersComponent implements OnInit {
 
-  
+  supers: string[] = ['Pokémon', 'Trainer', 'Energy'];
 
 
   constructor() { }
