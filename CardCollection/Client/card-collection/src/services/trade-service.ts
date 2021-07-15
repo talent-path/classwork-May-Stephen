@@ -19,6 +19,7 @@ export class TradeService{
     httpOptions = {headers: new HttpHeaders({"Content-Type" : "application/json"})}
     
     userId : number;
+    req!: request;
 
     constructor(private http : HttpClient, private router :Router ) {
         let u = JSON.parse(localStorage.getItem('user')  || '{}');
@@ -69,11 +70,8 @@ export class TradeService{
         return this.http.post<request>(this.url + "Trades/Requests/Add/" + this.userId, requestList, this.httpOptions);
       }
 
-      getReqByTradeId(tradeId: number) : Observable<request> {
-       return this.http.get<request>(this.url +"Trades/Requests/" + tradeId)
-       .pipe(
-         tap()
-       )
+      getReqByTradeId(tradeId: number) : Observable<card[]>{
+       return this.http.get<card[]>(this.url +"Trades/Requests/" + tradeId);
       }
     
       

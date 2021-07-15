@@ -21,7 +21,7 @@ namespace CardCollection.Repos
         {
             Request toAdd = new Request();
             toAdd.RequestedCards = req;
-            List<Trade> allTrades = _context.AvailableTrades.OrderBy(t => t.Id).ToList();
+            List<Trade> allTrades = _context.AvailableTrades.ToList();
             if (allTrades.Count > 0)
             {
                 toAdd.trade = allTrades.Last();
@@ -37,10 +37,16 @@ namespace CardCollection.Repos
             return toAdd;
         }
 
-        public Request GetReqByTrade(int id)
+        public List<Card> GetReqByTrade(int id)
         {
             Request toReturn = _context.Requests.SingleOrDefault(r => r.trade.Id == id);
-            return toReturn;
+           
+            List<Card> req = _context.Cards.Where(c => c.Requests.Contains(toReturn)).ToList();
+            toReturn.RequestedCards = req;
+            toReturn.trade = _context.AvailableTrades.Find(id);
+            
+            
+            return req;
         }
     }
 }

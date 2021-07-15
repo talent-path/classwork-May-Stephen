@@ -30,7 +30,7 @@ namespace CardCollection.Controllers
         [HttpGet("{id}")]
         public IActionResult GetRequestByTradeId(int id)
         {
-            Request req = _requestService.GetReqByTrade(id);
+            List<Card> req = _requestService.GetReqByTrade(id);
             return Accepted(req);
         }
 

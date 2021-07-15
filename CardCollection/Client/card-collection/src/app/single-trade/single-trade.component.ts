@@ -18,7 +18,7 @@ export class SingleTradeComponent implements OnInit {
   user!: User;
   req!: request;
   reqList: card[] = [];
-  card!: card;
+
 
   
 
@@ -26,18 +26,20 @@ export class SingleTradeComponent implements OnInit {
 
   ngOnInit(): void {
     this.service.getReqByTradeId(this.tradeId).subscribe(x => {
-      this.req = x;
+      this.reqList = x;
+    })
 
-    });
     this.service.getCardsByTradeId(this.tradeId).subscribe(x => {
       this.cards = x;
-    });
+    })
+
 
     this.service.getTradeUserName(this.tradeId).subscribe(x => {
       this.user = x;
-    });
-    
+    })
 
   }
+
+ 
 
 }
