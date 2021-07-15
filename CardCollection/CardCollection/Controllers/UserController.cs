@@ -150,6 +150,7 @@ namespace CardCollection.Controllers
             return Accepted();
         }
 
+        [AllowAnonymous]
         [HttpDelete("{id}/Collection/Remove/{cardId}")]
         public IActionResult RemoveFromCollection(int id, string cardId)
         {

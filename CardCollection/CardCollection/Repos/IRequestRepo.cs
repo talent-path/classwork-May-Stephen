@@ -8,6 +8,6 @@ namespace CardCollection.Repos
 {
     interface IRequestRepo
     {
-        Request AddRequest(Request toAdd, int id);
+        Request AddRequest(int id, List<Card> cards);
     }
 }

@@ -43,5 +43,12 @@ namespace CardCollection.Controllers
             List<Sets> sets = _service.GetSetsBySeries(name);
             return Accepted(sets);
         }
+
+        [HttpGet("Get/{id}")]
+        public IActionResult GetSetById(string id)
+        {
+            Sets set = _service.GetSetById(id);
+            return Accepted(set);
+        }
     }
 }

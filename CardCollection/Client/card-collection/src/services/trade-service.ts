@@ -6,11 +6,14 @@ import { catchError, tap } from "rxjs/operators";
 import { card } from "src/models/card";
 import { trade } from "src/models/trade";
 import { User } from "src/models/user";
+import { Request } from "src/models/request"
 
 @Injectable({
     providedIn: 'root'
 })
 export class TradeService{
+
+  
   
     url: string = "https://localhost:44345/"
 
@@ -52,5 +55,19 @@ export class TradeService{
         .pipe(
           tap(),
       )
+      }
+
+      createTrade(c : card[]) : Observable<any>{
+        console.log(c);
+        let u = JSON.parse(localStorage.getItem('user')  || '{}');
+        let toAdd : trade = { id : 0, user : u, cardsOffered : c};
+
+        return this.http.post<trade>(this.url + "Trades/Add/" + this.userId, toAdd, this.httpOptions);
+      }
+
+      createRequest(requestList: card[]) : Observable<any> {
+        console.log(requestList);
+        
+        return this.http.post<Request>(this.url + "Trades/Requests/Add/" + this.userId, requestList, this.httpOptions);
       }
 }

@@ -56,4 +56,8 @@ export class LoginComponent implements OnInit {
                     this.loading = false;
                 });
     }
+
+    reload() {
+        this.ngOnInit();
+    }
 }

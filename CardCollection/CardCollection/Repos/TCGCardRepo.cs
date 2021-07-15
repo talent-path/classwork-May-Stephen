@@ -76,7 +76,10 @@ namespace CardCollection.Repos
 
                             toAdd.Image = card["images"]["small"].ToString();
                             toAdd.supertype = card["supertype"].ToString();
-                            
+                            //toAdd.price = decimal.Parse(card["tcgplayer"]["prices"]["common"]["market"].ToString());
+                            //toAdd.price = decimal.Parse(string.Format("{0:0.##}", new Random().NextDouble() * 10));
+
+
                             if (card["hp"] == null)
                             {
                                 toAdd.hp = 0;

@@ -10,5 +10,6 @@ namespace CardCollection.Repos
     {
         List<string> GetAllSeries();
         List<Sets> GetSetsBySeries(string name);
+        Sets GetSetsById(string id);
     }
 }

@@ -24,7 +24,13 @@ export class LoginLogoutComponent implements OnInit {
   }
 
   isLoggedIn(): boolean {
+    this.ngOnInit();
     return this.service.isLoggedIn();
     
   }
+
+  reload(){
+    // any other execution
+    this.ngOnInit()
+    }
 }

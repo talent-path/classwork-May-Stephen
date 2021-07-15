@@ -13,6 +13,7 @@ export class CollectionListComponent implements OnInit {
 
   userId: number = 0;
   @Input()cards!: card[];
+  @Input() name!: string;
   
   constructor(private service : CollectionService, private router: Router) 
   {

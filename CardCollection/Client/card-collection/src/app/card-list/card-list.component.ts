@@ -12,7 +12,8 @@ import { CardService } from 'src/services/card-service';
 export class CardListComponent implements OnInit {
 
   @Input() id!: string;
-
+  @Input() image!: string;
+  set!: set;
   
   cards!: card[];
 
@@ -23,6 +24,10 @@ export class CardListComponent implements OnInit {
     this.service.getCardsBySet(this.id).subscribe(result => {
       this.cards = result;
 
+    })
+
+    this.service.getSetById(this.id).subscribe(res => {
+      this.set = res;
     })
   }
 }

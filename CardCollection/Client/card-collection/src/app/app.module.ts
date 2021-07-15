@@ -30,6 +30,10 @@ import { SingleTradeComponent } from './single-trade/single-trade.component';
 import { TradeDetailComponent } from './trade-detail/trade-detail.component';
 import { HomeComponent } from './home/home.component';
 import { CollectionAllComponent } from './collection-all/collection-all.component';
+import { AddTradeComponent } from './add-trade/add-trade.component';
+import { TradeRequestComponent } from './trade-request/trade-request.component';
+import { RemoveFromCollectionComponent } from './remove-from-collection/remove-from-collection.component';
+import { CollectionBySetComponent } from './collection-by-set/collection-by-set.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +63,10 @@ import { CollectionAllComponent } from './collection-all/collection-all.componen
     TradeDetailComponent,
     HomeComponent,
     CollectionAllComponent,
+    AddTradeComponent,
+    TradeRequestComponent,
+    RemoveFromCollectionComponent,
+    CollectionBySetComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,4 @@
+import { DecimalPipe } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { card } from 'src/models/card';
@@ -14,6 +15,7 @@ export class CollectionViewComponent implements OnInit {
   @Input() cardId!: string;
   cards!: card[];
   count!: number;
+  value!: number;
   
 
   constructor(private service : CollectionService, private router: Router) 
@@ -27,8 +29,13 @@ export class CollectionViewComponent implements OnInit {
     this.service.getCollection(this.userId).subscribe(res => {
       this.cards = res;
       this.count = this.cards.length;
+      this.value = this.cards.length * 0.48;
     })
+
+    
   }
+
+ 
 
   
 

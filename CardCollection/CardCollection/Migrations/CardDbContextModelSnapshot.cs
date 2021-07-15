@@ -80,6 +80,9 @@ namespace CardCollection.Migrations
                     b.Property<int>("hp")
                         .HasColumnType("int");
 
+                    b.Property<decimal>("price")
+                        .HasColumnType("decimal(18,2)");
+
                     b.Property<string>("supertype")
                         .HasColumnType("nvarchar(max)");
 
@@ -251,7 +254,7 @@ namespace CardCollection.Migrations
             modelBuilder.Entity("CardCollection.Models.Trade", b =>
                 {
                     b.HasOne("CardCollection.Entities.User", "user")
-                        .WithMany()
+                        .WithMany("Trades")
                         .HasForeignKey("userId");
 
                     b.Navigation("user");
@@ -315,6 +318,11 @@ namespace CardCollection.Migrations
                         .HasForeignKey("OwnersId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("CardCollection.Entities.User", b =>
+                {
+                    b.Navigation("Trades");
                 });
 #pragma warning restore 612, 618
         }

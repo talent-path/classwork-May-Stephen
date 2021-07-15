@@ -30,4 +30,9 @@ export class AddToCollectionComponent implements OnInit {
     this.service.addToCollection(this.cardId).subscribe();
   }
 
+  reload(){
+    // any other execution
+    this.ngOnInit()
+    }
+
 }

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './account/login.component';
+import { AddTradeComponent } from './add-trade/add-trade.component';
 import { CardDetailComponent } from './card-detail/card-detail.component';
 import { CardListComponent } from './card-list/card-list.component';
 import { CollectionAllComponent } from './collection-all/collection-all.component';
@@ -15,6 +16,7 @@ import { SeriesListComponent } from './series-list/series-list.component';
 import { SetTrackerComponent } from './set-tracker/set-tracker.component';
 import { TradeBoardComponent } from './trade-board/trade-board.component';
 import { TradeDetailComponent } from './trade-detail/trade-detail.component';
+import { TradeRequestComponent } from './trade-request/trade-request.component';
 
 const accountModule = () => import('./account/account.module').then(x => x.AccountModule);
 
@@ -31,7 +33,8 @@ const routes: Routes = [{path: "cardDetails/:id", component: CardDetailComponent
 {path: "collection/rarity/:rarity", component: CollectionByRarityComponent},
 {path: "collection/series/:series", component: CollectionBySeriesComponent},
 {path: "trade/:tradeId", component: TradeDetailComponent},
-{path: "", component: HomeComponent}]
+{path: "", component: HomeComponent},
+{path: "trade/request/:cardId", component: TradeRequestComponent}]
 
 
 

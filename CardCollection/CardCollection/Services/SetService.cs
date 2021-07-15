@@ -37,5 +37,10 @@ namespace CardCollection.Services
         {
             return _setRepo.GetSetsBySeries(name);
         }
+
+        internal Sets GetSetById(string id)
+        {
+            return _setRepo.GetSetsById(id);
+        }
     }
 }

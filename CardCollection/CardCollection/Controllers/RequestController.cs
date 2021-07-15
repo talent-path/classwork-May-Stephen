@@ -21,9 +21,9 @@ namespace CardCollection.Controllers
         }
 
         [HttpPost("Add/{id}")]
-        public IActionResult AddRequest(Request toAdd, int id)
+        public IActionResult AddRequest(int id, List<Card> toAdd)
         {
-            Request req = _requestService.AddRequest(toAdd, id);
+            Request req = _requestService.AddRequest(id, toAdd);
             return Accepted(req);
         }
 

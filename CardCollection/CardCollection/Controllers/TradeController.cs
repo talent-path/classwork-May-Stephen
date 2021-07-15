@@ -65,6 +65,8 @@ namespace CardCollection.Controllers
             return Accepted(user);
         }
 
+       
+
         //TODO: GET TRADE BY USER ID
     }
 

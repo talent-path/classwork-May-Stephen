@@ -1,4 +1,5 @@
-﻿using CardCollection.Models;
+﻿using CardCollection.Entities;
+using CardCollection.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,14 +17,16 @@ namespace CardCollection.Repos
             _context = context;
         }
 
-        public Request AddRequest(Request req, int id)
+        public Request AddRequest(int id, List<Card> req)
         {
+            User u = _context.Users.Find(id);
             Request toAdd = new Request();
-            toAdd.trade = _context.AvailableTrades.Find(id);
+            toAdd.RequestedCards = req;
+            toAdd.trade = _context.AvailableTrades.Where(t => t.user == u).LastOrDefault();
             _context.Requests.Add(toAdd);
             
            
-            foreach(Card c in req.RequestedCards)
+            foreach(Card c in req)
             {
                 _context.Cards.Find(c.Id).Requests.Add(toAdd);
             }

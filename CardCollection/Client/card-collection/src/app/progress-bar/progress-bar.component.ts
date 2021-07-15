@@ -31,8 +31,12 @@ export class ProgressBarComponent implements OnInit {
       this.service.getSetTotal(this.id).subscribe(res => {
         this.max = res;
       });
+
       
-      
+  }
+
+  getProgress() : number {
+    return this.cardCount / this.max;
   }
 
  

@@ -11,6 +11,8 @@ import { card } from "src/models/card";
 })
 export class CollectionService{
     
+    
+    
     url: string = "https://localhost:44345/"
 
     httpOptions = {headers: new HttpHeaders({"Content-Type" : "application/json"})}
@@ -80,5 +82,11 @@ export class CollectionService{
     GetCollectionSeries(userId: number) {
       return this.http.get<string[]>(this.url +"Collection/" + this.userId + "/allSeries" );
     }
+
+    removeFromCollection(cardId: string) {
+      return this.http.delete<card>(this.url + "User/" + this.userId + "/Collection/Remove/" + cardId);
+    }
+
+   
     
   }

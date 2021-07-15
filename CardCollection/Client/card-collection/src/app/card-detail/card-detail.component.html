@@ -4,7 +4,20 @@
          <img class="singleCard" src={{card.image}}>
          <br/>
          <br/>
-         <app-add-to-collection></app-add-to-collection>
+         <div>
+            <div *ngIf="!cardInCollection()" class="row" style="justify-content: center; width: 100%;">
+               <app-add-to-collection ></app-add-to-collection>
+            </div>
+            <br/>
+            <div *ngIf="!cardInCollection()" class="row" style="justify-content: center; width: 100%;">
+               <app-add-trade [cardId]="cardId"></app-add-trade>
+            </div>
+            <div *ngIf="cardInCollection()">
+              <app-remove-from-collection></app-remove-from-collection>
+            </div>
+         </div>
+         
+         
       </div>
       <div class="col-lg-6">
          <div class="row">

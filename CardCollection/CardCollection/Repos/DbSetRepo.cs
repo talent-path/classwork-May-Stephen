@@ -26,6 +26,12 @@ namespace CardCollection.Repos
             return toReturn;
         }
 
+        public Sets GetSetsById(string id)
+        {
+            Sets set = _context.Sets.Find(id);
+            return set;
+        }
+
         public List<Sets> GetSetsBySeries(string name)
         {
             List<Sets> toReturn = _context.Sets.Where(s => s.Series == name).ToList();

@@ -10,6 +10,7 @@ import { set } from "src/models/set";
 })
 export class CardService {
     
+    
     url: string = "https://localhost:44345/"
 
     httpOptions = {headers: new HttpHeaders({"Content-Type" : "application/json"})}
@@ -65,5 +66,22 @@ export class CardService {
             })
         )
     }
+
+    getCardByName(name : string) : Observable<card> {
+        return this.http.get<card>(this.url + "Cards/name/" + name)
+        .pipe(
+            tap(),
+            catchError(err => {
+                console.log(err);
+                return of(this.result);
+            })
+        )
+    }
+
+    getSetById(id: string) {
+        return this.http.get<set>(this.url + "Sets/Get/" + id);
+      }
+
+    
     
 }

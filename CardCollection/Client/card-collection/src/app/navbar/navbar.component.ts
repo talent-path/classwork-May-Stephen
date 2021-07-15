@@ -19,5 +19,7 @@ export class NavbarComponent implements OnInit {
   }
 
 
-  
+  reload() {
+    this.ngOnInit();
+  }
 }

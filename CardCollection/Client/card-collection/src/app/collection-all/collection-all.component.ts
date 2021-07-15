@@ -13,6 +13,7 @@ export class CollectionAllComponent implements OnInit {
 
   userId: number = 0;
   cards!: card[];
+  name: string = "All Cards in Your Collection"
   
   constructor(private service : CollectionService, private router: Router) 
   {
