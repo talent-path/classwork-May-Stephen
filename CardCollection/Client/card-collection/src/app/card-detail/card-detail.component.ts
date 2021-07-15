@@ -50,4 +50,6 @@ export class CardDetailComponent implements OnInit {
 
   
 
+  
+
 }

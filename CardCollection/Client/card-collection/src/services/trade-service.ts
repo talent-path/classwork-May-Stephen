@@ -6,13 +6,12 @@ import { catchError, tap } from "rxjs/operators";
 import { card } from "src/models/card";
 import { trade } from "src/models/trade";
 import { User } from "src/models/user";
-import { Request } from "src/models/request"
+import { request } from "src/models/request"
 
 @Injectable({
     providedIn: 'root'
 })
 export class TradeService{
-
   
   
     url: string = "https://localhost:44345/"
@@ -66,8 +65,16 @@ export class TradeService{
       }
 
       createRequest(requestList: card[]) : Observable<any> {
-        console.log(requestList);
         
-        return this.http.post<Request>(this.url + "Trades/Requests/Add/" + this.userId, requestList, this.httpOptions);
+        return this.http.post<request>(this.url + "Trades/Requests/Add/" + this.userId, requestList, this.httpOptions);
       }
+
+      getReqByTradeId(tradeId: number) : Observable<request> {
+       return this.http.get<request>(this.url +"Trades/Requests/" + tradeId)
+       .pipe(
+         tap()
+       )
+      }
+    
+      
 }

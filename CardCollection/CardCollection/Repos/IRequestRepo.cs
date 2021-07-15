@@ -9,5 +9,6 @@ namespace CardCollection.Repos
     interface IRequestRepo
     {
         Request AddRequest(int id, List<Card> cards);
+        Request GetReqByTrade(int id);
     }
 }

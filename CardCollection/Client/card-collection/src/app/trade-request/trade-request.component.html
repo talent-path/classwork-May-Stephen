@@ -1,14 +1,16 @@
-<div class="container ">
+<div class="container">
     <div class="row justify-content-center">
         <h3>Submit a Trade Request</h3> 
              
     </div>
     <hr/>  
-    <div class="row justify-content-center">
+    <div class="row justify-content-center" style="text-align: center;">
         <div class="col-md-5" style="justify-content: center;">
             <h3 style="text-align: center;">Request for:</h3>
             <h3 style="text-align: center;">{{card.name}}</h3>
             <hr/>
+            <br/>
+            <br/>
             <img class="ml-5" src="{{card.image}}">
        
         </div>
@@ -17,23 +19,24 @@
             <button *ngIf="offer != null;" (click)="createTrade(offer); createRequest(card)" class="btn btn-primary my-2 my-sm-0">Request Trade</button>
         </div>
         
-        <div class="col-md-4 justify-content-center">
-            <p>Card you would like to trade away:</p>
-                    <form>  
+
+            <div class="col-md-5" style="justify-content: center;">
+                <h4 style="text-align: center;">Card Offered:</h4>
+                <h3 *ngIf="offer != null;" style="text-align: center;">{{offer.name}}</h3>
+                <hr/>
+                    <form style="text-align: center;">  
                         <br/>
-                        <div class="col-md-6">
-                        <select (change)="selectChangedHandler($event)" class="selectpicker" data-live-search="true" >
+
+                        <select (change)="selectChangedHandler($event)" class="selectpicker" data-live-search="true" style="text-align: center;" >
                             <option *ngFor="let card of cards" value="{{card.name}}">{{card.name}}</option>
                         </select>
-                        </div>
-                        
-                        
-                        <img *ngIf="offer != null;" src="{{offer.image}}">
+                        <br/>
+                        <br/>
+                        <img style="justify-content: center;" *ngIf="offer != null;" src="{{offer.image}}">
                         <div class="col-md-6">
                             
                         </div>
                     </form>
-            </div>
         </div>
     <hr/>
     

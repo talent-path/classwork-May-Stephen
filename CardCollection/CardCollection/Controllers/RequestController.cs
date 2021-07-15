@@ -27,6 +27,13 @@ namespace CardCollection.Controllers
             return Accepted(req);
         }
 
+        [HttpGet("{id}")]
+        public IActionResult GetRequestByTradeId(int id)
+        {
+            Request req = _requestService.GetReqByTrade(id);
+            return Accepted(req);
+        }
+
         
     }
 }

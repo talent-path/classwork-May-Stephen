@@ -26,5 +26,10 @@ namespace CardCollection.Services
         {
             return _requestRepo.AddRequest(id, toAdd);
         }
+
+        internal Request GetReqByTrade(int id)
+        {
+            return _requestRepo.GetReqByTrade(id);
+        }
     }
 }

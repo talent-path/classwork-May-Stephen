@@ -19,25 +19,28 @@ namespace CardCollection.Repos
 
         public Request AddRequest(int id, List<Card> req)
         {
-            User u = _context.Users.Find(id);
             Request toAdd = new Request();
             toAdd.RequestedCards = req;
-            toAdd.trade = _context.AvailableTrades.Where(t => t.user == u).LastOrDefault();
-            _context.Requests.Add(toAdd);
-            
-           
-            foreach(Card c in req)
+            List<Trade> allTrades = _context.AvailableTrades.OrderBy(t => t.Id).ToList();
+            if (allTrades.Count > 0)
             {
-                _context.Cards.Find(c.Id).Requests.Add(toAdd);
+                toAdd.trade = allTrades.Last();
             }
             
-
-            
+            foreach (Card c in req)
+            {
+                _context.Attach(c);
+                c.Requests.Add(toAdd);
+            }
             _context.SaveChanges();
 
             return toAdd;
         }
 
-        
+        public Request GetReqByTrade(int id)
+        {
+            Request toReturn = _context.Requests.SingleOrDefault(r => r.trade.Id == id);
+            return toReturn;
+        }
     }
 }
