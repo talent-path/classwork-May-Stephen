@@ -7,5 +7,7 @@ export interface card {
     setNumber: string,
     illustrator: string,
     image: string,
-    releaseYear: number
+    releaseYear: number,
+    hp: number,
+    supertype: string
 }
